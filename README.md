@@ -1,16 +1,26 @@
-## Hi there 👋
+By Nicholas Conenna
+Applied AI Engineer building production-oriented LLM systems.
 
-<!--
-**YSKAIPE/YSKAIPE** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Focus:
+Multi-model LLM orchestration
+Structured output normalization
+Evaluation frameworks for reliability
+Backend inference architecture (FastAPI in progress)
+Human + AI coordination systems
 
-Here are some ideas to get you started:
+Current Project: YSKAIPE
+AI-managed small-group coordination system (live waitlist mode)
+Architecture includes:
+Next.js frontend (Vercel)
+Multi-model LLM integration (OpenAI, Anthropic, Grok)
+Backend inference layer (FastAPI deployment in progress)
+Structured output pipelines
+Reliability-first evaluation direction
+Engineering Direction
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I treat LLMs as probabilistic components inside deterministic systems.
+Current focus:
+Guardrails
+Failure analysis
+Drift reduction
+Evaluation before scale
