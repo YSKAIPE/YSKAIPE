@@ -1,4 +1,4 @@
-<h1 align="center">Hey, I'm Nicholas Conenna — YSKAIPE</h1>
+<h1 align="center">Hey, I'm Nick Conenna — YSKAIPE</h1>
 
 <p align="center">
   <strong>Applied AI Engineer</strong> building production-oriented LLM systems that actually ship and scale.<br>
