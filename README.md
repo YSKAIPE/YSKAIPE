@@ -3,6 +3,38 @@
 <p align="center">
   <strong>Applied AI Engineer</strong> building production-oriented LLM systems that actually ship and scale.<br>
   Treating probabilistic LLMs as reliable components inside deterministic architectures.
+
+[=================================================================================================================
+YSKAIPE is Home Services Market Intelligence · pronounced “escape”
+FAIR PRICE.
+SMART CHOICE.
+EVERYBODY
+WINS.
+The home services market works best when everyone knows the fair rate. Homeowners stop overpaying. Good contractors stop losing to lowballers. DIY-able jobs get done right. Complex jobs go to the pros who deserve them.
+
+YSKAIPE is market intelligence for the rest of us — the number that levels the field for everyone at the table.
+
+Homeowner wins
+Know the fair rate before anyone arrives
+DIY what you can. Hire smart when you cannot.
+Pro wins
+Compete on quality, not confusion
+Win jobs on skill. No more lowball pressure.
+Market wins
+Transparency raises the floor
+Good work gets rewarded. Bad actors lose.
+✓ Instant standard cost
+✓ DIY guidance + materials
+✓ Vetted pro matching
+Free to use
+No signup
+Claude AI powered
+Get the Fair Rate →
+8 sec · no account needed
+
+MORE UPDATES SOON 3-29-26
+====================================================================]
+
 </p>
 
 <p align="center">
