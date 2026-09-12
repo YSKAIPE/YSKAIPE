@@ -10,246 +10,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#101E1A;
-    --ink-2:#0B1613;
-    --paper:#F1E8D3;
-    --paper-2:#E9DEC4;
-    --brass:#AD8144;
-    --brass-soft:#C9A467;
-    --marsh:#8FA184;
-    --rust:#7A3B2E;
-    --ink-soft:#DCD5C0;
+    --black:#0B0B0A;
+    --black-2:#050504;
+    --white:#F2EFE7;
+    --grey:#9A968D;
+    --line:rgba(242,239,231,0.14);
+    --gold:#E0901E;
+    --gold-ink:#3A2405;
+    --rust:#C23B23;
     --measure:66ch;
   }
-
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
   }
-
-  body{
-    margin:0;
-    background:var(--ink);
-    color:var(--ink-soft);
-    font-family:"Source Serif 4", Georgia, serif;
-    font-size:17px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--brass-soft); text-decoration-color:rgba(173,129,68,0.45); text-underline-offset:3px;}
-  a:hover{text-decoration-color:var(--brass-soft);}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--brass-soft); outline-offset:3px;}
-
-  h1,h2,h3{
-    font-family:"Fraunces", Georgia, serif;
-    font-weight:500;
-    margin:0;
-    color:var(--paper);
-  }
-
+  body{margin:0; background:var(--black); color:var(--white); font-family:"Source Serif 4", Georgia, serif; font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--gold); text-decoration-color:rgba(224,144,30,0.5); text-underline-offset:3px;}
+  a:hover{text-decoration-color:var(--gold);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+  h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:500; margin:0; color:var(--white);}
   .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
 
   /* ---- top bar ---- */
-  header.bar{
-    border-bottom:1px solid rgba(173,129,68,0.35);
-  }
-  .bar-inner{
-    max-width:920px; margin:0 auto; padding:22px 28px;
-    display:flex; align-items:baseline; justify-content:space-between; gap:24px;
-    flex-wrap:wrap;
-  }
-  .wordmark{
-    font-family:"Fraunces", Georgia, serif;
-    font-size:1.15rem;
-    letter-spacing:0.04em;
-    color:var(--paper);
-    font-weight:500;
-  }
-  .wordmark span{color:var(--marsh); font-style:italic; font-weight:400; letter-spacing:0; font-size:0.85em;}
+  header.bar{border-bottom:1px solid var(--line);}
+  .bar-inner{max-width:920px; margin:0 auto; padding:22px 28px; display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .wordmark{font-family:"Fraunces", Georgia, serif; font-size:1.15rem; letter-spacing:0.04em; color:var(--white); font-weight:500;}
+  .wordmark span{color:var(--grey); font-style:italic; font-weight:400; letter-spacing:0; font-size:0.85em;}
   nav.top{display:flex; gap:22px; font-size:0.92rem;}
-  nav.top a{color:var(--ink-soft); text-decoration:none; border-bottom:1px solid transparent;}
-  nav.top a:hover{color:var(--paper); border-bottom-color:rgba(173,129,68,0.5);}
+  nav.top a{color:var(--grey); text-decoration:none; border-bottom:1px solid transparent;}
+  nav.top a:hover{color:var(--white); border-bottom-color:var(--gold);}
 
-  /* ---- featured / hero ---- */
-  section.featured{padding:76px 0 92px;}
-  .eyebrow{
-    font-family:"Fraunces", Georgia, serif;
-    font-style:italic;
-    color:var(--marsh);
-    font-size:1.02rem;
-    margin-bottom:18px;
-  }
-  h1.title{
-    font-size:clamp(2.6rem, 6vw, 4.4rem);
-    line-height:1.02;
-    letter-spacing:-0.01em;
-  }
-  h1.title em{
-    display:block;
-    font-style:italic;
-    color:var(--brass-soft);
-    font-weight:400;
-    font-size:0.62em;
-    margin-top:6px;
-  }
-  .byline{
-    margin-top:22px;
-    font-size:1.05rem;
-    color:var(--paper);
-  }
-  .byline .by{color:var(--marsh); font-style:italic;}
-
-  .blurb{
-    margin-top:34px;
-    max-width:var(--measure);
-  }
-  .blurb p{margin:0 0 1.15em;}
+  /* ---- featured / hero — the bold subsection ---- */
+  section.featured{background:var(--gold); color:var(--gold-ink); padding:76px 0 92px;}
+  .eyebrow{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--gold-ink); opacity:0.75; font-size:1.02rem; margin-bottom:18px;}
+  h1.title{font-size:clamp(2.6rem, 6vw, 4.4rem); line-height:1.02; letter-spacing:-0.01em; color:var(--gold-ink);}
+  h1.title em{display:block; font-style:italic; color:var(--gold-ink); opacity:0.75; font-weight:400; font-size:0.62em; margin-top:6px;}
+  .byline{margin-top:22px; font-size:1.05rem; color:var(--gold-ink);}
+  .byline .by{font-style:italic; opacity:0.7;}
+  .blurb{margin-top:34px; max-width:var(--measure);}
+  .blurb p{margin:0 0 1.15em; color:var(--gold-ink);}
   .blurb p:last-child{margin-bottom:0;}
 
-  /* ---- manifest stub ---- */
-  .stub{
-    margin-top:52px;
-    background:var(--paper);
-    color:var(--ink-2);
-    max-width:560px;
-    padding:34px 36px 30px;
-    position:relative;
-    box-shadow: 6px 6px 0 rgba(0,0,0,0.18);
-  }
-  .stub-head{
-    display:flex; justify-content:space-between; align-items:flex-start; gap:20px;
-    border-bottom:1px solid rgba(122,59,46,0.25);
-    padding-bottom:14px; margin-bottom:16px;
-  }
-  .stub-head .label{
-    font-family:"Source Serif 4", Georgia, serif;
-    font-size:0.72rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--rust);
-  }
-  .stub-head .no{
-    font-family:"Fraunces", Georgia, serif;
-    font-style:italic;
-    color:var(--brass);
-    font-size:0.95rem;
-  }
-  dl.fields{
-    display:grid;
-    grid-template-columns:auto 1fr;
-    row-gap:9px; column-gap:22px;
-    margin:0;
-  }
-  dl.fields dt{
-    font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--rust); white-space:nowrap; padding-top:2px;
-  }
-  dl.fields dd{margin:0; font-size:0.97rem; color:var(--ink-2);}
+  /* ---- manifest stub — inverted to matte black within the bold section ---- */
+  .stub{background:var(--black); color:var(--white); max-width:560px; padding:34px 36px 30px; position:relative; margin-top:52px;}
+  .stub-head{display:flex; justify-content:space-between; align-items:flex-start; gap:20px; border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:16px;}
+  .stub-head .label{font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold);}
+  .stub-head .no{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--grey); font-size:0.95rem;}
+  dl.fields{display:grid; grid-template-columns:auto 1fr; row-gap:9px; column-gap:22px; margin:0;}
+  dl.fields dt{font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); white-space:nowrap; padding-top:2px;}
+  dl.fields dd{margin:0; font-size:0.97rem; color:var(--white);}
 
-  .seal{
-    position:absolute;
-    top:-22px; right:-18px;
-    width:84px; height:84px;
-    transform: scale(0.6) rotate(-14deg);
-    opacity:0;
-    animation: stamp 700ms 400ms cubic-bezier(.2,1.4,.4,1) forwards;
-  }
-  @keyframes stamp{
-    0%{ transform:scale(0.5) rotate(-18deg); opacity:0; }
-    60%{ transform:scale(1.08) rotate(-9deg); opacity:1; }
-    100%{ transform:scale(1) rotate(-11deg); opacity:1; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .seal{animation:none; opacity:1; transform:rotate(-11deg);}
-  }
+  .seal{position:absolute; top:-22px; right:-18px; width:84px; height:84px; transform:scale(0.6) rotate(-14deg); opacity:0; animation:stamp 700ms 400ms cubic-bezier(.2,1.4,.4,1) forwards;}
+  @keyframes stamp{0%{transform:scale(0.5) rotate(-18deg); opacity:0;} 60%{transform:scale(1.08) rotate(-9deg); opacity:1;} 100%{transform:scale(1) rotate(-11deg); opacity:1;}}
+  @media (prefers-reduced-motion: reduce){ .seal{animation:none; opacity:1; transform:rotate(-11deg);} }
 
-  .status-line{
-    margin-top:22px;
-    font-style:italic;
-    color:var(--marsh);
-    font-size:0.95rem;
-  }
+  .status-line{margin-top:22px; font-style:italic; color:var(--gold-ink); opacity:0.75; font-size:0.95rem;}
 
-  /* ---- catalog ---- */
-  section.catalog{
-    background:var(--paper);
-    color:var(--ink-2);
-    padding:64px 0 68px;
-  }
-  section.catalog h2{
-    color:var(--ink-2);
-    font-size:1.7rem;
-    margin-bottom:8px;
-  }
-  section.catalog .sub{
-    color:#5B5136; font-style:italic; margin-bottom:36px; font-size:0.98rem;
-  }
-  ol.list{
-    list-style:none; margin:0; padding:0;
-    border-top:1px solid rgba(122,59,46,0.22);
-  }
-  ol.list li{
-    display:grid;
-    grid-template-columns:2.6em 1fr auto;
-    gap:18px;
-    align-items:baseline;
-    padding:16px 0;
-    border-bottom:1px solid rgba(122,59,46,0.22);
-  }
-  ol.list .num{
-    font-family:"Fraunces", Georgia, serif;
-    font-style:italic;
-    color:var(--brass);
-    font-size:0.95rem;
-  }
-  ol.list .work h3{
-    color:var(--ink-2);
-    font-size:1.12rem;
-    display:inline;
-    font-weight:500;
-  }
-  ol.list .work p{
-    margin:4px 0 0;
-    font-size:0.92rem;
-    color:#4B4732;
-    max-width:56ch;
-  }
-  ol.list .author{
-    font-size:0.88rem;
-    color:#7A3B2E;
-    font-style:italic;
-    white-space:nowrap;
-  }
-
-  /* ---- authors ---- */
-  section.authors{padding:64px 0 70px;}
-  section.authors h2{font-size:1.6rem; margin-bottom:34px;}
-  .authors-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-  }
-  .author h3{color:var(--paper); font-size:1.15rem; margin-bottom:8px;}
-  .author p{margin:0; font-size:0.97rem; color:var(--ink-soft); max-width:42ch;}
-
-  @media (max-width:640px){
-    .authors-grid{grid-template-columns:1fr; gap:32px;}
-    ol.list li{grid-template-columns:2em 1fr; row-gap:4px;}
-    ol.list .author{grid-column:2; font-size:0.85rem;}
-    .stub{padding:28px 22px 24px;}
-  }
+  /* ---- home teasers — plain matte black, no bold accent ---- */
+  section.teaser{border-top:1px solid var(--line); padding:40px 0;}
+  section.teaser.alt{border-top:1px solid var(--line);}
+  .teaser-inner{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .teaser-inner h2{font-size:1.3rem; margin-bottom:6px; color:var(--white);}
+  .teaser-inner p{margin:0; font-size:0.96rem; color:var(--grey); max-width:52ch;}
+  a.teaser-link{font-family:"Fraunces", Georgia, serif; font-style:italic; font-size:1rem; color:var(--gold); white-space:nowrap; text-decoration:none; border-bottom:1px solid rgba(224,144,30,0.5); padding-bottom:2px;}
+  a.teaser-link:hover{border-bottom-color:var(--gold);}
 
   /* ---- footer ---- */
-  footer{
-    border-top:1px solid rgba(173,129,68,0.3);
-    padding:30px 0 40px;
-    font-size:0.9rem;
-    color:var(--marsh);
+  footer{border-top:1px solid var(--line); padding:30px 0 40px; font-size:0.9rem; color:var(--grey);}
+  footer a{color:var(--gold);}
+
+  @media (max-width:640px){
+    .stub{padding:28px 22px 24px;}
   }
-  footer a{color:var(--brass-soft);}
 </style>
 </head>
 <body>
@@ -258,9 +92,9 @@
   <div class="bar-inner">
     <div class="wordmark">YSKAIPE <span>· escape</span></div>
     <nav class="top">
-      <a href="#catalog">Catalog</a>
-      <a href="#authors">Authors</a>
-      <a href="https://www.nickconenna.com/publishing-in.html">Pipeline</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="authors.html">Authors</a>
+      <a href="pipeline.html">Pipeline</a>
     </nav>
   </div>
 </header>
@@ -281,10 +115,10 @@
 
     <div class="stub">
       <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="46" fill="none" stroke="#7A3B2E" stroke-width="3"/>
-        <circle cx="50" cy="50" r="38" fill="none" stroke="#7A3B2E" stroke-width="1.2"/>
-        <text x="50" y="46" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="11" fill="#7A3B2E">Battery</text>
-        <text x="50" y="62" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="11" fill="#7A3B2E">Island</text>
+        <circle cx="50" cy="50" r="46" fill="#0B0B0A" stroke="#E0901E" stroke-width="3"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#E0901E" stroke-width="1.2"/>
+        <text x="50" y="46" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="11" fill="#E0901E">Battery</text>
+        <text x="50" y="62" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="11" fill="#E0901E">Island</text>
       </svg>
       <div class="stub-head">
         <span class="label">Manifest</span>
@@ -301,74 +135,23 @@
     <p class="status-line">Publication follows the Southport research trip. Watch this space.</p>
   </section>
 
-  <section class="catalog" id="catalog">
-    <div class="wrap">
-      <h2>The catalog</h2>
-      <p class="sub">Six more works, in print or in progress.</p>
-      <ol class="list">
-        <li>
-          <span class="num">01</span>
-          <span class="work">
-            <h3>The Pace</h3>
-            <p>Book I, The Cubit and the Quark — a metrologist inherits a murder, a rigged standard, and the question of what a measurement is actually for.</p>
-          </span>
-          <span class="author">Nick Conenna</span>
-        </li>
-        <li>
-          <span class="num">02</span>
-          <span class="work">
-            <h3>To Stay</h3>
-            <p>Speculative fiction built around Voyager 1's real crossing of the heliopause.</p>
-          </span>
-          <span class="author">Nick Conenna</span>
-        </li>
-        <li>
-          <span class="num">03</span>
-          <span class="work">
-            <h3>The Scoreboard</h3>
-            <p>A case that humanity is already climbing the Kardashev Scale — and a way of keeping score as we go.</p>
-          </span>
-          <span class="author">Nick Conenna</span>
-        </li>
-        <li>
-          <span class="num">04</span>
-          <span class="work">
-            <h3>Digital Gold for Everyone</h3>
-            <p>A plain-language primer on Bitcoin and self-custody, for someone who's never touched an exchange.</p>
-          </span>
-          <span class="author">Nick Conenna</span>
-        </li>
-        <li>
-          <span class="num">05</span>
-          <span class="work">
-            <h3>Set &amp; Setting</h3>
-            <p>A trilogy on psychedelics, athletics, and spirituality as three roads to the same peak experience.</p>
-          </span>
-          <span class="author">Nick Conenna</span>
-        </li>
-        <li>
-          <span class="num">06</span>
-          <span class="work">
-            <h3>Don't Make It Weird</h3>
-            <p>A psycho-comedy about the moment self-awareness stops helping and starts getting in the way.</p>
-          </span>
-          <span class="author">Dee Conenna</span>
-        </li>
-      </ol>
+  <section class="teaser" id="catalog">
+    <div class="wrap teaser-inner">
+      <div>
+        <h2>Six more works</h2>
+        <p>The Pace, To Stay, The Scoreboard, Digital Gold for Everyone, Set &amp; Setting, and Don't Make It Weird — in print or in progress.</p>
+      </div>
+      <a class="teaser-link" href="catalog.html">View the full catalog</a>
     </div>
   </section>
 
-  <section class="authors wrap" id="authors">
-    <h2>Authors</h2>
-    <div class="authors-grid">
-      <div class="author">
-        <h3>Nick Conenna</h3>
-        <p>Writes across literary fiction, speculative fiction, and nonfiction — the primary voice behind the YSKAIPE catalog to date.</p>
+  <section class="teaser alt" id="authors">
+    <div class="wrap teaser-inner">
+      <div>
+        <h2>Two authors so far</h2>
+        <p>Nick Conenna and Dee Conenna. Built to hold more.</p>
       </div>
-      <div class="author">
-        <h3>Dee Conenna</h3>
-        <p>Author of The Tides of Battery Island and Don't Make It Weird, and a collaborator across the house's day-to-day work.</p>
-      </div>
+      <a class="teaser-link" href="authors.html">Meet the authors</a>
     </div>
   </section>
 </main>
