@@ -1,1 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalog — YSKAIPE</title>
+<meta name="description" content="The full YSKAIPE catalog — seven works in print or in progress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E1F33; --navy-line:rgba(243,233,210,0.14);
+    --cream:#F3E9D2; --cream-2:#EAD9AF;
+    --cream-text:#EFE4C8; --sepia:#6E4B2A; --sepia-soft:#8B6239;
+    --gold:#B98B3E; --navy-soft:#8AA0B8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--navy); color:var(--cream-text); font-family:"Source Serif 4", Georgia, serif; font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--gold);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+  h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:500; margin:0; color:var(--cream-text);}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
 
+  header.bar{border-bottom:1px solid var(--navy-line);}
+  .bar-inner{max-width:1040px; margin:0 auto; padding:20px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .wordmark{display:flex; align-items:center; gap:10px; font-family:"Fraunces", Georgia, serif; font-size:1.15rem; letter-spacing:0.04em; color:var(--cream-text); font-weight:500;}
+  .wordmark span{color:var(--navy-soft); font-style:italic; font-weight:400; letter-spacing:0; font-size:0.85em;}
+  .wordmark a{color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px;}
+  .mark{width:24px; height:24px; flex-shrink:0;}
+  nav.top{display:flex; gap:22px; font-size:0.92rem;}
+  nav.top a{color:var(--navy-soft); text-decoration:none; border-bottom:1px solid transparent;}
+  nav.top a:hover, nav.top a.here{color:var(--cream-text); border-bottom-color:var(--gold);}
+
+  .page-head{padding:56px 0 18px;}
+  .page-head .eyebrow{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--navy-soft); font-size:1rem; margin-bottom:14px;}
+  .page-head h1{font-size:clamp(2.1rem, 4.6vw, 3rem); line-height:1.05; letter-spacing:-0.01em;}
+  .page-head p.dek{margin-top:16px; max-width:60ch; color:var(--navy-soft); font-size:1.02rem;}
+
+  section.catalog-list{padding:20px 0 70px;}
+
+  /* ---- featured card — its own cream page within the catalog ---- */
+  .feature-card{
+    --accent:#2E6F68;
+    background:var(--cream); color:var(--sepia);
+    display:grid; grid-template-columns:140px 1fr; gap:24px;
+    padding:26px; margin-bottom:38px; border:1px solid var(--accent);
+  }
+  .feature-card .thumb{border:1px solid var(--accent); background:#F3E9D2;}
+  .feature-card .thumb svg{display:block; width:100%; height:auto;}
+  .feature-card .eyebrow-mini{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--accent); font-size:0.85rem; margin-bottom:6px;}
+  .feature-card h3{color:var(--sepia); font-size:1.4rem; margin-bottom:6px;}
+  .feature-card h3 a{color:inherit; text-decoration:none; border-bottom:1px solid var(--accent);}
+  .feature-card p{margin:0 0 6px; font-size:0.98rem; color:var(--sepia);}
+  .feature-card .meta{font-size:0.86rem; font-style:italic; color:var(--sepia-soft);}
+  .feature-card .author{margin-top:10px; font-size:0.9rem; font-style:italic; color:var(--accent);}
+
+  /* ---- ordinary rows — each title keeps its own spine color ---- */
+  ol.list{list-style:none; margin:0; padding:0; border-top:1px solid var(--navy-line);}
+  ol.list li{
+    border-left:4px solid var(--accent, var(--gold));
+    border-bottom:1px solid var(--navy-line);
+    padding:22px 0 22px 20px;
+    display:grid; grid-template-columns:2.4em 1fr auto; gap:18px; align-items:baseline;
+  }
+  ol.list .num{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--navy-soft); font-size:1rem;}
+  ol.list .work h3{color:var(--cream-text); font-size:1.22rem; font-weight:500; margin-bottom:6px;}
+  ol.list .work p{margin:0; font-size:0.96rem; color:var(--navy-soft); max-width:58ch;}
+  ol.list .work .meta{margin-top:8px; font-size:0.85rem; color:var(--accent); font-style:italic;}
+  ol.list .author{font-size:0.88rem; color:var(--accent); font-style:italic; white-space:nowrap; text-align:right;}
+
+  footer{border-top:1px solid var(--navy-line); padding:34px 0 42px; font-size:0.88rem; color:var(--navy-soft); display:flex; align-items:center; gap:14px;}
+  footer .mark{width:26px; height:26px; opacity:0.8;}
+  footer a{color:var(--gold);}
+
+  @media (max-width:640px){
+    ol.list li{grid-template-columns:2em 1fr; row-gap:6px;}
+    ol.list .author{grid-column:2; text-align:left;}
+    .feature-card{grid-template-columns:1fr; }
+    .feature-card .thumb{max-width:180px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-inner">
+    <div class="wordmark"><a href="index.html">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" fill="none" stroke="#B98B3E" stroke-width="1.4"/>
+        <path d="M24 6 L26.5 22 L24 24 L21.5 22 Z" fill="#B98B3E"/>
+        <path d="M24 42 L21.5 26 L24 24 L26.5 26 Z" fill="#6E4B2A"/>
+        <line x1="6" y1="24" x2="42" y2="24" stroke="#6E4B2A" stroke-width="0.9"/>
+        <line x1="24" y1="6" x2="24" y2="42" stroke="#6E4B2A" stroke-width="0.9"/>
+      </svg>
+      YSKAIPE <span>· escape</span></a>
+    </div>
+    <nav class="top">
+      <a href="catalog.html" class="here">Catalog</a>
+      <a href="authors.html">Authors</a>
+      <a href="pipeline.html">Pipeline</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head wrap">
+    <p class="eyebrow">The full list</p>
+    <h1>Catalog</h1>
+    <p class="dek">Seven works, in print or in progress. Each carries its own mark — a color that will eventually anchor its own page.</p>
+  </section>
+
+  <section class="catalog-list">
+    <div class="wrap">
+
+      <div class="feature-card">
+        <div class="thumb">
+          <svg viewBox="0 0 140 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="140" height="180" fill="#F3E9D2"/>
+            <path d="M20 92 Q70 104 120 92 L112 98 Q70 110 28 98 Z" stroke="#6E4B2A" stroke-width="1" fill="none"/>
+            <line x1="52" y1="92" x2="52" y2="58" stroke="#6E4B2A" stroke-width="1"/>
+            <line x1="88" y1="92" x2="88" y2="50" stroke="#6E4B2A" stroke-width="1"/>
+            <path d="M52 60 L70 82 L52 82 Z" stroke="#6E4B2A" stroke-width="0.8" fill="none"/>
+            <path d="M88 52 L70 82 L88 82 Z" stroke="#6E4B2A" stroke-width="0.8" fill="none"/>
+            <line x1="10" y1="150" x2="130" y2="150" stroke="#2E6F68" stroke-width="1" stroke-dasharray="4 3"/>
+            <g transform="translate(28,150)" stroke="#6E4B2A" stroke-width="0.6">
+              <circle r="16" fill="none"/>
+              <line x1="0" y1="-16" x2="0" y2="16"/><line x1="-16" y1="0" x2="16" y2="0"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow-mini">No. 07 — Featured</p>
+          <h3><a href="index.html">The Tides of Battery Island</a></h3>
+          <p>A dual-timeline historical novel about a schooner deliberately wrecked off Southport in Hurricane Hazel, and the granddaughter who comes home seventy years later to find out why.</p>
+          <p class="meta">Historical fiction · Southport, NC — 1954 &amp; present day · Forthcoming, KDP Select / Paperback / Audible</p>
+          <p class="author">Dee Conenna</p>
+        </div>
+      </div>
+
+      <ol class="list">
+        <li style="--accent:#57687A">
+          <span class="num">01</span>
+          <span class="work">
+            <h3>The Pace</h3>
+            <p>Book I, The Cubit and the Quark — a metrologist inherits a murder, a rigged standard, and the question of what a measurement is actually for.</p>
+            <p class="meta">Literary thriller · Live on KDP — ebook &amp; paperback</p>
+          </span>
+          <span class="author">Nick Conenna</span>
+        </li>
+        <li style="--accent:#3B3576">
+          <span class="num">02</span>
+          <span class="work">
+            <h3>To Stay</h3>
+            <p>Speculative fiction built around Voyager 1's real crossing of the heliopause.</p>
+            <p class="meta">Speculative / literary fiction · In the KDP publishing pipeline</p>
+          </span>
+          <span class="author">Nick Conenna</span>
+        </li>
+        <li style="--accent:#B0602E">
+          <span class="num">03</span>
+          <span class="work">
+            <h3>The Scoreboard</h3>
+            <p>A case that humanity is already climbing the Kardashev Scale — and a way of keeping score as we go.</p>
+            <p class="meta">Nonfiction, Spaceship Earth · In progress</p>
+          </span>
+          <span class="author">Nick Conenna</span>
+        </li>
+        <li style="--accent:#B98B3E">
+          <span class="num">04</span>
+          <span class="work">
+            <h3>Digital Gold for Everyone</h3>
+            <p>A plain-language primer on Bitcoin and self-custody, for someone who's never touched an exchange.</p>
+            <p class="meta">Nonfiction · Manuscript drafted, launch pending</p>
+          </span>
+          <span class="author">Nick Conenna</span>
+        </li>
+        <li style="--accent:#6E4270">
+          <span class="num">05</span>
+          <span class="work">
+            <h3>Set &amp; Setting</h3>
+            <p>A trilogy on psychedelics, athletics, and spirituality as three roads to the same peak experience.</p>
+            <p class="meta">Nonfiction trilogy · Book One in draft</p>
+          </span>
+          <span class="author">Nick Conenna</span>
+        </li>
+        <li style="--accent:#B0563C">
+          <span class="num">06</span>
+          <span class="work">
+            <h3>Don't Make It Weird</h3>
+            <p>A psycho-comedy about the moment self-awareness stops helping and starts getting in the way.</p>
+            <p class="meta">Psycho-comedy · In pipeline</p>
+          </span>
+          <span class="author">Dee Conenna</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+    <circle cx="24" cy="24" r="21" fill="none" stroke="#B98B3E" stroke-width="1.4"/>
+    <path d="M24 6 L26.5 22 L24 24 L21.5 22 Z" fill="#B98B3E"/>
+    <path d="M24 42 L21.5 26 L24 24 L26.5 26 Z" fill="#8AA0B8"/>
+    <line x1="6" y1="24" x2="42" y2="24" stroke="#8AA0B8" stroke-width="0.9"/>
+    <line x1="24" y1="6" x2="24" y2="42" stroke="#8AA0B8" stroke-width="0.9"/>
+  </svg>
+  <span>An imprint of Peaking Waters LLC. Also from Peaking Waters: <a href="https://fairrateindex.com">Fair Rate Index</a>.</span>
+</footer>
+
+</body>
+</html>
