@@ -10,48 +10,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#0B0B0A; --black-2:#050504;
-    --white:#F2EFE7; --grey:#9A968D;
-    --line:rgba(242,239,231,0.14);
-    --gold:#E0901E; --gold-ink:#3A2405;
-    --rust:#C23B23;
+    --navy:#0E1F33; --navy-line:rgba(243,233,210,0.14);
+    --cream-text:#EFE4C8; --gold:#B98B3E; --navy-soft:#8AA0B8;
   }
   *{box-sizing:border-box;}
-  body{margin:0; background:var(--black); color:var(--white); font-family:"Source Serif 4", Georgia, serif; font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  body{margin:0; background:var(--navy); color:var(--cream-text); font-family:"Source Serif 4", Georgia, serif; font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;}
   a{color:var(--gold);}
   a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
-  h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:500; margin:0; color:var(--white);}
-  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+  h1,h2,h3{font-family:"Fraunces", Georgia, serif; font-weight:500; margin:0; color:var(--cream-text);}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
 
-  header.bar{border-bottom:1px solid var(--line);}
-  .bar-inner{max-width:920px; margin:0 auto; padding:22px 28px; display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap;}
-  .wordmark{font-family:"Fraunces", Georgia, serif; font-size:1.15rem; letter-spacing:0.04em; color:var(--white); font-weight:500;}
-  .wordmark span{color:var(--grey); font-style:italic; font-weight:400; letter-spacing:0; font-size:0.85em;}
-  .wordmark a{color:inherit; text-decoration:none;}
+  header.bar{border-bottom:1px solid var(--navy-line);}
+  .bar-inner{max-width:1040px; margin:0 auto; padding:20px 28px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .wordmark{display:flex; align-items:center; gap:10px; font-family:"Fraunces", Georgia, serif; font-size:1.15rem; letter-spacing:0.04em; color:var(--cream-text); font-weight:500;}
+  .wordmark span{color:var(--navy-soft); font-style:italic; font-weight:400; letter-spacing:0; font-size:0.85em;}
+  .wordmark a{color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px;}
+  .mark{width:24px; height:24px; flex-shrink:0;}
   nav.top{display:flex; gap:22px; font-size:0.92rem;}
-  nav.top a{color:var(--grey); text-decoration:none; border-bottom:1px solid transparent;}
-  nav.top a:hover, nav.top a.here{color:var(--white); border-bottom-color:var(--gold);}
+  nav.top a{color:var(--navy-soft); text-decoration:none; border-bottom:1px solid transparent;}
+  nav.top a:hover, nav.top a.here{color:var(--cream-text); border-bottom-color:var(--gold);}
 
-  .page-head{padding:60px 0 20px;}
-  .page-head .eyebrow{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--grey); font-size:1rem; margin-bottom:14px;}
+  .page-head{padding:56px 0 18px;}
+  .page-head .eyebrow{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--navy-soft); font-size:1rem; margin-bottom:14px;}
   .page-head h1{font-size:clamp(2.1rem, 4.6vw, 3rem); line-height:1.05; letter-spacing:-0.01em;}
-  .page-head p.dek{margin-top:16px; max-width:60ch; color:var(--grey); font-size:1.02rem;}
+  .page-head p.dek{margin-top:16px; max-width:60ch; color:var(--navy-soft); font-size:1.02rem;}
 
-  section.authors-list{padding:24px 0 70px;}
-  .author-entry{padding:44px 0; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 2fr; gap:36px;}
-  .author-entry:last-child{border-bottom:1px solid var(--line);}
+  section.authors-list{padding:20px 0 70px;}
+  .author-entry{padding:44px 0; border-top:1px solid var(--navy-line); display:grid; grid-template-columns:1fr 2fr; gap:36px;}
+  .author-entry:last-child{border-bottom:1px solid var(--navy-line);}
   .author-entry h2{font-size:1.6rem; margin-bottom:8px;}
-  .author-entry .role{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--grey); font-size:0.98rem;}
-  .author-entry .bio p{margin:0 0 1em; max-width:62ch; font-size:1rem; color:var(--white);}
+  .author-entry .role{font-family:"Fraunces", Georgia, serif; font-style:italic; color:var(--navy-soft); font-size:0.98rem;}
+  .author-entry .bio p{margin:0 0 1em; max-width:62ch; font-size:1rem; color:var(--cream-text);}
   .author-entry .bio p:last-child{margin-bottom:0;}
-  .author-entry .works{margin-top:16px; font-size:0.92rem; color:var(--gold); font-style:italic;}
-  .author-entry .works a{color:inherit;}
+  .works{margin-top:18px; display:flex; flex-wrap:wrap; gap:10px 18px;}
+  .works .work-tag{display:flex; align-items:center; gap:7px; font-size:0.9rem; font-style:italic; color:var(--navy-soft);}
+  .works .dot{width:9px; height:9px; border-radius:50%; display:inline-block; flex-shrink:0;}
+  .works a{color:inherit;}
 
   @media (max-width:680px){
     .author-entry{grid-template-columns:1fr; gap:14px;}
   }
 
-  footer{border-top:1px solid var(--line); padding:30px 0 40px; font-size:0.9rem; color:var(--grey);}
+  footer{border-top:1px solid var(--navy-line); padding:34px 0 42px; font-size:0.88rem; color:var(--navy-soft); display:flex; align-items:center; gap:14px;}
+  footer .mark{width:26px; height:26px; opacity:0.8;}
   footer a{color:var(--gold);}
 </style>
 </head>
@@ -59,7 +60,16 @@
 
 <header class="bar">
   <div class="bar-inner">
-    <div class="wordmark"><a href="index.html">YSKAIPE <span>· escape</span></a></div>
+    <div class="wordmark"><a href="index.html">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" fill="none" stroke="#B98B3E" stroke-width="1.4"/>
+        <path d="M24 6 L26.5 22 L24 24 L21.5 22 Z" fill="#B98B3E"/>
+        <path d="M24 42 L21.5 26 L24 24 L26.5 26 Z" fill="#6E4B2A"/>
+        <line x1="6" y1="24" x2="42" y2="24" stroke="#6E4B2A" stroke-width="0.9"/>
+        <line x1="24" y1="6" x2="24" y2="42" stroke="#6E4B2A" stroke-width="0.9"/>
+      </svg>
+      YSKAIPE <span>· escape</span></a>
+    </div>
     <nav class="top">
       <a href="catalog.html">Catalog</a>
       <a href="authors.html" class="here">Authors</a>
@@ -84,7 +94,13 @@
       <div class="bio">
         <p>Writes across literary fiction, speculative fiction, and nonfiction — the primary voice behind the YSKAIPE catalog to date. His work returns often to the same questions from different angles: what a standard is actually for, what a boundary crossing costs, and how far a species can climb before it has to answer for what it's built.</p>
         <p>Publishes under Peaking Waters LLC, with a reserved imprint — Spaceship Earth — for space-related titles.</p>
-        <div class="works"><a href="catalog.html">The Pace · To Stay · The Scoreboard · Digital Gold for Everyone · Set &amp; Setting</a></div>
+        <div class="works">
+          <span class="work-tag"><span class="dot" style="background:#57687A"></span><a href="catalog.html">The Pace</a></span>
+          <span class="work-tag"><span class="dot" style="background:#3B3576"></span><a href="catalog.html">To Stay</a></span>
+          <span class="work-tag"><span class="dot" style="background:#B0602E"></span><a href="catalog.html">The Scoreboard</a></span>
+          <span class="work-tag"><span class="dot" style="background:#B98B3E"></span><a href="catalog.html">Digital Gold for Everyone</a></span>
+          <span class="work-tag"><span class="dot" style="background:#6E4270"></span><a href="catalog.html">Set &amp; Setting</a></span>
+        </div>
       </div>
     </div>
 
@@ -96,14 +112,24 @@
       <div class="bio">
         <p>Author of The Tides of Battery Island, a dual-timeline historical novel set on the North Carolina coast, and Don't Make It Weird, a psycho-comedy about the moment self-awareness stops helping and starts getting in the way.</p>
         <p>A collaborator across the house's day-to-day work, and one of YSKAIPE's founding contributors.</p>
-        <div class="works"><a href="index.html">The Tides of Battery Island</a> · <a href="catalog.html">Don't Make It Weird</a></div>
+        <div class="works">
+          <span class="work-tag"><span class="dot" style="background:#2E6F68"></span><a href="index.html">The Tides of Battery Island</a></span>
+          <span class="work-tag"><span class="dot" style="background:#B0563C"></span><a href="catalog.html">Don't Make It Weird</a></span>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="wrap">
-  An imprint of Peaking Waters LLC. Also from Peaking Waters: <a href="https://fairrateindex.com">Fair Rate Index</a>.
+  <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+    <circle cx="24" cy="24" r="21" fill="none" stroke="#B98B3E" stroke-width="1.4"/>
+    <path d="M24 6 L26.5 22 L24 24 L21.5 22 Z" fill="#B98B3E"/>
+    <path d="M24 42 L21.5 26 L24 24 L26.5 26 Z" fill="#8AA0B8"/>
+    <line x1="6" y1="24" x2="42" y2="24" stroke="#8AA0B8" stroke-width="0.9"/>
+    <line x1="24" y1="6" x2="24" y2="42" stroke="#8AA0B8" stroke-width="0.9"/>
+  </svg>
+  <span>An imprint of Peaking Waters LLC. Also from Peaking Waters: <a href="https://fairrateindex.com">Fair Rate Index</a>.</span>
 </footer>
 
 </body>
