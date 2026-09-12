@@ -1,108 +1,74 @@
-<h1 align="center">Hey, I'm Nick Conenna — YSKAIPE</h1>
+# YSKAIPE
 
-<p align="center">
-  <strong>Applied AI Engineer</strong> building production-oriented LLM systems that actually ship and scale.<br>
-  Treating probabilistic LLMs as reliable components inside deterministic architectures.
+**YSKAIPE** (pronounced *"escape"*) is a publishing house — a home for the ones who go past the edge of the map, in print now, and wherever the frontier leads next.
 
-[=================================================================================================================
-YSKAIPE is Home Services Market Intelligence · pronounced “escape”
-FAIR PRICE.
-SMART CHOICE.
-EVERYBODY
-WINS.
-The home services market works best when everyone knows the fair rate. Homeowners stop overpaying. Good contractors stop losing to lowballers. DIY-able jobs get done right. Complex jobs go to the pros who deserve them.
+An imprint of Peaking Waters LLC.
 
-YSKAIPE is market intelligence for the rest of us — the number that levels the field for everyone at the table.
-
-Homeowner wins
-Know the fair rate before anyone arrives
-DIY what you can. Hire smart when you cannot.
-Pro wins
-Compete on quality, not confusion
-Win jobs on skill. No more lowball pressure.
-Market wins
-Transparency raises the floor
-Good work gets rewarded. Bad actors lose.
-✓ Instant standard cost
-✓ DIY guidance + materials
-✓ Vetted pro matching
-Free to use
-No signup
-Claude AI powered
-Get the Fair Rate →
-8 sec · no account needed
-
-MORE UPDATES SOON 3-29-26
-====================================================================]
-
-</p>
-
-<p align="center">
-  <a href="https://x.com/yskaipe"><img src="https://img.shields.io/badge/X-@yskaipe-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
-  <!-- Add LinkedIn, personal site, email badge if you have them -->
-  &nbsp;
-  <img src="https://img.shields.io/badge/Focus-CrewAI%20×%20Bitcoin%20Pods-FF9900?style=for-the-badge" alt="Current Focus"/>
-</p>
+🔗 [yskaipe.com](https://yskaipe.com) · [Catalog](https://www.nickconenna.com/yskaipe-pubs.html) · [Pipeline](https://www.nickconenna.com/publishing-in.html)
 
 ---
 
-### 🚀 Current Mission (March 2026)
-Orchestrating **multi-agent AI pods** with **CrewAI + Python** for Bitcoin-native intelligence.
+## 🌊 Now Featured — *The Tides of Battery Island*
 
-- Real-time on-chain monitoring
-- Market sentiment & news synthesis
-- Structured forecasting & simulation
-- Autonomous workflows with strong guardrails
+### by Dee Conenna
 
-Repo → **[crewai-bitcoin-pod](https://github.com/yskaipe/crewai-bitcoin-pod)** (just created — early stage, very active)
+> *Southport, North Carolina. 1954 and now.*
 
----
+The Cape Fear River doesn't give up what it takes. It just waits.
 
-### 🛠 Engineering Philosophy & Focus
+**October 15, 1954.** As Hurricane Hazel tears into the mouth of the Cape Fear, nineteen-year-old Atticus realizes the captain of the cargo schooner *Southern Star* isn't fighting to save her — he's steering her straight onto the oyster shoals behind Battery Island on purpose. A fortune in undeclared cargo, a family's buried debts, and a shipping company's name on the insurance ledger all point to one truth: this wreck was never an accident. With the storm closing in and the captain coming at him with an iron belaying pin, Atticus does the only thing he can — he seals the ship's true manifest inside a brass cylinder and hurls it into the marsh, letting the tide swallow the evidence rather than the truth.
 
-I design LLM systems like mission-critical software:
+The next morning, a young crabber named Charles Lynch pulls that cylinder out of the reeds — and decides the river isn't done keeping its secret yet.
 
-- **Multi-model orchestration** — OpenAI, Anthropic, Grok, and local models working together
-- **Structured output normalization** — Zod/Pydantic everywhere, no hallucinations in prod
-- **Reliability & evaluation frameworks** — Metrics before merge, drift detection, failure post-mortems
-- **Backend inference architecture** — FastAPI layers (deployment in progress), caching, rate-limiting, observability
-- **Human + AI coordination** — Blending loops where humans guide, agents execute
+**Present day.** Charlotte Lynch, a Raleigh attorney, comes home to Southport to settle her late grandfather's estate — and finds a 1961 codicil in her briefcase naming her family the rightful heirs to Battery Island itself. Waiting on the porch next door is Eli, a neighbor who knows exactly why a shipping syndicate has spent seventy years hoping nobody ever finds "the other half of the ledger" — and why the marsh is finally showing its hand.
 
-Core belief: **LLMs are powerful but probabilistic — wrap them in deterministic systems.**
+A dual-timeline historical novel about inheritance, buried evidence, and a stretch of North Carolina coastline that remembers everything.
 
-Priorities right now:
-- Guardrails & safety layers
-- Failure mode analysis
-- Reducing output drift
-- **Evaluation-first** scaling (don't build what you can't measure)
+| | |
+|---|---|
+| **Author** | Dee Conenna |
+| **Genre** | Historical fiction |
+| **Setting** | Southport, NC & Battery Island — 1954 / present day |
+| **Status** | In final research — a trip to Southport is planned before publication to confirm setting details |
+| **Format** | KDP Select (ebook), Paperback, and Audible |
+
+*Publication follows the Southport research trip. Watch this space.*
 
 ---
 
-### 🌟 Flagship Project: YSKAIPE
+## About YSKAIPE
 
-**AI-managed small-group coordination system** — currently in live waitlist mode.
+YSKAIPE publishes genuine, conviction-driven work — literary fiction, speculative fiction, and nonfiction — with no filler content and no compromise on voice. It's built to hold more than one author.
 
-Reimagines collaboration: effortless escape from isolation or mismatched teams via AI-powered pod matching.
+## The catalog
 
-**Architecture highlights**
-- **Frontend**: Next.js (Vercel)
-- **LLM layer**: Multi-provider integration (OpenAI, Anthropic, Grok)
-- **Backend**: FastAPI inference service (deploying soon)
-- **Pipelines**: Structured outputs + reliability evals
-- **Vision**: Human-cohesive AI — pods that feel like supercharged teams
+Beyond the featured release, seven works in print or in progress:
 
-Repos:
-- [yskaipe-app](https://github.com/YSKAIPE/yskaipe-app)
-- [yskaipe-backend](https://github.com/YSKAIPE/yskaipe-backend)
-- [yskaipe-website](https://github.com/YSKAIPE/yskaipe-website)
+| No. | Title | Author | Notes |
+|---|---|---|---|
+| 01 | *The Pace* (Book I, *The Cubit and the Quark*) | Nick Conenna | A metrologist inherits a murder, a rigged standard, and the question of what a measurement is actually for. |
+| 02 | *To Stay* | Nick Conenna | Speculative fiction built around Voyager 1's real crossing of the heliopause. |
+| 03 | *The Scoreboard* | Nick Conenna | A case that humanity is already climbing the Kardashev Scale — and a way of keeping score as we go. |
+| 04 | *Digital Gold for Everyone* | Nick Conenna | A plain-language primer on Bitcoin and self-custody. |
+| 05 | *Set & Setting* (trilogy) | Nick Conenna | Psychedelics, athletics, and spirituality as three roads to the same peak experience. |
+| 06 | *Don't Make It Weird* | Dee Conenna | A psycho-comedy about the moment self-awareness stops helping and starts getting in the way. |
+| 07 | *The Tides of Battery Island* | Dee Conenna | **Featured above.** Historical fiction, Southport NC. |
+
+## Authors
+
+- **Nick Conenna** — writes across literary fiction, speculative fiction, and nonfiction; primary voice behind the YSKAIPE catalog to date.
+- **Dee Conenna** — author of *Don't Make It Weird* and *The Tides of Battery Island*; collaborator across the house's day-to-day work.
+
+## Site structure
+
+- Main page — featured release + catalog entry point
+- [`yskaipe-pubs.html`](https://www.nickconenna.com/yskaipe-pubs.html) — full catalog and author pages
+- [`publishing-in.html`](https://www.nickconenna.com/publishing-in.html) — internal pipeline board (Nick & Deb's in-progress titles, priority, and target months)
+
+## On the horizon
+
+YSKAIPE started as a home for the books. It won't stay only that — everything that follows, in print, in the field, or built by hand, starts here first.
 
 ---
 
-### 🔗 Let's Connect / Follow Along
-
-- **X** → [@yskaipe](https://x.com/yskaipe) — real-time thoughts on agents, Bitcoin, reliability
-- Watch for updates on the **crewai-bitcoin-pod** — aiming for open, reproducible Bitcoin AI tooling
-
-Open to collabs on production LLM infra, multi-agent reliability, or Bitcoin-native agents.
-
-Built with reliability in mind. Let's escape mediocre AI together. 🚀
+*An imprint of Peaking Waters LLC. Also from Peaking Waters: [Fair Rate Index](https://fairrateindex.com).*
