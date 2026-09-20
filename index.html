@@ -55,10 +55,8 @@
     2. Create series/tidewater.html, series/festival-league.html, series/to-stay.html,
        series/cubit-and-quark.html (or point those links at series.html for now).
     3. Confirm the status line on each book (search this file for "status").
-    4. Stoppage Time, To Stay, and The Pace use real covers from /images. The Tides of Battery Island
-       still uses the drawn study (<symbol id="cv-tides">). When its cover is ready, replace the two
-       <svg>...<use href="#cv-tides"/></svg> blocks with <img src="images/cover-tobc.jpg" ...>
-       and delete the sprite at the top of <body>.
+    4. All four covers now use real images from /images (cover-tobi.jpg, cover-stoppage-time.jpg,
+       cover-to-stay.jpeg, cover-the-pace.jpg).
     All .yk-* rules are scoped so they don't collide with style.css. Move them there when ready.
   -->
   <style>
@@ -207,58 +205,6 @@
 </head>
 <body>
 
-  <!-- Stand-in art for The Tides of Battery Island only. The other three covers are real images in /images. -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <defs>
-      <!-- The Tides of Battery Island: study for the cover, from the previous homepage -->
-      <symbol id="cv-tides" viewBox="0 0 400 600">
-        <rect width="400" height="600" fill="#F3E9D2"/>
-        <text x="200" y="44" text-anchor="middle" style="font-family:Georgia,serif" font-size="25" font-style="italic" fill="#6E4B2A">The Tides of</text>
-        <text x="200" y="74" text-anchor="middle" style="font-family:Georgia,serif" font-size="25" font-style="italic" fill="#6E4B2A">Battery Island</text>
-        <g transform="translate(11,84) scale(0.9)">
-          <g stroke="#6E4B2A" stroke-width="1.3" fill="none">
-            <path d="M70 210 Q210 246 350 210 L330 226 Q210 258 90 226 Z"/>
-            <line x1="150" y1="210" x2="150" y2="112"/>
-            <line x1="255" y1="210" x2="255" y2="96"/>
-            <path d="M150 118 L204 176 L150 176 Z"/>
-            <path d="M255 100 L204 176 L255 176 Z"/>
-            <path d="M150 176 L96 176 L150 210"/>
-            <g stroke-width="0.7">
-              <line x1="100" y1="216" x2="130" y2="220"/>
-              <line x1="140" y1="222" x2="170" y2="225"/>
-              <line x1="230" y1="225" x2="260" y2="222"/>
-              <line x1="270" y1="220" x2="300" y2="216"/>
-            </g>
-          </g>
-          <circle cx="150" cy="210" r="6" fill="none" stroke="#2E6F68" stroke-width="1.2"/>
-          <text x="150" y="214" text-anchor="middle" style="font-family:Georgia,serif" font-style="italic" font-size="8" fill="#2E6F68">I</text>
-          <path d="M156 208 L196 178" stroke="#2E6F68" stroke-width="0.7" stroke-dasharray="2 3" fill="none"/>
-          <text x="200" y="176" style="font-family:Georgia,serif" font-style="italic" font-size="11" fill="#6E4B2A">manifest, sealed brass</text>
-          <circle cx="255" cy="145" r="6" fill="none" stroke="#2E6F68" stroke-width="1.2"/>
-          <text x="255" y="149" text-anchor="middle" style="font-family:Georgia,serif" font-style="italic" font-size="8" fill="#2E6F68">II</text>
-          <path d="M261 143 L300 130" stroke="#2E6F68" stroke-width="0.7" stroke-dasharray="2 3" fill="none"/>
-          <text x="304" y="132" style="font-family:Georgia,serif" font-style="italic" font-size="11" fill="#6E4B2A">foremast, cut away</text>
-          <path d="M20 372 Q60 366 100 372 T180 372 T260 372 T340 372 T400 372" stroke="#6E4B2A" stroke-width="1" fill="none"/>
-          <line x1="20" y1="352" x2="400" y2="352" stroke="#2E6F68" stroke-width="1" stroke-dasharray="5 4"/>
-          <text x="24" y="345" style="font-family:Georgia,serif" font-style="italic" font-size="11" fill="#2E6F68">high-water mark, 15 Oct 1954</text>
-          <g transform="translate(96,452)">
-            <circle r="52" fill="none" stroke="#6E4B2A" stroke-width="1"/>
-            <circle r="38" fill="none" stroke="#6E4B2A" stroke-width="0.6"/>
-            <g stroke="#6E4B2A" stroke-width="0.8">
-              <line x1="0" y1="-52" x2="0" y2="52"/>
-              <line x1="-52" y1="0" x2="52" y2="0"/>
-              <line x1="-37" y1="-37" x2="37" y2="37"/>
-              <line x1="-37" y1="37" x2="37" y2="-37"/>
-            </g>
-            <line x1="0" y1="0" x2="0" y2="-52" stroke="#2E6F68" stroke-width="1.6"/>
-            <text x="0" y="-60" text-anchor="middle" style="font-family:Georgia,serif" font-style="italic" font-size="10" fill="#2E6F68">N</text>
-          </g>
-        </g>
-        <text x="200" y="580" text-anchor="middle" style="font-family:Georgia,serif" font-size="16" fill="#8B6239">Dee Conenna</text>
-      </symbol>
-    </defs>
-  </svg>
-
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">YSKAIPE <span>escape</span></a>
@@ -286,7 +232,7 @@
         <ul class="yk-covers">
           <li>
             <a class="yk-cover-link" href="#tides">
-              <svg viewBox="0 0 400 600" role="img" aria-label="Cover study: The Tides of Battery Island by Dee Conenna"><use href="#cv-tides"/></svg>
+              <img src="images/cover-tobi.jpg" alt="Cover of The Tides of Battery Island by Dee Conenna" decoding="async">
               <div class="yk-cover-cap">
                 <strong>The Tides of Battery Island</strong>
                 <span>Dee Conenna · Historical fiction</span>
@@ -332,7 +278,7 @@
     <section class="yk-shelf" id="tides">
       <div class="container yk-shelf-grid">
         <div class="yk-shelf-cover">
-          <img src="images/cover-tobc.jpg" alt="Cover of Before the Reckoning, Book One of Tides of Battery Island" loading="lazy" decoding="async">
+          <img src="images/cover-tobi.jpg" alt="Cover of The Tides of Battery Island by Dee Conenna" loading="lazy" decoding="async">
         </div>
         <div class="yk-shelf-body">
           <p class="yk-series-name">The Tidewater Novels, Book One</p>
