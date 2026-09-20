@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Authors — YSKAIPE</title>
+  <title>Authors | YSKAIPE Publishing</title>
+  <meta name="description" content="The authors behind YSKAIPE Publishing: Dee Conenna and Nick Conenna, and the books each of them is writing.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .yk-author-links{margin:14px 0 0;padding:0;list-style:none;}
+    .yk-author-links li{padding:8px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));font-size:0.95rem;}
+    .yk-author-links a{color:var(--accent-soft, #c8a05a);}
+    .yk-author-links span{color:var(--text-muted, #9a9188);}
+    .author-card:target{outline:1px solid var(--accent, #c8a05a);outline-offset:6px;}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -17,7 +25,7 @@
         <a href="authors.html" class="active">Authors</a>
         <a href="about.html">Our Story</a>
       </nav>
-      <a href="series.html" class="btn btn-primary">Start a Series</a>
+      <a href="index.html#launch-list" class="btn btn-primary">Join the launch list</a>
     </div>
   </header>
 
@@ -26,50 +34,50 @@
       <div class="hero-label">The people behind the worlds</div>
       <h1 style="font-size: 2.6rem; margin-bottom: 16px;">Authors</h1>
       <p style="color: var(--text-muted); max-width: 560px; margin-bottom: 48px;">
-        YSKAIPE is still a small, founder-led house. We write under our own names and, 
-        where a series is better served by a distinct voice on the cover, under a house 
-        pen name — either way, the same standard applies to every book.
+        YSKAIPE is a small, founder-led house. Every book has a real name on the cover, and every
+        one goes through the same editing standard before it reaches you.
       </p>
 
       <div class="authors-grid">
-        <div class="author-card">
+        <div class="author-card" id="nick-conenna">
           <div class="author-avatar">N</div>
           <div class="author-name">Nick Conenna</div>
           <div class="author-role">Founding Author</div>
           <p class="author-bio">
-            Writes across several of the house's series and continues the original 
-            literary and speculative catalog alongside them.
+            Writes sports romance, alternate-history space fiction, and thrillers, plus nonfiction on
+            the systems that shape how we live: energy, money, and the way people push toward
+            peak experience.
           </p>
+          <ul class="yk-author-links">
+            <li><a href="series.html#festival-league">The Festival League</a> <span>· sports romance, starting with Stoppage Time</span></li>
+            <li><a href="series.html#to-stay">To Stay</a> <span>· alternate-history space fiction</span></li>
+            <li><a href="series.html#cubit-and-quark">The Cubit and the Quark</a> <span>· thriller series, starting with The Pace</span></li>
+            <li><a href="catalog.html">Nonfiction</a> <span>· The Scoreboard, Set &amp; Setting, Digital Gold for Everyone</span></li>
+          </ul>
         </div>
 
-        <div class="author-card">
+        <div class="author-card" id="dee-conenna">
           <div class="author-avatar">D</div>
           <div class="author-name">Dee Conenna</div>
           <div class="author-role">Founding Author</div>
           <p class="author-bio">
-            Author of <em>The Lowcountry Mysteries</em> and <em>The Tides of Battery 
-            Island</em>, Book One of <em>The Tidewater Novels</em>.
+            Writes Southeastern historical fiction: storms, salvage, and inheritance along the
+            Carolina coast, told across two timelines.
           </p>
-        </div>
-
-        <div class="author-card">
-          <div class="author-avatar">S</div>
-          <div class="author-name">House Pen Names</div>
-          <div class="author-role">Series-Specific Voices</div>
-          <p class="author-bio">
-            A few series publish under a dedicated pen name so the voice on the cover 
-            matches the world inside it. Same house, same editing standard, every time.
-          </p>
+          <ul class="yk-author-links">
+            <li><a href="series.html#tidewater">The Tidewater Novels</a> <span>· starting with The Tides of Battery Island</span></li>
+            <li><a href="catalog.html">Nonfiction</a> <span>· Don't Make It Weird</span></li>
+          </ul>
         </div>
       </div>
 
       <div style="margin-top: 64px; padding: 40px; background: var(--bg-elevated); border-radius: 10px; border: 1px solid var(--border); max-width: 700px;">
         <h2 style="font-size: 1.4rem; margin-bottom: 12px;">Still a small house</h2>
         <p style="color: var(--text-muted);">
-          We haven't become a large traditional publisher, and we're not trying to. Staying 
-          small means we can move fast, keep every series coherent book to book, and actually 
-          read what readers say about what we put out. New voices join carefully, and only 
-          when the fit with readers is real — not because we needed the headcount.
+          We haven't become a large traditional publisher, and we're not trying to. Staying
+          small means we can keep every series coherent from book to book and actually read what
+          readers say about what we put out. New voices join carefully, and only when the fit with
+          readers is real.
         </p>
       </div>
     </div>
@@ -78,7 +86,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-bottom" style="border: none;">
-        <div>© 2026 YSKAIPE</div>
+        <div>© 2026 YSKAIPE Publishing · Peaking Waters LLC</div>
       </div>
     </div>
   </footer>
