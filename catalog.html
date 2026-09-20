@@ -3,8 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalog — YSKAIPE</title>
+  <title>Catalog | YSKAIPE Publishing</title>
+  <meta name="description" content="Every YSKAIPE title in one list: where it's set, who wrote it, and where it stands. Fiction by series, plus nonfiction.">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- TODO: confirm each Status cell; replace href="#kdp-..." with real KDP links. -->
+  <style>
+    .yk-page{padding:72px 0 40px;}
+    .yk-page h1{
+      font-family:var(--font-display, Georgia, serif);
+      font-size:clamp(2.2rem, 5vw, 3.6rem);line-height:1.06;margin:0 0 18px;max-width:18ch;
+    }
+    .yk-lead{max-width:60ch;margin:0 0 20px;font-size:1.08rem;line-height:1.6;color:var(--text-muted, #9a9188);}
+
+    .yk-group{padding:40px 0 8px;}
+    .yk-group h2{
+      font-family:var(--font-display, Georgia, serif);font-size:1.7rem;line-height:1.15;margin:0 0 4px;
+    }
+    .yk-group h2 a{color:inherit;text-decoration:none;}
+    .yk-group h2 a:hover,.yk-group h2 a:focus-visible{color:var(--accent-soft, #c8a05a);}
+    .yk-group-note{margin:0 0 14px;color:var(--text-muted, #9a9188);font-size:0.95rem;}
+    .yk-section-title{
+      font-family:var(--font-display, Georgia, serif);font-size:1.15rem;font-weight:500;
+      color:var(--accent, #c8a05a);margin:56px 0 0;padding-top:24px;
+      border-top:1px solid var(--border, rgba(255,255,255,0.14));
+    }
+
+    .yk-cat{list-style:none;margin:0;padding:0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
+    .yk-cat li{
+      display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1.2fr) minmax(0,1.2fr);
+      gap:8px 24px;align-items:baseline;padding:14px 4px;
+      border-bottom:1px solid var(--border, rgba(255,255,255,0.1));font-size:0.95rem;
+    }
+    .yk-cat .t{font-family:var(--font-display, Georgia, serif);font-size:1.08rem;font-weight:600;}
+    .yk-cat .t small{display:block;font-family:inherit;font-size:0.85rem;font-weight:400;color:var(--text-muted, #9a9188);margin-top:2px;}
+    .yk-cat .a,.yk-cat .w{color:var(--text-muted, #9a9188);}
+    .yk-cat .s{color:var(--text, #ece6dc);}
+    .yk-cat .s.live{color:var(--accent-soft, #c8a05a);}
+    .yk-cat .s a{color:inherit;}
+    .yk-cat li.later .t{font-weight:500;color:var(--text-muted, #9a9188);}
+
+    .yk-foot{margin:48px 0 0;color:var(--text-muted, #9a9188);max-width:62ch;line-height:1.6;}
+
+    @media (max-width:820px){
+      .yk-page{padding:48px 0 28px;}
+      .yk-cat li{grid-template-columns:1fr;gap:2px;padding:16px 4px;}
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -17,70 +62,146 @@
         <a href="authors.html">Authors</a>
         <a href="about.html">Our Story</a>
       </nav>
-      <a href="series.html" class="btn btn-primary">Start a Series</a>
+      <a href="index.html#launch-list" class="btn btn-primary">Join the launch list</a>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="hero-label">Full Catalog · 2028</div>
-      <h1 style="font-size: 2.6rem; margin-bottom: 12px;">Forty-two titles and growing</h1>
-      <p style="color: var(--text-muted); margin-bottom: 48px; max-width: 560px;">
-        The series below are what most readers come for. The original literary and speculative 
-        titles remain available underneath, for anyone who wants to see where the house started.
-      </p>
+  <main>
+    <section class="yk-page">
+      <div class="container">
+        <h1>Every title, and where it stands.</h1>
+        <p class="yk-lead">
+          Fiction is grouped by series, in reading order. Each row shows the author, the real place the
+          story is set, and whether you can read it yet.
+        </p>
 
-      <h2 style="font-size: 1.5rem; margin-bottom: 24px; color: var(--accent);">The Series</h2>
-      <div style="display: grid; gap: 12px; margin-bottom: 48px;">
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>The Tidewater Novels</strong> <span style="color: var(--text-muted);">— Coastal Carolina · Book One forthcoming · Flagship</span></div>
-          <a href="series/tidewater.html">View →</a>
-        </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>The Cortlandt Inheritance</strong> <span style="color: var(--text-muted);">— New York, Geneva, Lake Como · 5 books + 2 announced</span></div>
-          <a href="series/cortlandt.html">View →</a>
-        </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>The Evertide</strong> <span style="color: var(--text-muted);">— a new coastline every book · 4 books</span></div>
-          <a href="series/evertide.html">View →</a>
-        </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>The Lowcountry Mysteries</strong> <span style="color: var(--text-muted);">— Savannah &amp; Charleston · 6 books</span></div>
-          <a href="series/lowcountry.html">View →</a>
-        </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>Second Save</strong> <span style="color: var(--text-muted);">— remote outposts, worldwide · 3 books</span></div>
-          <a href="series.html">View →</a>
-        </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>The Ferry Crossing</strong> <span style="color: var(--text-muted);">— Mediterranean, Scandinavian &amp; Asian waterways · 4 interconnected standalones</span></div>
-          <a href="series.html">View →</a>
-        </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
-          <div><strong>Still Water</strong> <span style="color: var(--text-muted);">— quiet European capitals · 3 books</span></div>
-          <a href="series.html">View →</a>
-        </div>
-      </div>
+        <h2 class="yk-section-title">Fiction</h2>
 
-      <h2 style="font-size: 1.5rem; margin-bottom: 24px; color: var(--accent);">Original Literary & Speculative Catalog</h2>
-      <div style="display: grid; gap: 12px;">
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;">
-          <strong>The Pace</strong> <span style="color: var(--text-muted);">— Nick Conenna · Literary thriller</span>
+        <div class="yk-group">
+          <h2><a href="series.html#tidewater">The Tidewater Novels</a></h2>
+          <p class="yk-group-note">Historical fiction, dual timeline</p>
+          <ul class="yk-cat">
+            <li>
+              <span class="t">The Tides of Battery Island<small>Book One · three novelettes, $5.99</small></span>
+              <span class="a">Dee Conenna</span>
+              <span class="w">Southport, NC and Battery Island</span>
+              <span class="s">Forthcoming</span>
+            </li>
+          </ul>
         </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;">
-          <strong>To Stay</strong> <span style="color: var(--text-muted);">— Nick Conenna · Speculative</span>
+
+        <div class="yk-group">
+          <h2><a href="series.html#festival-league">The Festival League</a></h2>
+          <p class="yk-group-note">Sports romance, three countries</p>
+          <ul class="yk-cat">
+            <li>
+              <span class="t">Stoppage Time<small>Book One</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Costa Brava, Spain</span>
+              <span class="s">Manuscript complete, KDP release coming</span>
+            </li>
+            <li>
+              <span class="t">Clean Sheet<small>Book Two</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Porto and Lisbon, Portugal</span>
+              <span class="s">In development</span>
+            </li>
+            <li>
+              <span class="t">The Through Ball<small>Book Three</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Valais, Switzerland</span>
+              <span class="s">In development</span>
+            </li>
+          </ul>
         </div>
-        <div style="padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;">
-          <strong>Additional titles</strong> <span style="color: var(--text-muted);">— The Scoreboard, Digital Gold for Everyone, Set & Setting, Don't Make It Weird, and more</span>
+
+        <div class="yk-group">
+          <h2><a href="series.html#to-stay">To Stay</a></h2>
+          <p class="yk-group-note">Alternate-history space fiction, standalone</p>
+          <ul class="yk-cat">
+            <li>
+              <span class="t">To Stay</span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Siena, Florence, the Moon, the heliopause</span>
+              <span class="s live"><a href="#kdp-to-stay">Available on Kindle</a></span>
+            </li>
+          </ul>
         </div>
+
+        <div class="yk-group">
+          <h2><a href="series.html#cubit-and-quark">The Cubit and the Quark</a></h2>
+          <p class="yk-group-note">Thriller series, four books</p>
+          <ul class="yk-cat">
+            <li>
+              <span class="t">The Pace<small>Book I</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">North Carolina, Texas, Florida</span>
+              <span class="s">Revised edition forthcoming</span>
+            </li>
+            <li class="later">
+              <span class="t">The Fathom<small>Book II</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w"></span>
+              <span class="s">In the works</span>
+            </li>
+            <li class="later">
+              <span class="t">The Breath<small>Book III</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w"></span>
+              <span class="s">In the works</span>
+            </li>
+            <li class="later">
+              <span class="t">The Standard<small>Book IV</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w"></span>
+              <span class="s">In the works</span>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="yk-section-title">Nonfiction</h2>
+
+        <div class="yk-group">
+          <ul class="yk-cat">
+            <li>
+              <span class="t">The Scoreboard<small>How the Kardashev Scale became the blueprint for the age of abundance</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Energy, money, orbit, and intelligence</span>
+              <span class="s">Manuscript drafted</span>
+            </li>
+            <li>
+              <span class="t">Set &amp; Setting<small>A three-book series on psychedelics, athletics, and spirituality</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Peak experience, three doors in</span>
+              <span class="s">In development</span>
+            </li>
+            <li>
+              <span class="t">Digital Gold for Everyone<small>A hodler's guide to Bitcoin</small></span>
+              <span class="a">Nick Conenna</span>
+              <span class="w">Bitcoin, from savings to lending</span>
+              <span class="s">In development</span>
+            </li>
+            <li>
+              <span class="t">Don't Make It Weird<small>On the ways we complicate life against our better judgement</small></span>
+              <span class="a">Dee Conenna</span>
+              <span class="w">Everyday life</span>
+              <span class="s">In development</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="yk-foot">
+          Every YSKAIPE novel ends with a short companion guide to the real places in the story.
+          <a href="index.html#launch-list">Join the launch list</a> to hear when the next one lands.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-bottom" style="border: none;">
-        <div>© 2028 YSKAIPE Publishing</div>
+        <div>© 2026 YSKAIPE Publishing · Peaking Waters LLC</div>
       </div>
     </div>
   </footer>
