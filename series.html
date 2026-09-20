@@ -9,8 +9,9 @@
 
   <!--
     TODO: replace href="#kdp-..." with real KDP links.
-    The .yk-* rules and cover <symbol>s below are shared with index.html. When convenient, move the CSS
-    into css/style.css and the covers into a shared file so they live in one place.
+    The .yk-* rules below are shared with index.html. When convenient, move them into css/style.css.
+    The Tides cover is still the drawn study (<symbol id="cv-tides">). When the real cover is ready,
+    swap that <svg> for an <img> in /images and delete the sprite at the top of <body>.
   -->
   <style>
     .yk-page{padding:72px 0 40px;}
@@ -35,7 +36,8 @@
     /* Series rows */
     .yk-row{padding:72px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
     .yk-row-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:56px;align-items:start;}
-    .yk-row-cover svg{
+    .yk-row-cover svg,
+    .yk-row-cover img{
       display:block;width:100%;height:auto;border-radius:3px;
       box-shadow:0 20px 44px rgba(0,0,0,0.5);
     }
@@ -70,14 +72,14 @@
       .yk-jump a{grid-template-columns:1fr;gap:2px;}
       .yk-row{padding:56px 0;}
       .yk-row-grid{grid-template-columns:1fr;gap:28px;}
-      .yk-row-cover svg{max-width:220px;}
+      .yk-row-cover svg,.yk-row-cover img{max-width:220px;}
       .yk-page{padding:48px 0 28px;}
     }
   </style>
 </head>
 <body>
 
-  <!-- Cover art library (same stand-in covers as index.html) -->
+  <!-- Stand-in art for The Tides of Battery Island only. The other three covers are real images in /images. -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
       <symbol id="cv-tides" viewBox="0 0 400 600">
@@ -124,53 +126,6 @@
           </g>
         </g>
         <text x="200" y="580" text-anchor="middle" style="font-family:Georgia,serif" font-size="16" fill="#8B6239">Dee Conenna</text>
-      </symbol>
-
-      <symbol id="cv-stoppage" viewBox="0 0 400 600">
-        <rect width="400" height="600" fill="#0F3A6B"/>
-        <g fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2">
-          <line x1="0" y1="340" x2="400" y2="340"/>
-          <circle cx="200" cy="340" r="104"/>
-          <rect x="90" y="-2" width="220" height="70"/>
-        </g>
-        <circle cx="200" cy="340" r="5" fill="#FFFFFF" fill-opacity="0.8"/>
-        <text x="200" y="352" text-anchor="middle" style="font-family:Georgia,serif" font-size="70" font-weight="700" fill="#F2C230" transform="translate(0,-4)">90+</text>
-        <text x="200" y="128" text-anchor="middle" style="font-family:Georgia,serif" font-size="46" font-weight="700" letter-spacing="3" fill="#FFFFFF">STOPPAGE</text>
-        <text x="200" y="178" text-anchor="middle" style="font-family:Georgia,serif" font-size="46" font-weight="700" letter-spacing="3" fill="#FFFFFF">TIME</text>
-        <text x="200" y="486" text-anchor="middle" style="font-family:Georgia,serif" font-size="15" font-style="italic" fill="#BFD3EA">The Festival League · Book One</text>
-        <text x="200" y="572" text-anchor="middle" style="font-family:Georgia,serif" font-size="18" letter-spacing="2" fill="#FFFFFF">NICK CONENNA</text>
-      </symbol>
-
-      <symbol id="cv-tostay" viewBox="0 0 400 600">
-        <rect width="400" height="600" fill="#0A0E27"/>
-        <g fill="#FFFFFF" fill-opacity="0.7">
-          <circle cx="52" cy="210" r="1.4"/><circle cx="340" cy="180" r="1.2"/><circle cx="88" cy="520" r="1.2"/>
-          <circle cx="360" cy="470" r="1.5"/><circle cx="24" cy="360" r="1"/><circle cx="300" cy="248" r="1"/>
-          <circle cx="150" cy="240" r="1"/><circle cx="376" cy="330" r="1"/>
-        </g>
-        <circle cx="200" cy="360" r="128" fill="none" stroke="#C9873A" stroke-width="1.6" stroke-dasharray="7 6"/>
-        <circle cx="200" cy="360" r="6" fill="#F2C230"/>
-        <path d="M200 360 C 230 330, 300 300, 372 232" fill="none" stroke="#FFFFFF" stroke-width="1.4"/>
-        <circle cx="372" cy="232" r="4" fill="#FFFFFF"/>
-        <text x="200" y="510" text-anchor="middle" style="font-family:Georgia,serif" font-size="13" font-style="italic" fill="#C9873A">where the Sun's wind ends</text>
-        <text x="200" y="118" text-anchor="middle" style="font-family:Georgia,serif" font-size="66" font-weight="700" letter-spacing="6" fill="#FFFFFF">TO STAY</text>
-        <text x="200" y="152" text-anchor="middle" style="font-family:Georgia,serif" font-size="15" font-style="italic" fill="#C9873A">a novel</text>
-        <text x="200" y="572" text-anchor="middle" style="font-family:Georgia,serif" font-size="18" letter-spacing="2" fill="#FFFFFF">NICK CONENNA</text>
-      </symbol>
-
-      <symbol id="cv-pace" viewBox="0 0 400 600">
-        <rect width="400" height="600" fill="#E8E1CF"/>
-        <text x="200" y="128" text-anchor="middle" style="font-family:Georgia,serif" font-size="70" font-weight="700" letter-spacing="4" fill="#1C2B2E">THE PACE</text>
-        <text x="200" y="166" text-anchor="middle" style="font-family:Georgia,serif" font-size="16" font-style="italic" fill="#5A5A4E">Book I of The Cubit and the Quark</text>
-        <line x1="40" y1="340" x2="360" y2="340" stroke="#1C2B2E" stroke-width="2"/>
-        <path stroke="#B8862B" stroke-width="1.6" d="M55 340v-12M70 340v-12M85 340v-12M100 340v-12M115 340v-12M130 340v-12M160 340v-12M175 340v-12M190 340v-12M205 340v-12M220 340v-12M250 340v-12M265 340v-12M280 340v-12M295 340v-12M310 340v-12"/>
-        <path stroke="#1C2B2E" stroke-width="2.4" d="M55 340v-30M145 340v-30M235 340v-30M325 340v-30"/>
-        <text x="55" y="366" text-anchor="middle" style="font-family:Georgia,serif" font-size="13" font-weight="700" fill="#B8862B">Pace</text>
-        <text x="145" y="366" text-anchor="middle" style="font-family:Georgia,serif" font-size="13" font-style="italic" fill="#7C7A6C">Fathom</text>
-        <text x="235" y="366" text-anchor="middle" style="font-family:Georgia,serif" font-size="13" font-style="italic" fill="#7C7A6C">Breath</text>
-        <text x="325" y="366" text-anchor="middle" style="font-family:Georgia,serif" font-size="13" font-style="italic" fill="#7C7A6C">Standard</text>
-        <text x="200" y="486" text-anchor="middle" style="font-family:Georgia,serif" font-size="14" font-style="italic" fill="#5A5A4E">Every unit was once a body.</text>
-        <text x="200" y="572" text-anchor="middle" style="font-family:Georgia,serif" font-size="18" letter-spacing="2" fill="#1C2B2E">NICK CONENNA</text>
       </symbol>
     </defs>
   </svg>
@@ -237,7 +192,7 @@
     <section class="yk-row" id="festival-league">
       <div class="container yk-row-grid">
         <div class="yk-row-cover">
-          <svg viewBox="0 0 400 600" role="img" aria-label="Cover: Stoppage Time, Book One of The Festival League"><use href="#cv-stoppage"/></svg>
+          <img src="images/cover-stoppage-time.jpg" alt="Cover of Stoppage Time by Nick Conenna, Book One of The Festival League" loading="lazy" decoding="async">
         </div>
         <div>
           <p class="yk-kind">Sports romance, three countries</p>
@@ -269,7 +224,7 @@
     <section class="yk-row" id="to-stay">
       <div class="container yk-row-grid">
         <div class="yk-row-cover">
-          <svg viewBox="0 0 400 600" role="img" aria-label="Cover: To Stay by Nick Conenna"><use href="#cv-tostay"/></svg>
+          <img src="images/cover-to-stay.jpeg" alt="Cover of To Stay by Nick Conenna" loading="lazy" decoding="async">
         </div>
         <div>
           <p class="yk-kind">Alternate-history space fiction, standalone</p>
@@ -296,7 +251,7 @@
     <section class="yk-row" id="cubit-and-quark">
       <div class="container yk-row-grid">
         <div class="yk-row-cover">
-          <svg viewBox="0 0 400 600" role="img" aria-label="Cover: The Pace, Book I of The Cubit and the Quark"><use href="#cv-pace"/></svg>
+          <img src="images/cover-the-pace.jpg" alt="Cover of The Pace by Nick Conenna, Book One of The Cubit and the Quark" loading="lazy" decoding="async">
         </div>
         <div>
           <p class="yk-kind">Thriller series, four books</p>
