@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage (canonical is the root, not /index.html) -->
   <url>
     <loc>https://www.yskaipe.com/</loc>
-    <lastmod>2026-09-20</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+
+  <!-- Trip guides (virtual worlds): the main destination-search pages -->
+  <url>
+    <loc>https://www.yskaipe.com/series/tidewater.html</loc>
   </url>
   <url>
+    <loc>https://www.yskaipe.com/series/festival-league.html</loc>
+  </url>
+
+  <!-- Core site pages -->
+  <url>
     <loc>https://www.yskaipe.com/series.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.yskaipe.com/catalog.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.yskaipe.com/authors.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.yskaipe.com/about.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <priority>0.5</priority>
   </url>
 </urlset>
