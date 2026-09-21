@@ -7,18 +7,24 @@
   <meta name="description" content="Independent fiction set in real places, each series with a trip guide to walk the story. Stoppage Time, To Stay, and The Pace are on Amazon now.">
   <!-- SEO -->
   <link rel="canonical" href="https://www.yskaipe.com/">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" href="/images/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="YSKAIPE Publishing">
   <meta property="og:title" content="YSKAIPE Publishing | Fiction set in real places, with trip guides to walk the story">
   <meta property="og:description" content="Independent fiction set in real places, each series with a trip guide to walk the story. Stoppage Time, To Stay, and The Pace are on Amazon now.">
   <meta property="og:url" content="https://www.yskaipe.com/">
-  <meta property="og:image" content="https://www.yskaipe.com/images/cover-stoppage-time.jpg">
-  <meta property="og:image:alt" content="YSKAIPE Publishing | Fiction set in real places, with trip guides to walk the story">
+  <meta property="og:image" content="https://www.yskaipe.com/images/og-yskaipe.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="YSKAIPE escape logo: a gold open book above a coastline and a winding road">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@yskaipe">
   <meta name="twitter:title" content="YSKAIPE Publishing | Fiction set in real places, with trip guides to walk the story">
   <meta name="twitter:description" content="Independent fiction set in real places, each series with a trip guide to walk the story. Stoppage Time, To Stay, and The Pace are on Amazon now.">
-  <meta name="twitter:image" content="https://www.yskaipe.com/images/cover-stoppage-time.jpg">
+  <meta name="twitter:image" content="https://www.yskaipe.com/images/og-yskaipe.jpg">
+  <meta name="twitter:image:alt" content="YSKAIPE escape logo: a gold open book above a coastline and a winding road">
   <!-- When the Amazon author pages and Goodreads pages go live, add their URLs to sameAs below. -->
   <script type="application/ld+json">
 {
@@ -30,6 +36,12 @@
       "name": "YSKAIPE Publishing",
       "url": "https://www.yskaipe.com/",
       "email": "hello@yskaipe.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.yskaipe.com/images/logo-512.png",
+        "width": 512,
+        "height": 512
+      },
       "sameAs": [
         "https://x.com/yskaipe",
         "https://www.instagram.com/yskaipe"
@@ -126,6 +138,8 @@
        rel="me noopener">, remove the "is-soon" class and the status line, update the footer entry, and
        add the URL to sameAs in the JSON-LD above.
     7. The launch list form posts to Buttondown (buttondown.com/yskaipe). Test one signup end to end after deploying.
+    8. Brand images: upload favicon.ico to the site root, and images/yskaipe-logo.webp, yskaipe-emblem.webp,
+       yskaipe-logo.png, logo-512.png, icon-192.png, apple-touch-icon.png and og-yskaipe.jpg to /images.
     All four covers use real images from /images (cover-tobi.jpeg, cover-stoppage-time.jpg,
     cover-to-stay.jpeg, cover-the-pace.jpg).
     All .yk-* rules are scoped so they don't collide with style.css. Move them there when ready.
@@ -153,6 +167,17 @@
     .yk-hero-more{margin:28px 0 0;font-size:0.95rem;line-height:1.55;color:var(--text-muted, #9a9188);}
     .yk-hero-more a{color:var(--accent-soft, #c8a05a);}
     .yk-hero-more + .yk-hero-more{margin-top:10px;}
+
+    /* Brand: logo lockup beside the hero headline, emblem in the header and footer */
+    .yk-hero-top{
+      display:grid;grid-template-columns:minmax(0, 1.25fr) minmax(0, 0.75fr);
+      gap:56px;align-items:center;margin:0 0 44px;
+    }
+    .yk-hero-top .yk-hero-lead{margin:0;}
+    .yk-hero-mark img{display:block;width:100%;max-width:400px;height:auto;margin:0 auto;}
+    .logo.yk-logo{display:inline-flex;align-items:center;gap:12px;}
+    .yk-logo-mark{display:block;height:44px;width:auto;flex:none;}
+    .footer-brand .yk-logo-mark{height:38px;}
 
     /* The two featured series: each offers a virtual world and, when live, a Kindle link */
     .yk-worlds{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
@@ -354,6 +379,8 @@
       .yk-shelf.flip .yk-shelf-cover{order:0;}
       .yk-shelf-cover svg,.yk-shelf-cover img{max-width:300px;}
       .yk-hero{padding:48px 0 32px;}
+      .yk-hero-top{grid-template-columns:1fr;gap:28px;margin-bottom:32px;}
+      .yk-hero-mark img{max-width:260px;}
       .yk-follow-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
     }
     @media (max-width:520px){
@@ -371,7 +398,10 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">YSKAIPE <span>escape</span></a>
+      <a href="index.html" class="logo yk-logo">
+        <img class="yk-logo-mark" src="images/yskaipe-emblem.webp" alt="" width="60" height="44" decoding="async">
+        <div class="yk-logo-text">YSKAIPE <span>escape</span></div>
+      </a>
       <nav class="nav">
         <a href="index.html" class="active">Home</a>
         <a href="series.html">Series</a>
@@ -388,12 +418,19 @@
     <!-- Hero: the two featured series, each with a virtual world and, when live, a Kindle link -->
     <section class="yk-hero">
       <div class="container">
-        <h1>Read the story. Then walk it.</h1>
-        <p class="yk-hero-lead">
-          YSKAIPE publishes fiction set in real places, and every series crosses over into a trip you can
-          take. Start with the book and the companion guide at its end, or start in the trip guide online,
-          a virtual world to explore before you go. The journey is the reward.
-        </p>
+        <div class="yk-hero-top">
+          <div class="yk-hero-intro">
+            <h1>Read the story. Then walk it.</h1>
+            <p class="yk-hero-lead">
+              YSKAIPE publishes fiction set in real places, and every series crosses over into a trip you can
+              take. Start with the book and the companion guide at its end, or start in the trip guide online,
+              a virtual world to explore before you go. The journey is the reward.
+            </p>
+          </div>
+          <div class="yk-hero-mark">
+            <img src="images/yskaipe-logo.webp" alt="YSKAIPE escape logo: a gold open book above a coastline and a winding road" width="737" height="617" fetchpriority="high" decoding="async">
+          </div>
+        </div>
 
         <div class="yk-worlds" id="trip-guides">
           <article class="yk-world-tile is-tides">
@@ -768,7 +805,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo">YSKAIPE <span>escape</span></div>
+          <div class="logo yk-logo">
+            <img class="yk-logo-mark" src="images/yskaipe-emblem.webp" alt="" width="52" height="38" loading="lazy" decoding="async">
+            <div class="yk-logo-text">YSKAIPE <span>escape</span></div>
+          </div>
           <p>Independent publisher. Fiction set in real places, with the travel guide inside. Est. 2025</p>
         </div>
         <div class="footer-col">
