@@ -15,9 +15,11 @@
   <meta property="og:image" content="https://www.yskaipe.com/images/cover-stoppage-time.jpg">
   <meta property="og:image:alt" content="YSKAIPE Publishing | Fiction set in real places, with trip guides to walk the story">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@yskaipe">
   <meta name="twitter:title" content="YSKAIPE Publishing | Fiction set in real places, with trip guides to walk the story">
   <meta name="twitter:description" content="Independent fiction set in real places, each series with a trip guide to walk the story. Stoppage Time, To Stay, and The Pace are on Amazon now.">
   <meta name="twitter:image" content="https://www.yskaipe.com/images/cover-stoppage-time.jpg">
+  <!-- When the Amazon author pages and Goodreads pages go live, add their URLs to sameAs below. -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,6 +30,10 @@
       "name": "YSKAIPE Publishing",
       "url": "https://www.yskaipe.com/",
       "email": "hello@yskaipe.com",
+      "sameAs": [
+        "https://x.com/yskaipe",
+        "https://www.instagram.com/yskaipe"
+      ],
       "parentOrganization": {
         "@type": "Organization",
         "name": "Peaking Waters LLC"
@@ -108,8 +114,18 @@
        pages do not exist yet (404), so those two link to their sections on series.html for now.
        series.html itself still shows older statuses (Stoppage Time "release coming", To Stay
        "#kdp-to-stay", The Pace "revised edition forthcoming"): update it to match this page.
-    3. Confirm the status line on each book (search this file for "status").
-    4. When the Stoppage Time paperback is live, update its format notes and add the paperback link.
+    3. Confirm the status line on each book (search this file for "status"), and the format statuses
+       in the "Every title comes in three formats" table (id="formats").
+    4. When the Stoppage Time paperback is live, update its format notes, the formats table, and add
+       the paperback link.
+    5. When each audiobook goes live on Audible, update its cell in the formats table, its format
+       notes, and add an Audible link.
+    6. Follow section (id="follow") and footer: X and Instagram are live. The Amazon author pages
+       (Nick Conenna and Deb Conenna) and Goodreads are placeholders ("is-soon" cards). When each URL
+       exists, change the card's <div> to an <a class="yk-follow-card" href="..." target="_blank"
+       rel="me noopener">, remove the "is-soon" class and the status line, update the footer entry, and
+       add the URL to sameAs in the JSON-LD above.
+    7. The launch list form posts to Buttondown (buttondown.com/yskaipe). Test one signup end to end after deploying.
     All four covers use real images from /images (cover-tobi.jpeg, cover-stoppage-time.jpg,
     cover-to-stay.jpeg, cover-the-pace.jpg).
     All .yk-* rules are scoped so they don't collide with style.css. Move them there when ready.
@@ -136,6 +152,7 @@
     }
     .yk-hero-more{margin:28px 0 0;font-size:0.95rem;line-height:1.55;color:var(--text-muted, #9a9188);}
     .yk-hero-more a{color:var(--accent-soft, #c8a05a);}
+    .yk-hero-more + .yk-hero-more{margin-top:10px;}
 
     /* The two featured series: each offers a virtual world and, when live, a Kindle link */
     .yk-worlds{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
@@ -231,6 +248,7 @@
     }
     .yk-pricetag small{font-family:inherit;font-size:0.9rem;color:var(--text-muted, #9a9188);margin-left:6px;}
     .yk-format-note{margin:14px 0 0;font-size:0.9rem;color:var(--text-muted, #9a9188);}
+    .yk-format-note a{color:var(--accent-soft, #c8a05a);}
 
     /* More by Nick Conenna: quieter, still one click from Amazon */
     .yk-more{padding:72px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
@@ -244,6 +262,27 @@
     .yk-more-links{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;font-size:0.92rem;}
     .yk-more-links a:not(.btn){color:var(--accent-soft, #c8a05a);}
     .yk-more-note{margin:0;font-size:0.85rem;color:var(--text-muted, #9a9188);}
+
+    /* Formats and bonus material */
+    .yk-formats{padding:72px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
+    .yk-formats h2{font-family:var(--font-display, Georgia, serif);font-size:clamp(1.6rem, 3vw, 2.2rem);line-height:1.15;margin:0 0 14px;}
+    .yk-formats-lead{max-width:62ch;margin:0 0 28px;line-height:1.65;color:var(--text-muted, #9a9188);}
+    .yk-table-wrap{overflow-x:auto;}
+    .yk-formats table{width:100%;min-width:560px;border-collapse:collapse;}
+    .yk-formats th,
+    .yk-formats td{
+      text-align:left;vertical-align:top;padding:12px 20px 12px 0;
+      border-bottom:1px solid var(--border, rgba(255,255,255,0.1));
+      font-size:0.95rem;line-height:1.4;
+    }
+    .yk-formats thead th{font-weight:500;font-size:0.9rem;color:var(--accent, #c8a05a);}
+    .yk-formats tbody th{font-family:var(--font-display, Georgia, serif);font-weight:600;font-size:1.05rem;}
+    .yk-formats td{color:var(--text-muted, #9a9188);}
+    .yk-formats td.is-live,
+    .yk-formats td.is-live a{color:var(--text, #ece6dc);}
+    .yk-formats td.is-live a{text-decoration-color:var(--accent-soft, #c8a05a);text-underline-offset:3px;}
+    .yk-formats-note{max-width:62ch;margin:24px 0 0;font-size:0.95rem;line-height:1.6;color:var(--text-muted, #9a9188);}
+    .yk-formats-note a{color:var(--accent-soft, #c8a05a);}
 
     /* Book within a book */
     .yk-guide{
@@ -272,6 +311,26 @@
     .yk-author p{margin:0 0 10px;max-width:50ch;line-height:1.6;color:var(--text-muted, #9a9188);}
     .yk-author a{color:var(--accent-soft, #c8a05a);}
 
+    /* Follow */
+    .yk-follow{padding:88px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
+    .yk-follow h2{font-family:var(--font-display, Georgia, serif);font-size:clamp(1.8rem, 3.4vw, 2.6rem);line-height:1.12;margin:0 0 14px;}
+    .yk-follow-lead{max-width:58ch;margin:0 0 32px;line-height:1.65;color:var(--text-muted, #9a9188);}
+    .yk-follow-grid{display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:20px;}
+    .yk-follow-card{
+      display:block;padding:22px 22px 24px;color:inherit;text-decoration:none;
+      border:1px solid var(--border, rgba(255,255,255,0.14));
+      border-top:3px solid var(--accent, #c8a05a);
+      border-radius:6px;background:rgba(255,255,255,0.02);
+    }
+    a.yk-follow-card:hover,
+    a.yk-follow-card:focus-visible{border-color:var(--accent, #c8a05a);}
+    a.yk-follow-card:focus-visible{outline:2px solid var(--accent, #c8a05a);outline-offset:3px;}
+    .yk-follow-card.is-soon{border-style:dashed;border-top-width:1px;}
+    .yk-follow-name{margin:0 0 2px;font-family:var(--font-display, Georgia, serif);font-size:1.3rem;line-height:1.2;}
+    .yk-follow-handle{margin:0 0 12px;font-size:0.9rem;color:var(--accent-soft, #c8a05a);}
+    .yk-follow-text{margin:0;font-size:0.95rem;line-height:1.55;color:var(--text-muted, #9a9188);}
+    .yk-follow-status{margin:12px 0 0;font-size:0.85rem;color:var(--text-muted, #9a9188);}
+
     /* Launch list */
     .yk-signup{padding:88px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));text-align:center;}
     .yk-signup h2{font-family:var(--font-display, Georgia, serif);font-size:clamp(1.8rem, 3.4vw, 2.6rem);margin:0 0 14px;}
@@ -284,6 +343,9 @@
     }
     .yk-signup input[type="email"]:focus-visible{outline:2px solid var(--accent, #c8a05a);outline-offset:2px;}
 
+    /* Footer placeholders */
+    .footer-col .yk-soon{display:block;color:var(--text-muted, #9a9188);}
+
     @media (max-width:900px){
       .yk-worlds{grid-template-columns:1fr;gap:24px;}
       .yk-more-grid{grid-template-columns:1fr;gap:32px;}
@@ -292,10 +354,12 @@
       .yk-shelf.flip .yk-shelf-cover{order:0;}
       .yk-shelf-cover svg,.yk-shelf-cover img{max-width:300px;}
       .yk-hero{padding:48px 0 32px;}
+      .yk-follow-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
     }
     @media (max-width:520px){
       .yk-world-tile{grid-template-columns:96px minmax(0, 1fr);gap:18px;padding:20px;}
       .yk-tile-title{font-size:1.35rem;}
+      .yk-follow-grid{grid-template-columns:1fr;}
     }
     @media (prefers-reduced-motion:reduce){
       .yk-cover-link svg,.yk-cover-link img{transition:none;}
@@ -348,7 +412,7 @@
                 <!-- When live, add first: <a href="#kdp-tides" class="btn btn-primary">Get it on Kindle</a> -->
                 <a href="#launch-list" class="btn btn-outline">Get launch news</a>
               </div>
-              <p class="yk-tile-note">Books forthcoming. $5.99 for all three on Kindle.</p>
+              <p class="yk-tile-note">Forthcoming in ebook, paperback, and audiobook. $5.99 for all three novelettes on Kindle.</p>
             </div>
           </article>
 
@@ -367,7 +431,7 @@
                 <a href="https://www.amazon.com/dp/B0GX3B5SYV" class="btn btn-primary" target="_blank" rel="noopener">Get Stoppage Time on Kindle</a>
                 <a href="series/festival-league.html" class="btn btn-outline">Open the Festival League trip guide</a>
               </div>
-              <p class="yk-tile-note">Ebook now. Paperback coming soon.</p>
+              <p class="yk-tile-note">Ebook now. Paperback coming soon. Audiobook in production.</p>
             </div>
           </article>
         </div>
@@ -375,6 +439,10 @@
         <p class="yk-hero-more">
           More from Nick Conenna: <a href="#to-stay">To Stay</a> and <a href="#cubit-and-quark">The Pace</a>,
           both on Amazon in ebook and paperback.
+        </p>
+        <p class="yk-hero-more">
+          Follow along on <a href="https://x.com/yskaipe" target="_blank" rel="me noopener">X</a> and
+          <a href="https://www.instagram.com/yskaipe" target="_blank" rel="me noopener">Instagram</a>.
         </p>
       </div>
     </section>
@@ -388,7 +456,7 @@
         <div class="yk-shelf-body">
           <p class="yk-series-name">The Tidewater Novels, Book One</p>
           <h2>The Tides of Battery Island</h2>
-          <p class="yk-by">by <a href="authors.html#dee-conenna">Deb Conenna</a></p>
+          <p class="yk-by">by <a href="authors.html#deb-conenna">Deb Conenna</a></p>
 
           <p class="yk-blurb">
             Hurricane Hazel put a cargo schooner on the oyster shoals behind Battery Island in October of
@@ -407,7 +475,7 @@
           <dl class="yk-facts">
             <dt>Genre</dt><dd>Historical fiction, dual timeline</dd>
             <dt>Setting</dt><dd>Southport, NC and Battery Island: 1954 and the present day</dd>
-            <dt>Format</dt><dd>Three novelettes in one Kindle edition (KDP)</dd>
+            <dt>Format</dt><dd>Three novelettes in one edition: ebook, paperback, and audiobook (audiobook in production)</dd>
             <dt>Status</dt><dd>Forthcoming. The final research trip to Southport is underway.</dd>
           </dl>
 
@@ -427,7 +495,7 @@
             <!-- When live, add first: <a href="#kdp-tides" class="btn btn-primary">Get it on Kindle</a> -->
             <a href="#launch-list" class="btn btn-outline">Get launch news</a>
           </div>
-          <p class="yk-format-note">$5.99 for all three novelettes on Kindle, forthcoming.</p>
+          <p class="yk-format-note">Forthcoming in ebook ($5.99 for all three novelettes on Kindle), paperback, and audiobook. Bonus material will be added to the series as it's made.</p>
         </div>
       </div>
     </section>
@@ -456,7 +524,7 @@
           <ol class="yk-order">
             <li>
               <span><b>Stoppage Time</b>
-              <small>Costa Brava, Spain · Available now on Amazon, paperback coming soon</small></span>
+              <small>Costa Brava, Spain · Ebook now, paperback coming soon, audiobook in production</small></span>
             </li>
             <li>
               <span><b>Clean Sheet</b>
@@ -486,7 +554,12 @@
             <a href="https://www.amazon.com/dp/B0GX3B5SYV" class="btn btn-primary" target="_blank" rel="noopener">Get Stoppage Time on Kindle</a>
             <a href="series/festival-league.html" class="btn btn-outline">Open the Festival League trip guide</a>
           </div>
-          <p class="yk-format-note">Ebook available now. Paperback coming soon.</p>
+          <p class="yk-format-note">Ebook available now. Paperback coming soon. Audiobook in production. Bonus material will be added to the series as it's made.</p>
+          <p class="yk-format-note">
+            Soccer season, festival season: follow the series on
+            <a href="https://x.com/yskaipe" target="_blank" rel="me noopener">X</a> and
+            <a href="https://www.instagram.com/yskaipe" target="_blank" rel="me noopener">Instagram</a>.
+          </p>
         </div>
       </div>
     </section>
@@ -509,7 +582,7 @@
                 <a href="https://www.amazon.com/dp/B0HHPYR2WM" class="btn btn-outline" target="_blank" rel="noopener">Get To Stay on Amazon</a>
                 <a href="series.html#to-stay">About the book</a>
               </div>
-              <p class="yk-more-note">Ebook and paperback.</p>
+              <p class="yk-more-note">Ebook and paperback. Audiobook in production.</p>
             </div>
           </div>
 
@@ -527,10 +600,62 @@
                 <a href="https://www.amazon.com/dp/B0HHGJ5B59" class="btn btn-outline" target="_blank" rel="noopener">Get The Pace on Amazon</a>
                 <a href="series.html#cubit-and-quark">About the series</a>
               </div>
-              <p class="yk-more-note">Ebook and paperback. Books II to IV, The Fathom, The Breath, and The Standard, are in the works.</p>
+              <p class="yk-more-note">Ebook and paperback. Audiobook in production. Books II to IV, The Fathom, The Breath, and The Standard, are in the works.</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Formats and bonus material -->
+    <section class="yk-formats" id="formats">
+      <div class="container">
+        <h2>Every title comes in three formats</h2>
+        <p class="yk-formats-lead">
+          Each YSKAIPE book is published as an ebook, a paperback, and an audiobook. The audiobooks are in
+          production. Each series also gets bonus material as it's made.
+        </p>
+        <div class="yk-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Ebook</th>
+                <th scope="col">Paperback</th>
+                <th scope="col">Audiobook</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">The Tides of Battery Island</th>
+                <td>Forthcoming</td>
+                <td>Forthcoming</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <th scope="row">Stoppage Time</th>
+                <td class="is-live"><a href="https://www.amazon.com/dp/B0GX3B5SYV" target="_blank" rel="noopener">Available</a></td>
+                <td>Coming soon</td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <th scope="row">To Stay</th>
+                <td class="is-live"><a href="https://www.amazon.com/dp/B0HHPYR2WM" target="_blank" rel="noopener">Available</a></td>
+                <td class="is-live"><a href="https://www.amazon.com/dp/B0HHPYR2WM" target="_blank" rel="noopener">Available</a></td>
+                <td>In production</td>
+              </tr>
+              <tr>
+                <th scope="row">The Pace</th>
+                <td class="is-live"><a href="https://www.amazon.com/dp/B0HHGJ5B59" target="_blank" rel="noopener">Available</a></td>
+                <td class="is-live"><a href="https://www.amazon.com/dp/B0HHGJ5B59" target="_blank" rel="noopener">Available</a></td>
+                <td>In production</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="yk-formats-note">
+          Want to know the day an audiobook or paperback lands? <a href="#launch-list">Join the launch list.</a>
+        </p>
       </div>
     </section>
 
@@ -567,7 +692,7 @@
       <div class="container">
         <h2>The authors</h2>
         <div class="yk-author-grid">
-          <div class="yk-author" id="dee-conenna">
+          <div class="yk-author" id="deb-conenna">
             <h3>Deb Conenna</h3>
             <p>Southeastern historical fiction: storms, salvage, and inheritance along the Carolina coast.</p>
             <p><a href="#tides">The Tides of Battery Island</a></p>
@@ -585,13 +710,52 @@
       </div>
     </section>
 
+    <!-- Follow -->
+    <section class="yk-follow" id="follow">
+      <div class="container">
+        <h2>Follow the journey</h2>
+        <p class="yk-follow-lead">
+          New books, new places, and the crossover between soccer and festival season. Follow along where
+          you already read and scroll.
+        </p>
+        <div class="yk-follow-grid">
+          <a class="yk-follow-card" href="https://x.com/yskaipe" target="_blank" rel="me noopener">
+            <h3 class="yk-follow-name">X</h3>
+            <p class="yk-follow-handle">@yskaipe</p>
+            <p class="yk-follow-text">Soccer, festivals, and new-book news.</p>
+          </a>
+          <a class="yk-follow-card" href="https://www.instagram.com/yskaipe" target="_blank" rel="me noopener">
+            <h3 class="yk-follow-name">Instagram</h3>
+            <p class="yk-follow-handle">@yskaipe</p>
+            <p class="yk-follow-text">Covers, places, and the story behind the books.</p>
+          </a>
+          <!-- When live, change this <div> to an <a class="yk-follow-card" href="AMAZON AUTHOR PAGE URL" target="_blank" rel="me noopener">,
+               remove "is-soon" and the status line. Nick Conenna and Deb Conenna each need their own Author Central page. -->
+          <div class="yk-follow-card is-soon">
+            <h3 class="yk-follow-name">Amazon</h3>
+            <p class="yk-follow-handle">Author pages</p>
+            <p class="yk-follow-text">Follow Nick Conenna and Deb Conenna for new-release alerts.</p>
+            <p class="yk-follow-status">Link coming soon</p>
+          </div>
+          <!-- When live, swap for an <a class="yk-follow-card" href="GOODREADS URL" target="_blank" rel="me noopener"> as above. -->
+          <div class="yk-follow-card is-soon">
+            <h3 class="yk-follow-name">Goodreads</h3>
+            <p class="yk-follow-handle">Author profiles</p>
+            <p class="yk-follow-text">Add the books to your shelf and see what's next.</p>
+            <p class="yk-follow-status">Link coming soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Launch list -->
     <section class="yk-signup" id="launch-list">
       <div class="container">
         <h2>Hear first when the next book lands.</h2>
         <p>One short email per release: the new book, where it's set, and a launch-week price when there is one.</p>
-        <!-- TODO: point action at your email provider's form endpoint -->
-        <form action="#" method="post">
+        <!-- Buttondown embed form. If the newsletter username ever changes, update both URLs below. -->
+        <form action="https://buttondown.com/api/emails/embed-subscribe/yskaipe" method="post" target="popupwindow"
+              onsubmit="window.open('https://buttondown.com/yskaipe', 'popupwindow')">
           <label for="yk-email" style="position:absolute;left:-9999px;">Email address</label>
           <input id="yk-email" type="email" name="email" placeholder="you@example.com" required>
           <button type="submit" class="btn btn-primary">Join the launch list</button>
@@ -623,8 +787,11 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="#launch-list">Launch list</a>
-          <a href="#">X / Twitter</a>
-          <a href="#">Instagram</a>
+          <a href="https://x.com/yskaipe" target="_blank" rel="me noopener">X</a>
+          <a href="https://www.instagram.com/yskaipe" target="_blank" rel="me noopener">Instagram</a>
+          <!-- When live, replace each span with an <a href="..." target="_blank" rel="me noopener"> -->
+          <span class="yk-soon">Amazon author pages (link coming soon)</span>
+          <span class="yk-soon">Goodreads (link coming soon)</span>
         </div>
       </div>
       <div class="footer-bottom">
