@@ -3,40 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story | YSKAIPE Publishing</title>
-  <meta name="description" content="YSKAIPE means 'escape.' We're an independent publisher of series set in real places, with a companion travel guide at the end of every book.">
+  <title>Our Story: What YSKAIPE Means | YSKAIPE Publishing</title>
+  <meta name="description" content="YSKAIPE means escape. We're an independent publisher of series set in real places, with a trip guide for every story.">
   <!-- SEO -->
   <link rel="canonical" href="https://www.yskaipe.com/about.html">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" href="/images/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="YSKAIPE Publishing">
-  <meta property="og:title" content="Our Story | YSKAIPE Publishing">
-  <meta property="og:description" content="YSKAIPE means 'escape.' We're an independent publisher of series set in real places, with a companion travel guide at the end of every book.">
+  <meta property="og:title" content="Our Story: What YSKAIPE Means | YSKAIPE Publishing">
+  <meta property="og:description" content="YSKAIPE means escape. We're an independent publisher of series set in real places, with a trip guide for every story.">
   <meta property="og:url" content="https://www.yskaipe.com/about.html">
-  <meta property="og:image" content="https://www.yskaipe.com/images/cover-stoppage-time.jpg">
-  <meta property="og:image:alt" content="Our Story | YSKAIPE Publishing">
+  <meta property="og:image" content="https://www.yskaipe.com/images/og-yskaipe.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="YSKAIPE escape logo: a gold open book above a coastline and a winding road">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Story | YSKAIPE Publishing">
-  <meta name="twitter:description" content="YSKAIPE means 'escape.' We're an independent publisher of series set in real places, with a companion travel guide at the end of every book.">
-  <meta name="twitter:image" content="https://www.yskaipe.com/images/cover-stoppage-time.jpg">
+  <meta name="twitter:site" content="@yskaipe">
+  <meta name="twitter:title" content="Our Story: What YSKAIPE Means | YSKAIPE Publishing">
+  <meta name="twitter:description" content="YSKAIPE means escape. We're an independent publisher of series set in real places, with a trip guide for every story.">
+  <meta name="twitter:image" content="https://www.yskaipe.com/images/og-yskaipe.jpg">
+  <meta name="twitter:image:alt" content="YSKAIPE escape logo: a gold open book above a coastline and a winding road">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AboutPage",
-      "name": "Our Story | YSKAIPE Publishing",
-      "url": "https://www.yskaipe.com/about.html",
-      "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://www.yskaipe.com/#publisher",
+      "name": "YSKAIPE Publishing",
+      "url": "https://www.yskaipe.com/",
+      "email": "hello@yskaipe.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.yskaipe.com/images/logo-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://x.com/yskaipe",
+        "https://www.instagram.com/yskaipe"
+      ],
+      "parentOrganization": {
         "@type": "Organization",
-        "@id": "https://www.yskaipe.com/#publisher",
-        "name": "YSKAIPE Publishing",
-        "url": "https://www.yskaipe.com/",
-        "email": "hello@yskaipe.com",
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "Peaking Waters LLC"
-        }
+        "name": "Peaking Waters LLC"
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.yskaipe.com/#website",
+      "url": "https://www.yskaipe.com/",
+      "name": "YSKAIPE Publishing",
+      "publisher": {
+        "@id": "https://www.yskaipe.com/#publisher"
+      }
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.yskaipe.com/about.html#webpage",
+      "url": "https://www.yskaipe.com/about.html",
+      "name": "Our Story: What YSKAIPE Means | YSKAIPE Publishing",
+      "description": "YSKAIPE means escape. We're an independent publisher of series set in real places, with a trip guide for every story.",
+      "isPartOf": {
+        "@id": "https://www.yskaipe.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.yskaipe.com/about.html#breadcrumb"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-21",
+      "mainEntity": {
+        "@id": "https://www.yskaipe.com/#publisher"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.yskaipe.com/about.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "YSKAIPE Publishing",
+          "item": "https://www.yskaipe.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Story",
+          "item": "https://www.yskaipe.com/about.html"
+        }
+      ]
     }
   ]
 }
@@ -44,6 +101,20 @@
   <!-- /SEO -->
   <link rel="stylesheet" href="css/style.css">
   <style>
+    /* Brand mark: cropped from images/yskaipe-goat.jpg, same as the homepage */
+    .logo.yk-logo{display:inline-flex;align-items:center;gap:12px;}
+    .yk-logo-mark{
+      --h:44px;
+      display:block;flex:none;height:var(--h);width:calc(var(--h) * 1.3757);
+      background:url("images/yskaipe-goat.jpg") no-repeat;
+      background-size:calc(var(--h) * 3.0899) auto;
+      background-position:calc(var(--h) * -0.8439) calc(var(--h) * -0.2249);
+      mix-blend-mode:lighten;
+    }
+    .footer-brand .yk-logo-mark{--h:38px;}
+    .yk-logo-text{white-space:nowrap;}
+    .footer-col .yk-soon{display:block;color:var(--text-muted, #9a9188);}
+
     .yk-ways{list-style:none;margin:0 0 8px;padding:0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
     .yk-ways li{padding:18px 0;border-bottom:1px solid var(--border, rgba(255,255,255,0.1));}
     .yk-ways a{color:inherit;text-decoration:none;}
@@ -51,16 +122,20 @@
     .yk-ways a:hover strong,.yk-ways a:focus-visible strong{color:var(--accent-soft, #c8a05a);}
     .yk-ways a:focus-visible{outline:2px solid var(--accent, #c8a05a);outline-offset:3px;}
     .yk-ways span{display:block;margin-top:4px;color:var(--text-muted, #9a9188);line-height:1.55;}
-    .yk-mail{color:var(--accent-soft, #c8a05a);}
+    .yk-mail,.yk-inline{color:var(--accent-soft, #c8a05a);}
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">YSKAIPE <span>escape</span></a>
+      <a href="index.html" class="logo yk-logo">
+        <span class="yk-logo-mark" aria-hidden="true"></span>
+        <div class="yk-logo-text">YSKAIPE <span>escape</span></div>
+      </a>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="series.html">Series</a>
+        <a href="index.html#trip-guides">Trip guides</a>
         <a href="catalog.html">Catalog</a>
         <a href="authors.html">Authors</a>
         <a href="about.html" class="active">Our Story</a>
@@ -69,6 +144,7 @@
     </div>
   </header>
 
+  <main>
   <section class="section">
     <div class="container" style="max-width: 800px;">
       <div class="hero-label">What YSKAIPE Means</div>
@@ -126,6 +202,12 @@
         story. Finish the book, turn the page, and you have a reason to go. We think the journey is
         the reward, so we give you both.
       </p>
+      <p style="color: var(--text-muted); margin-bottom: 16px; max-width: 640px;">
+        Prefer to start on the ground? The Tidewater Novels and The Festival League each have an
+        online trip guide, a virtual world of maps, dates, and itineraries:
+        <a class="yk-inline" href="series/tidewater.html">the Tidewater trip guide</a> and
+        <a class="yk-inline" href="series/festival-league.html">the Festival League trip guide</a>.
+      </p>
       <p style="color: var(--text-muted); margin-bottom: 0; max-width: 640px;">
         The same idea sits behind every character: each one has something real to lose, and every
         book is about what an escape costs and what it's worth.
@@ -144,7 +226,9 @@
       <h2 style="font-size: 1.8rem; margin: 56px 0 12px;">Say hello</h2>
       <p style="color: var(--text-muted); margin-bottom: 0; max-width: 640px;">
         Questions, feedback, or a note about a book: write to
-        <a class="yk-mail" href="mailto:hello@yskaipe.com">hello@yskaipe.com</a>.
+        <a class="yk-mail" href="mailto:hello@yskaipe.com">hello@yskaipe.com</a>, or find us on
+        <a class="yk-inline" href="https://x.com/yskaipe" target="_blank" rel="me noopener">X</a> and
+        <a class="yk-inline" href="https://www.instagram.com/yskaipe" target="_blank" rel="me noopener">Instagram</a>.
       </p>
 
       <div style="margin-top: 48px; text-align: center;">
@@ -152,10 +236,42 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="border: none;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo yk-logo">
+            <span class="yk-logo-mark" aria-hidden="true"></span>
+            <div class="yk-logo-text">YSKAIPE <span>escape</span></div>
+          </div>
+          <p>Independent publisher. Fiction set in real places, with the travel guide inside. Est. 2025</p>
+        </div>
+        <div class="footer-col">
+          <h4>Series</h4>
+          <a href="series/tidewater.html">The Tidewater Novels</a>
+          <a href="series/festival-league.html">The Festival League</a>
+          <a href="series.html#to-stay">To Stay</a>
+          <a href="series.html#cubit-and-quark">The Cubit and the Quark</a>
+        </div>
+        <div class="footer-col">
+          <h4>House</h4>
+          <a href="authors.html">Authors</a>
+          <a href="about.html">Our Story</a>
+          <a href="catalog.html">Full Catalog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="index.html#launch-list">Launch list</a>
+          <a href="https://x.com/yskaipe" target="_blank" rel="me noopener">X</a>
+          <a href="https://www.instagram.com/yskaipe" target="_blank" rel="me noopener">Instagram</a>
+          <!-- When live, replace each span with an <a href="..." target="_blank" rel="me noopener"> -->
+          <span class="yk-soon">Amazon author pages (link coming soon)</span>
+          <span class="yk-soon">Goodreads (link coming soon)</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <div>© 2026 YSKAIPE Publishing · Peaking Waters LLC</div>
         <div><a href="mailto:hello@yskaipe.com">hello@yskaipe.com</a></div>
       </div>
