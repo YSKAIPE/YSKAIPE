@@ -51,12 +51,16 @@
 
   <!--
     TODO before publishing:
-    1. Replace every href="#kdp-..." with the real KDP product link.
-    2. Create series/tidewater.html, series/festival-league.html, series/to-stay.html,
+    1. Live Amazon links are in place for Stoppage Time, The Pace, and To Stay.
+       The Tides of Battery Island is still forthcoming: when it goes live, replace its
+       "Get launch news" button with the Amazon link (see the comment in that section).
+    2. series/tidewater.html and series/festival-league.html are live and featured in the
+       "Trip guides" section. Still to create: series/to-stay.html and
        series/cubit-and-quark.html (or point those links at series.html for now).
     3. Confirm the status line on each book (search this file for "status").
-    4. All four covers now use real images from /images (cover-tobi.jpeg, cover-stoppage-time.jpg,
-       cover-to-stay.jpeg, cover-the-pace.jpg).
+    4. When the Stoppage Time paperback is live, update its format note and add the paperback link.
+    All four covers use real images from /images (cover-tobi.jpeg, cover-stoppage-time.jpg,
+    cover-to-stay.jpeg, cover-the-pace.jpg).
     All .yk-* rules are scoped so they don't collide with style.css. Move them there when ready.
   -->
   <style>
@@ -150,6 +154,37 @@
       padding-right:14px;
     }
     .yk-pricetag small{font-family:inherit;font-size:0.9rem;color:var(--text-muted, #9a9188);margin-left:6px;}
+    .yk-format-note{margin:14px 0 0;font-size:0.9rem;color:var(--text-muted, #9a9188);}
+
+    /* Trip guides: the two interactive series guides */
+    .yk-guides{padding:88px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));}
+    .yk-guides-head{max-width:62ch;margin:0 0 40px;}
+    .yk-guides-head h2{font-family:var(--font-display, Georgia, serif);font-size:clamp(1.8rem, 3.4vw, 2.6rem);line-height:1.12;margin:0 0 14px;}
+    .yk-guides-head p{margin:0;line-height:1.65;color:var(--text-muted, #9a9188);}
+    .yk-guides-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+    .yk-guide-card{
+      display:flex;flex-direction:column;padding:32px;
+      border:1px solid var(--border, rgba(255,255,255,0.14));
+      border-top:3px solid var(--accent, #c8a05a);
+      border-radius:6px;background:rgba(255,255,255,0.02);
+    }
+    .yk-guide-card.is-tides{border-top-color:var(--yk-tides);}
+    .yk-guide-card.is-pitch{border-top-color:var(--yk-pitch);}
+    .yk-guide-card-head{display:flex;gap:20px;align-items:center;margin:0 0 20px;}
+    .yk-guide-card-head img{
+      display:block;width:84px;height:auto;flex:none;border-radius:3px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.45);
+    }
+    .yk-guide-card-head p{margin:0 0 4px;font-size:0.9rem;color:var(--accent-soft, #c8a05a);}
+    .yk-guide-card-head h3{margin:0;font-family:var(--font-display, Georgia, serif);font-size:1.5rem;line-height:1.15;}
+    .yk-guide-card-lead{margin:0 0 18px;line-height:1.65;color:var(--text, #ece6dc);}
+    .yk-guide-card ul{margin:0 0 28px;padding:0;list-style:none;}
+    .yk-guide-card li{padding:10px 0;border-top:1px solid var(--border, rgba(255,255,255,0.1));font-size:0.95rem;line-height:1.5;}
+    .yk-guide-card li b{font-weight:600;}
+    .yk-guide-card li span{display:block;margin-top:2px;font-size:0.88rem;color:var(--text-muted, #9a9188);}
+    .yk-guide-card .yk-buy{margin-top:auto;}
+    .yk-guides-note{margin:28px 0 0;max-width:62ch;font-size:0.88rem;line-height:1.55;color:var(--text-muted, #9a9188);}
+    .yk-guide p a{color:var(--accent-soft, #c8a05a);}
 
     /* Book within a book */
     .yk-guide{
@@ -193,6 +228,9 @@
       .yk-covers{grid-template-columns:repeat(2, 1fr);gap:24px;}
       .yk-shelf{padding:64px 0;}
       .yk-shelf-grid,.yk-guide-grid,.yk-author-grid{grid-template-columns:1fr;gap:36px;}
+      .yk-guides{padding:64px 0;}
+      .yk-guides-grid{grid-template-columns:1fr;gap:24px;}
+      .yk-guide-card{padding:24px;}
       .yk-shelf.flip .yk-shelf-cover{order:0;}
       .yk-shelf-cover svg,.yk-shelf-cover img{max-width:300px;}
       .yk-hero{padding:48px 0 32px;}
@@ -211,6 +249,7 @@
       <nav class="nav">
         <a href="index.html" class="active">Home</a>
         <a href="series.html">Series</a>
+        <a href="#guides">Trip guides</a>
         <a href="catalog.html">Catalog</a>
         <a href="authors.html">Authors</a>
         <a href="about.html">Our Story</a>
@@ -246,7 +285,7 @@
               <div class="yk-cover-cap">
                 <strong>Stoppage Time</strong>
                 <span>Nick Conenna · The Festival League, Book One</span>
-                <span class="yk-price">Sports romance · Costa Brava</span>
+                <span class="yk-price">Sports romance · Ebook on Amazon</span>
               </div>
             </a>
           </li>
@@ -256,7 +295,7 @@
               <div class="yk-cover-cap">
                 <strong>To Stay</strong>
                 <span>Nick Conenna · Alternate-history space fiction</span>
-                <span class="yk-price">Standalone novel</span>
+                <span class="yk-price">Standalone novel · Ebook and paperback</span>
               </div>
             </a>
           </li>
@@ -266,11 +305,77 @@
               <div class="yk-cover-cap">
                 <strong>The Pace</strong>
                 <span>Nick Conenna · The Cubit and the Quark, Book I</span>
-                <span class="yk-price">Thriller · Revised edition forthcoming</span>
+                <span class="yk-price">Thriller · Ebook and paperback</span>
               </div>
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Trip guides: the interactive guides for the two series -->
+    <section class="yk-guides" id="guides" aria-labelledby="guides-title">
+      <div class="container">
+        <div class="yk-guides-head">
+          <h2 id="guides-title">Read the book, then plan the trip.</h2>
+          <p>
+            The YSKAIPE Guides are interactive trip guides to the places in our series, with real dates,
+            real itineraries, and nothing sponsored. No email needed.
+          </p>
+        </div>
+
+        <div class="yk-guides-grid">
+          <article class="yk-guide-card is-tides">
+            <div class="yk-guide-card-head">
+              <img src="images/cover-tobi.jpeg" alt="" loading="lazy" decoding="async">
+              <div>
+                <p>Trip guide · Southport and the Cape Fear coast</p>
+                <h3>The Tidewater Novels</h3>
+              </div>
+            </div>
+            <p class="yk-guide-card-lead">
+              The characters are invented. Hurricane Hazel, Southport, and Battery Island are not. Follow
+              the real storm of 1954, then plan the coast trip behind the books.
+            </p>
+            <ul>
+              <li><b>The storm was real</b><span>Follow Hazel from its first day to landfall on 15 October 1954.</span></li>
+              <li><b>The year on the river</b><span>When the birds nest, when the storms come, when the boats come out.</span></li>
+              <li><b>Which hour is yours?</b><span>Four questions pick the book and the trip that fit you.</span></li>
+              <li><b>Trip Book</b><span>Gather the stops you want and carry the plan with you.</span></li>
+            </ul>
+            <div class="yk-buy">
+              <a href="series/tidewater.html" class="btn btn-primary">Open the Tidewater guide</a>
+            </div>
+          </article>
+
+          <article class="yk-guide-card is-pitch">
+            <div class="yk-guide-card-head">
+              <img src="images/cover-stoppage-time.jpg" alt="" loading="lazy" decoding="async">
+              <div>
+                <p>Trip guide · Six real festivals</p>
+                <h3>The Festival League</h3>
+              </div>
+            </div>
+            <p class="yk-guide-card-lead">
+              Every book sends the squad to a real festival. Pick a pin on the map, read the honest
+              version, and go.
+            </p>
+            <ul>
+              <li><b>The map</b><span>Stoppage Time's route, and where the series goes next.</span></li>
+              <li><b>The lineup and the season</b><span>Every festival in calendar order, with the next dates coming up.</span></li>
+              <li><b>Which escape is yours?</b><span>Four questions, no wrong answers.</span></li>
+              <li><b>Trip Book</b><span>Gather the stops you want and carry the plan with you.</span></li>
+            </ul>
+            <div class="yk-buy">
+              <a href="series/festival-league.html" class="btn btn-primary">Plan the Festival League trip</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="yk-guides-note">
+          Dates, hours, and schedules change. Each guide reminds you to confirm with the organizers
+          before you book anything non-refundable.
+        </p>
       </div>
     </section>
 
@@ -310,7 +415,7 @@
             <div class="yk-pricetag">$5.99<small>all three novelettes</small></div>
             <a href="#launch-list" class="btn btn-primary">Get launch news</a>
             <!-- When live: <a href="#kdp-tides" class="btn btn-primary">Get it on Kindle</a> -->
-            <a href="series/tidewater.html" class="btn btn-outline">About the Tidewater Novels</a>
+            <a href="series/tidewater.html" class="btn btn-outline">Explore the trip guide</a>
           </div>
         </div>
       </div>
@@ -340,7 +445,7 @@
           <ol class="yk-order">
             <li>
               <span><b>Stoppage Time</b>
-              <small>Costa Brava, Spain · Manuscript complete, KDP release coming</small></span>
+              <small>Costa Brava, Spain · Available now on Amazon, paperback coming soon</small></span>
             </li>
             <li>
               <span><b>Clean Sheet</b>
@@ -356,10 +461,10 @@
           </ol>
 
           <div class="yk-buy">
-            <a href="#launch-list" class="btn btn-primary">Get launch news</a>
-            <!-- When live: <a href="#kdp-stoppage-time" class="btn btn-primary">Get Stoppage Time on Kindle</a> -->
-            <a href="series/festival-league.html" class="btn btn-outline">About the series</a>
+            <a href="https://www.amazon.com/dp/B0GX3B5SYV" class="btn btn-primary" target="_blank" rel="noopener">Get Stoppage Time on Kindle</a>
+            <a href="series/festival-league.html" class="btn btn-outline">Plan the trip</a>
           </div>
+          <p class="yk-format-note">Ebook available now. Paperback coming soon.</p>
         </div>
       </div>
     </section>
@@ -388,11 +493,12 @@
           <dl class="yk-facts">
             <dt>Genre</dt><dd>Alternate-history space fiction</dd>
             <dt>Setting</dt><dd>Siena and Florence, low Earth orbit, the Moon, and the far edge of the solar system</dd>
-            <dt>Status</dt><dd>Available now on KDP</dd>
+            <dt>Format</dt><dd>Ebook and paperback</dd>
+            <dt>Status</dt><dd>Available now on Amazon</dd>
           </dl>
 
           <div class="yk-buy">
-            <a href="#kdp-to-stay" class="btn btn-primary">Get it on Kindle</a>
+            <a href="https://www.amazon.com/dp/B0HHPYR2WM" class="btn btn-primary" target="_blank" rel="noopener">Get it on Amazon</a>
             <a href="series/to-stay.html" class="btn btn-outline">About the book</a>
           </div>
         </div>
@@ -422,16 +528,17 @@
           </p>
 
           <ol class="yk-order">
-            <li><span><b>The Pace</b><small>Book I · Revised edition forthcoming</small></span></li>
+            <li><span><b>The Pace</b><small>Book I · Available now, ebook and paperback</small></span></li>
             <li class="later"><span><b>The Fathom</b><small>Book II · In the works</small></span></li>
             <li class="later"><span><b>The Breath</b><small>Book III · In the works</small></span></li>
             <li class="later"><span><b>The Standard</b><small>Book IV · In the works</small></span></li>
           </ol>
 
           <div class="yk-buy">
-            <a href="#launch-list" class="btn btn-primary">Get launch news</a>
+            <a href="https://www.amazon.com/dp/B0HHGJ5B59" class="btn btn-primary" target="_blank" rel="noopener">Get The Pace on Amazon</a>
             <a href="series/cubit-and-quark.html" class="btn btn-outline">About the series</a>
           </div>
+          <p class="yk-format-note">Ebook and paperback available now.</p>
         </div>
       </div>
     </section>
@@ -446,7 +553,10 @@
             towns, coasts, and landmarks you just read about. Where to stand, what to see, what the
             characters would have eaten.
           </p>
-          <p>That's the YSKAIPE promise. The story is the escape, and the guide is how you make it real.</p>
+          <p>
+            That's the YSKAIPE promise. The story is the escape, and the guide is how you make it real.
+            <a href="#guides">Explore the online trip guides.</a>
+          </p>
         </div>
         <div class="yk-guide-sample">
           <h3>Companion guide</h3>
