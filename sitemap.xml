@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Homepage (canonical is the root, not /index.html) -->
   <url>
     <loc>https://www.yskaipe.com/</loc>
     <lastmod>2026-09-21</lastmod>
+    <image:image><image:loc>https://www.yskaipe.com/images/yskaipe-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.yskaipe.com/images/cover-tobi.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.yskaipe.com/images/cover-stoppage-time.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.yskaipe.com/images/cover-to-stay.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.yskaipe.com/images/cover-the-pace.jpg</image:loc></image:image>
   </url>
 
   <!-- Trip guides (virtual worlds): the main destination-search pages -->
