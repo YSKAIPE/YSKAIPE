@@ -1,247 +1,1410 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tidewater Novels — YSKAIPE</title>
-  <meta name="description" content="The Tidewater Novels from YSKAIPE — historical fiction along the Cape Fear, opening with The Tides of Battery Island by Dee Conenna.">
-  <link rel="stylesheet" href="../css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tidewater Novels | Deb Conenna | YSKAIPE Publishing</title>
+<meta name="description" content="The Tidewater Novels by Deb Conenna: a dual-timeline historical romance set in Southport, North Carolina, with Hurricane Hazel at its heart. Meet the trilogy, follow the real storm, and plan the trip behind the books.">
+<meta name="theme-color" content="#0B1D2C">
+<link rel="canonical" href="https://www.yskaipe.com/series/tidewater.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YSKAIPE Publishing">
+<meta property="og:title" content="The Tidewater Novels | Deb Conenna">
+<meta property="og:description" content="Seventy years. One secret. Two women who loved the same water. A dual-timeline historical romance on the Cape Fear coast, with a real trip behind every book.">
+<meta property="og:url" content="https://www.yskaipe.com/series/tidewater.html">
+<meta property="og:image" content="https://www.yskaipe.com/images/cover-tobi.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BookSeries","name":"The Tidewater Novels","url":"https://www.yskaipe.com/series/tidewater.html","description":"A dual-timeline historical romance set in Southport, North Carolina, with Hurricane Hazel at its heart.","author":{"@type":"Person","name":"Deb Conenna"},"publisher":{"@type":"Organization","name":"YSKAIPE Publishing","url":"https://www.yskaipe.com/"},"image":"https://www.yskaipe.com/images/cover-tobi.jpeg","genre":"Historical romance","hasPart":[{"@type":"Book","name":"Before the Reckoning","position":1,"author":{"@type":"Person","name":"Deb Conenna"}},{"@type":"Book","name":"What the Water Kept Hidden","position":2,"author":{"@type":"Person","name":"Deb Conenna"}},{"@type":"Book","name":"After the Reckoning","position":3,"author":{"@type":"Person","name":"Deb Conenna"}}]}
+</script>
+<style>
+:root{
+  --ink:#0B1D2C; --deep:#123449; --tide:#1B4A63; --sage:#9DB59A; --sage-d:#5F7F63; --brass:#C9A24D; --coral:#D98872;
+  --mist:#EAF0EE; --paper:#F7FAF8; --line:#C4D2CD; --silver:#C9D6DE; --text:#1B2B36; --muted:#4A6070;
+  --display:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  /* default kit = night */
+  --k-bg:#0A1A2A; --k-fg:#E6EEF3; --k-accent:#C9A24D; --k-on:#0A1A2A; --k-soft:rgba(255,255,255,.07); --k-line:rgba(255,255,255,.22);
+}
+.kit-dusk{--k-bg:#2E2440; --k-fg:#FBEEE8; --k-accent:#EBA37A; --k-on:#2A1622; --k-soft:rgba(255,255,255,.08); --k-line:rgba(251,238,232,.28)}
+.kit-night{--k-bg:#0A1A2A; --k-fg:#E6EEF3; --k-accent:#C9A24D; --k-on:#0A1A2A; --k-soft:rgba(255,255,255,.07); --k-line:rgba(255,255,255,.24)}
+.kit-dawn{--k-bg:#F4DDD2; --k-fg:#23243A; --k-accent:#1F5F7A; --k-on:#FFFFFF; --k-soft:rgba(35,36,58,.07); --k-line:rgba(35,36,58,.28)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--text);font:400 1.0625rem/1.62 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.04;margin:0;letter-spacing:-.012em}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--brass);color:#1B1305;padding:.6rem 1rem;z-index:200;font:700 1rem var(--sans)}
+.skip:focus{left:8px;top:8px}
 
-  <!-- Scoped .tw-* rules for this series page. Falls back gracefully if a
-       token isn't defined in style.css; move into style.css when ready. -->
-  <style>
-    .tw-hero{
-      display:grid;
-      grid-template-columns:0.82fr 1.18fr;
-      gap:48px;
-      align-items:start;
-    }
-    .tw-cover{position:relative;border:1px solid var(--border, rgba(255,255,255,0.1));border-radius:8px;overflow:hidden;background:#F3E9D2;}
-    .tw-cover svg{display:block;width:100%;height:auto;}
-    .tw-cover-caption{
-      margin:0;padding:10px 14px;
-      font-size:0.78rem;font-style:italic;text-align:center;
-      color:#8B6239;background:#EAD9AF;
-      border-top:1px solid rgba(110,75,42,0.25);
-    }
-    .tw-series-label{color:var(--accent, #c8a05a);font-size:0.95rem;margin:0 0 6px;}
-    .tw-lead{color:var(--text-muted, #9a9188);max-width:60ch;margin:16px 0 28px;font-size:1.02rem;}
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:60;height:64px;display:flex;align-items:center;gap:1rem;padding:0 clamp(1rem,3vw,2.5rem);background:rgba(8,20,32,.93);backdrop-filter:blur(8px);color:#fff}
+.brand{font:700 1.05rem/1 var(--sans);text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+.here{display:flex;flex-direction:column;border-left:1px solid rgba(255,255,255,.28);padding-left:1rem;text-decoration:none;white-space:nowrap}
+.here b{font:600 1.15rem/1.1 var(--display)}
+.here small{font:400 .8rem/1.2 var(--sans);opacity:.7}
+.nav{display:flex;gap:1.35rem;margin-left:auto;align-items:center}
+.nav a{color:#fff;text-decoration:none;font:500 .98rem var(--sans);opacity:.86}
+.nav a:hover{opacity:1;text-decoration:underline;text-decoration-color:var(--brass);text-decoration-thickness:2px;text-underline-offset:7px}
+.tb-open{display:inline-flex;align-items:center;gap:.55rem;background:transparent;border:2px solid var(--brass);color:#fff;padding:.32rem .8rem;font:600 .98rem var(--sans);cursor:pointer}
+.tb-open:hover{background:var(--brass);color:#1B1305}
+.tb-count{min-width:1.45rem;height:1.45rem;background:var(--brass);color:#1B1305;display:inline-grid;place-items:center;border-radius:99px;font-size:.88rem;padding:0 .35rem}
+.tb-open:hover .tb-count{background:#1B1305;color:var(--brass)}
+@media (max-width:980px){.nav a{display:none}.nav{margin-left:auto}}
+@media (max-width:520px){.site-head{gap:.6rem;padding:0 .8rem}.here small{display:none}.here{padding-left:.6rem}.here b{font-size:.98rem}.brand{font-size:.8rem}.tb-open{padding:.28rem .55rem;font-size:.88rem;gap:.35rem}.tb-count{min-width:1.25rem;height:1.25rem;font-size:.78rem}}
 
-    .tw-stub{
-      border:1px solid var(--border, rgba(255,255,255,0.1));
-      border-left:3px solid var(--accent, #c8a05a);
-      border-radius:6px;
-      padding:20px 24px;
-      margin:0 0 24px;
-    }
-    .tw-fields{display:grid;grid-template-columns:auto 1fr;row-gap:9px;column-gap:24px;margin:0;}
-    .tw-fields dt{
-      font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;
-      color:var(--accent, #c8a05a);white-space:nowrap;padding-top:3px;
-    }
-    .tw-fields dd{margin:0;font-size:0.94rem;}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:600 1rem/1.1 var(--sans);padding:.8rem 1.15rem;border:2px solid var(--k-accent);cursor:pointer;text-decoration:none;background:none;color:var(--k-fg)}
+.btn.solid{background:var(--k-accent);color:var(--k-on)}
+.btn.solid:hover{filter:brightness(1.08)}
+.btn:not(.solid):hover{background:var(--k-accent);color:var(--k-on)}
+.btn.small{font-size:.93rem;padding:.5rem .8rem}
+.btn[aria-pressed="true"]:not(.solid){background:transparent}
+.btn.solid[aria-pressed="true"]{background:transparent;color:var(--k-fg);border-color:var(--k-fg)}
 
-    .tw-book-row{
-      display:grid;
-      grid-template-columns:120px 1fr;
-      gap:24px;
-      padding:26px 0;
-      border-top:1px solid var(--border, rgba(255,255,255,0.1));
-      align-items:start;
-    }
-    .tw-book-row:first-of-type{border-top:none;}
-    .tw-book-thumb{
-      background:linear-gradient(160deg, #2a241c 0%, #151310 100%);
-      border:1px solid var(--border, rgba(255,255,255,0.1));
-      border-radius:6px;
-      height:168px;
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;padding:12px;
-    }
-    .tw-book-thumb span{font-size:0.85rem;color:var(--accent-soft, #c8a05a);line-height:1.3;}
-    .tw-book-num{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent, #c8a05a);margin:0 0 6px;}
-    .tw-book-title{font-size:1.3rem;margin:0 0 6px;}
-    .tw-book-status{font-style:italic;color:var(--text-muted, #9a9188);font-size:0.9rem;margin:0 0 10px;}
-    .tw-book-desc{color:var(--text-muted, #9a9188);font-size:0.95rem;max-width:64ch;margin:0;}
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:#fff;isolation:isolate}
+.hero-art{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-scrim{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(180deg,rgba(7,18,28,.5) 0%,rgba(7,18,28,0) 30%,rgba(7,18,28,0) 46%,rgba(7,18,28,.86) 100%),
+  radial-gradient(85% 75% at 0% 28%,rgba(7,18,28,.62),transparent 68%)}
+.hero-in{position:relative;max-width:1320px;margin:0 auto;min-height:calc(100svh - 64px);padding:clamp(1.6rem,4.5vw,3.4rem) clamp(1rem,3vw,2.5rem) 1.6rem;display:flex;flex-direction:column;justify-content:space-between;gap:2.4rem}
+.hero h1{font-size:clamp(3.2rem,6.6vw,6.4rem);font-weight:600;line-height:.92;letter-spacing:-.025em;max-width:14ch;text-shadow:0 2px 30px rgba(6,16,26,.45)}
+.hook{font:italic 400 clamp(1.25rem,2vw,1.6rem)/1.25 var(--display);max-width:32ch;margin-top:1rem;color:#F4E9DD;text-shadow:0 1px 18px rgba(6,16,26,.6)}
+.by{max-width:46ch;margin-top:.9rem;font-size:1rem;line-height:1.5;color:#DCE7EC;text-shadow:0 1px 14px rgba(6,16,26,.6)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.hero .btn{--k-accent:var(--brass);--k-on:#1B1305;--k-fg:#fff}
+.kick{position:absolute;top:clamp(1.6rem,4.5vw,3.4rem);right:clamp(1rem,3vw,2.5rem);max-width:19rem;text-align:right;margin:0;font-size:1rem;line-height:1.45;color:#E8F0F3;text-shadow:0 1px 12px rgba(6,16,26,.6)}
+.kick b{font:700 1.5rem/1 var(--display);color:#fff;white-space:nowrap}
+.kick a{color:var(--brass);font-weight:600;text-underline-offset:4px}
 
-    @media (max-width:820px){
-      .tw-hero{grid-template-columns:1fr;gap:32px;}
-      .tw-cover{max-width:340px;}
-      .tw-book-row{grid-template-columns:1fr;}
-      .tw-book-thumb{height:140px;max-width:220px;}
-    }
-  </style>
+.tidebar{max-width:820px}
+.tb-lab{font:600 1rem var(--sans);color:#fff;text-shadow:0 1px 10px rgba(6,16,26,.7);display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.tb-lab span{font-weight:400;opacity:.8;font-size:.92rem}
+.ro{margin:.5rem 0 .2rem;max-width:40rem}
+.ro-t{font:600 clamp(1.7rem,3.2vw,2.5rem)/1.05 var(--display);color:#fff;text-shadow:0 1px 20px rgba(6,16,26,.6)}
+.ro-p{margin-top:.4rem;font-size:1.05rem;line-height:1.45;color:#E5EDF0;text-shadow:0 1px 14px rgba(6,16,26,.7)}
+.ro-a{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.9rem}
+.tide-range{width:100%;-webkit-appearance:none;appearance:none;background:transparent;height:38px;margin:.35rem 0 0;cursor:grab;display:block}
+.tide-range:active{cursor:grabbing}
+.tide-range::-webkit-slider-runnable-track{height:4px;border-radius:3px;background:linear-gradient(90deg,#EBA37A,#C9D6DE 50%,#F6D9A4)}
+.tide-range::-moz-range-track{height:4px;border-radius:3px;background:linear-gradient(90deg,#EBA37A,#C9D6DE 50%,#F6D9A4)}
+.tide-range::-webkit-slider-thumb{-webkit-appearance:none;width:32px;height:32px;border-radius:50%;background:var(--brass);border:4px solid #0B1D2C;margin-top:-14px;box-shadow:0 0 0 2px var(--brass),0 4px 14px rgba(0,0,0,.4)}
+.tide-range::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--brass);border:4px solid #0B1D2C;box-shadow:0 0 0 2px var(--brass),0 4px 14px rgba(0,0,0,.4)}
+.stops3{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.1rem}
+.stop3{background:none;border:0;padding:.2rem 0;cursor:pointer;color:#fff;opacity:.72;font:500 .95rem/1.25 var(--sans);text-shadow:0 1px 10px rgba(6,16,26,.8);text-align:left}
+.stop3:nth-child(2){text-align:center}.stop3:nth-child(3){text-align:right}
+.stop3 b{display:block;font:600 1.02rem/1.15 var(--display)}
+.stop3[aria-current="true"]{opacity:1}
+.stop3[aria-current="true"] b{text-decoration:underline;text-decoration-color:var(--brass);text-decoration-thickness:3px;text-underline-offset:5px}
+@media (max-width:900px){
+  .hero-art{position:relative;height:82vw;min-height:290px;max-height:520px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(7,18,28,0) 60%,rgba(11,29,44,1) 100%)}
+  .hero-in{min-height:0;padding-top:.4rem}
+  .hero h1{max-width:none}
+  .kick{position:static;text-align:left;max-width:none;margin-top:1.1rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.3)}
+  .stop3 span{display:none}
+  .stop3{font-size:.86rem}
+}
+
+/* scene animation */
+.flock{animation:fly 52s linear infinite}
+@keyframes fly{from{transform:translateX(-200px)}to{transform:translateX(1400px)}}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5.6s ease-in-out infinite alternate}
+.sw2{animation-duration:7.2s;animation-delay:-2s}.sw3{animation-duration:6.3s;animation-delay:-3.4s}.sw4{animation-duration:8s;animation-delay:-1s}.sw5{animation-duration:5.1s;animation-delay:-4s}.sw6{animation-duration:6.9s;animation-delay:-.5s}
+@keyframes sway{from{transform:rotate(-1.5deg)}to{transform:rotate(1.7deg)}}
+.drift{animation:drift 80s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translateX(-50px)}to{transform:translateX(60px)}}
+.ripple{transform-box:fill-box;transform-origin:center;animation:rip 3.4s ease-out infinite}
+.ripple.r2{animation-delay:-1.7s}
+@keyframes rip{0%{transform:scale(.5);opacity:.75}100%{transform:scale(2.3);opacity:0}}
+.still *{animation:none!important}
+@media (prefers-reduced-motion:reduce){.flock,.sway,.drift,.ripple,.wave{animation:none!important}html{scroll-behavior:auto}}
+
+/* ---------- sections ---------- */
+.section{padding:clamp(3.4rem,7.5vw,6.4rem) clamp(1rem,3vw,2.5rem)}
+.wrap{max-width:1200px;margin:0 auto}
+.sec-title{font-size:clamp(2.5rem,5.8vw,4.8rem);line-height:.98}
+.sec-sub{max-width:54ch;margin-top:1rem;font-size:1.2rem;line-height:1.55;color:var(--muted)}
+
+/* books */
+.books{background:var(--mist)}
+.b-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end}
+.series-box{display:flex;gap:1rem;align-items:flex-end;font-size:.95rem;color:var(--muted);max-width:19rem}
+.series-box img{width:96px;height:auto;display:block;box-shadow:0 10px 26px rgba(11,29,44,.28);flex:none}
+.series-box p{line-height:1.35}
+.series-box b{display:block;color:var(--text);font:600 1.02rem/1.2 var(--display);margin-bottom:.2rem}
+.plates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.4vw,2rem);align-items:start;margin-top:3rem}
+.plate{background:var(--k-bg);color:var(--k-fg);scroll-margin-top:84px}
+.plate:nth-child(2){margin-top:3.4rem}.plate:nth-child(3){margin-top:6.8rem}
+.plate-art{aspect-ratio:5/4;overflow:hidden;position:relative;border-bottom:4px solid var(--k-accent)}
+.plate-art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.plate-body{padding:1.3rem 1.4rem 1.6rem}
+.plate-n{font:600 3.6rem/.8 var(--display);color:var(--k-accent)}
+.plate h3{font-size:clamp(1.7rem,2.6vw,2.2rem);margin-top:.5rem;line-height:1.02}
+.plate-hour{margin-top:.35rem;font:italic 400 1.02rem var(--display);opacity:.85}
+.plate .blurb{margin-top:1rem;font-size:1.02rem;line-height:1.55}
+.threads{margin:1.1rem 0 0;display:grid;gap:.6rem}
+.thread{display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:.6rem;border-top:1px solid var(--k-line);padding-top:.6rem;font-size:.96rem;line-height:1.42}
+.thread b{font:600 1.05rem/1.2 var(--display);color:var(--k-accent)}
+.plate .feel{margin-top:1rem;font:italic 400 1.02rem/1.4 var(--display)}
+.plate-a{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.cast{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:4.5rem;border-top:2px solid var(--ink)}
+.cast>div{padding:1.1rem 1.4rem 0 0}
+.cast>div+div{padding-left:1.4rem;border-left:1px solid var(--line)}
+.cast h3{font-size:1.5rem}
+.cast p{margin-top:.35rem;color:var(--muted);font-size:1rem;line-height:1.5}
+@media (max-width:959px){
+  .plates{grid-template-columns:1fr;max-width:34rem}
+  .plate:nth-child(2),.plate:nth-child(3){margin-top:0}
+  .b-head{grid-template-columns:1fr}
+  .cast{grid-template-columns:1fr}.cast>div,.cast>div+div{padding:1rem 0;border-left:0;border-top:1px solid var(--line)}
+}
+
+/* hazel */
+.hazel{background:var(--ink);color:#E9F0F3}
+.hz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(1.5rem,4vw,4rem);margin-top:2.4rem;align-items:start}
+.hazel .sec-sub{color:#B9CBD3}
+.hz-tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.3rem}
+.hz-tab{background:transparent;border:2px solid rgba(255,255,255,.28);padding:.45rem .9rem;font:600 1rem var(--sans);cursor:pointer;color:#E9F0F3}
+.hz-tab:hover{border-color:var(--brass)}
+.hz-tab[aria-selected="true"]{background:var(--brass);border-color:var(--brass);color:#1B1305}
+.hz-card{min-height:16rem}
+.hz-d{font:600 clamp(3rem,6vw,5rem)/.9 var(--display);color:var(--brass)}
+.hz-h{font:600 clamp(1.7rem,3vw,2.4rem)/1.05 var(--display);margin-top:.6rem}
+.hz-p{margin-top:.9rem;font-size:1.12rem;line-height:1.6;max-width:50ch}
+.hz-nav{display:flex;gap:.6rem;margin-top:1.3rem}
+.hz-nav .btn{--k-accent:var(--brass);--k-fg:#fff;--k-on:#1B1305}
+.hz-note{margin-top:1.6rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.2);font:italic 400 1.05rem/1.5 var(--display);color:#C9D9E0;max-width:50ch}
+.gauge{position:sticky;top:84px}
+.gauge svg{width:100%;height:auto;display:block;max-height:78vh}
+.gauge .cap{margin-top:.5rem;font-size:.95rem;color:#B9CBD3;line-height:1.4}
+.wave{animation:wv 6s linear infinite}
+@keyframes wv{from{transform:translateX(0)}to{transform:translateX(-160px)}}
+.srcs{margin-top:1.2rem;font-size:.95rem;color:#B9CBD3;line-height:1.6}
+.srcs a{text-underline-offset:4px}
+@media (max-width:900px){.hz{grid-template-columns:1fr}.gauge{position:static;max-width:24rem}}
+
+/* season */
+.season{background:var(--mist)}
+.gantt{margin-top:2.2rem;background:var(--paper);border:1px solid var(--line);padding:1rem clamp(.8rem,2vw,1.6rem) 1.5rem}
+.g-months{display:grid;grid-template-columns:repeat(12,1fr);font:600 .85rem var(--sans);color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:.45rem}
+.g-months span{text-align:center}
+.g-months .now{color:var(--ink);font-weight:700}
+.g-body{position:relative}
+.g-row{margin-top:1rem}
+.g-lbl{font:600 1rem/1.3 var(--sans)}
+.g-lbl i{font-style:normal;font-weight:400;color:var(--muted)}
+.g-track{display:grid;grid-template-columns:repeat(12,1fr);height:18px;margin-top:.35rem;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(100%/12 - 1px),var(--line) calc(100%/12 - 1px),var(--line) calc(100%/12))}
+.g-bar{height:100%;border-radius:2px;background:var(--b,var(--tide))}
+.g-bar.closed{background:repeating-linear-gradient(135deg,#8B9AA5 0 5px,#B9C4CB 5px 10px)}
+.g-today{position:absolute;top:0;bottom:0;width:2px;background:var(--coral);opacity:.55;pointer-events:none}
+.g-today::after{content:"today";position:absolute;top:-1.55rem;left:50%;transform:translateX(-50%);font:600 .78rem var(--sans);color:var(--coral);background:var(--paper);padding:0 .25rem}
+.g-dots{position:relative;height:40px;margin-top:.5rem}
+.g-dot{position:absolute;top:2px;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;border:0;background:var(--k-bg);color:var(--k-fg);font:700 .85rem var(--sans);cursor:pointer;box-shadow:0 0 0 3px var(--paper),0 0 0 4px rgba(0,0,0,.25)}
+.g-dot:hover{transform:translateX(-50%) scale(1.12)}
+.g-note{margin-top:.25rem;font-size:.92rem;color:var(--muted);line-height:1.4;max-width:60ch}
+.fixtures{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:.9rem}
+.fx{display:grid;grid-template-columns:130px minmax(0,1fr) auto;background:#fff;border:1px solid var(--line);scroll-margin-top:90px}
+.fx.flash{animation:flash 1.4s}
+@keyframes flash{0%,60%{box-shadow:0 0 0 4px var(--brass)}100%{box-shadow:0 0 0 0 transparent}}
+.fx-date{background:var(--k-bg);color:var(--k-fg);padding:1rem .8rem;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.fx-date .d{font:600 2.6rem/1 var(--display)}
+.fx-date .m{font:600 1rem var(--sans);margin-top:.15rem;opacity:.9}
+.fx-main{padding:1rem 1.3rem}
+.fx-main h3{font-size:1.6rem}
+.fx-main .pl{margin-top:.25rem;font-size:1rem;color:var(--muted)}
+.fx-main .nt{margin-top:.5rem;font-size:1rem;color:var(--text)}
+.fx-side{padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem;align-items:flex-end;justify-content:center;text-align:right}
+.when{font:600 1.35rem/1 var(--display)}
+.tag{display:inline-block;font:600 .85rem var(--sans);padding:.15rem .6rem;border-radius:99px;background:#E1EAE6;color:#2B4350}
+.fx .btn{--k-accent:var(--ink);--k-fg:var(--ink);--k-on:#fff}
+@media (max-width:760px){
+  .fx{grid-template-columns:96px minmax(0,1fr)}
+  .fx-side{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;text-align:left;border-top:1px solid var(--line)}
+  .fx-date .d{font-size:2rem}
+  .g-months span{font-size:.7rem}
+}
+
+/* quiz */
+.quiz-sec{background:var(--deep);color:#fff}
+.quiz-sec .sec-sub{color:#C5D6DD}
+.quiz{margin-top:2rem;max-width:860px}
+.q-prog{display:flex;gap:.45rem;margin-bottom:1.3rem}
+.q-prog i{flex:1;height:5px;background:rgba(255,255,255,.2)}
+.q-prog i.done{background:var(--brass)}
+.q-q{font:600 clamp(1.8rem,3.8vw,2.8rem)/1.08 var(--display)}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.4rem}
+.q-opt{text-align:left;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.22);padding:1rem 1.15rem;font:400 1.08rem/1.35 var(--sans);cursor:pointer;color:#fff;min-height:5rem}
+.q-opt:hover{border-color:var(--brass);background:rgba(255,255,255,.1)}
+.q-opt.picked{background:var(--brass);color:#1B1305;border-color:var(--brass)}
+.q-back{margin-top:1.1rem;background:none;border:0;color:#B9CBD1;font:400 1rem var(--sans);cursor:pointer;text-decoration:underline;padding:0}
+@media (max-width:640px){.q-opts{grid-template-columns:1fr}}
+.q-win{background:var(--k-bg);color:var(--k-fg);padding:1.4rem 1.5rem 1.5rem;border-left:10px solid var(--k-accent)}
+.q-win .n{font:600 5rem/.8 var(--display);color:var(--k-accent)}
+.q-win h3{font-size:2.4rem;margin-top:.5rem}
+.q-win p{margin-top:.6rem;max-width:52ch}
+.q-win .acts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem}
+.q-alt{margin-top:1rem;font-size:1.02rem;color:#C5D6DD}
+.q-alt button{background:none;border:0;padding:0;color:#fff;text-decoration:underline;cursor:pointer;font:inherit}
+
+/* escapes */
+.esc-intro{background:var(--mist)}
+.esc-intro .chips{margin-top:1.4rem}
+.esc-intro .chip{border-color:var(--ink);font:600 1rem var(--sans);padding:.35rem .95rem}
+.esc-intro .chip:hover{background:var(--ink);color:#fff}
+.escape{background:var(--k-bg);color:var(--k-fg);scroll-margin-top:64px}
+.esc-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.2fr);gap:clamp(1.5rem,4vw,4.5rem);max-width:1320px;margin:0 auto;padding:clamp(3rem,7vw,6rem) clamp(1rem,3vw,2.5rem)}
+.esc-side{position:sticky;top:84px;align-self:start}
+.jersey{font:600 clamp(5rem,9vw,7.5rem)/.8 var(--display);color:var(--k-accent)}
+.esc-side h2{font-size:clamp(2.5rem,4.8vw,4.2rem);line-height:.98;margin-top:.5rem}
+.esc-book{margin-top:.6rem;font:italic 400 1.25rem/1.3 var(--display);opacity:.9}
+.esc-tag{font-size:1.15rem;line-height:1.5;margin-top:1rem;max-width:36ch}
+.esc-where{margin-top:.7rem;font:600 1rem var(--sans);opacity:.85}
+.esc-art{margin-top:1.5rem}
+.esc-art svg{display:block;width:100%;height:auto;outline:2px solid var(--k-line);outline-offset:8px}
+.blk{border-top:1px solid var(--k-line);padding-top:1.5rem;margin-top:2rem}
+.blk:first-child{border-top:0;margin-top:0;padding-top:0}
+.blk h3{font-size:1.7rem;margin-bottom:.8rem}
+.fest{background:var(--k-soft);border-left:7px solid var(--k-accent);padding:1.4rem 1.5rem}
+.fest h3{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:0}
+.fest h4{font-size:1.3rem;margin:1.2rem 0 .5rem}
+.fest-lead{margin-top:.8rem}
+.honest{margin:0;padding:0;list-style:none;display:grid;gap:.7rem}
+.honest li{padding-left:1.5rem;position:relative}
+.honest li::before{content:"";position:absolute;left:0;top:.55em;width:.7rem;height:.7rem;border-radius:50%;background:var(--k-accent)}
+.tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.2rem}
+.tab{font:600 1rem var(--sans);padding:.45rem .9rem;background:transparent;border:2px solid var(--k-line);cursor:pointer}
+.tab:hover{border-color:var(--k-accent)}
+.tab[aria-selected="true"]{background:var(--k-accent);color:var(--k-on);border-color:var(--k-accent)}
+.stops{list-style:none;margin:0;padding:0 0 0 1.7rem;position:relative;display:grid;gap:1.2rem}
+.stops::before{content:"";position:absolute;left:5px;top:.7rem;bottom:.7rem;width:2px;background:var(--k-line)}
+.stop{position:relative}
+.stop::before{content:"";position:absolute;left:-1.7rem;top:.42rem;width:12px;height:12px;border-radius:50%;background:var(--k-accent);box-shadow:0 0 0 4px var(--k-bg)}
+.stop h4{font:600 1.3rem/1.15 var(--display)}
+.stop p{margin-top:.25rem}
+.stop-a{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:.4rem}
+.stop-a a,.save{font:600 .95rem var(--sans);text-underline-offset:4px}
+.save{background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.save.on{text-decoration:none;color:var(--k-accent);font-weight:700}
+.stretch{margin-top:1.1rem;font-style:italic;opacity:.92}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.trio h4{font-size:1.25rem;margin-bottom:.4rem}
+.trio ul{margin:0;padding-left:1.1rem}.trio li{margin:.2rem 0}
+.sig{background:var(--k-accent);color:var(--k-on);padding:1.2rem 1.3rem}
+.sig h4{font-size:1.45rem}
+.sig p{margin-top:.35rem;font-size:1.05rem}
+@media (max-width:1000px){.trio{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.trio{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{border:1px solid var(--k-line);padding:.25rem .8rem;border-radius:99px;font-size:1rem;text-decoration:none}
+a.chip:hover{background:var(--k-accent);color:var(--k-on);border-color:var(--k-accent)}
+.acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.esc-srcs{margin-top:1rem;font-size:.98rem;opacity:.92}
+.esc-srcs a{text-underline-offset:4px}
+.status-note{margin-top:1rem;font:italic 400 1.05rem/1.45 var(--display);opacity:.9}
+@media (max-width:900px){.esc-in{grid-template-columns:1fr}.esc-side{position:static}}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:#fff;padding:clamp(3.5rem,8vw,7rem) clamp(1rem,3vw,2.5rem) 2.5rem}
+.foot h2{font-size:clamp(2.8rem,7.5vw,6.6rem);line-height:.92;max-width:13ch;letter-spacing:-.02em}
+.foot p{max-width:56ch;margin-top:1.3rem;font-size:1.15rem;color:#D3E1E5}
+.foot .btn{--k-accent:var(--brass);--k-fg:#fff;--k-on:#1B1305}
+.foot .hero-cta{margin-top:1.6rem}
+.fcols{max-width:1200px;margin:3.5rem auto 0;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.fcols h4{font:600 1.1rem var(--display);margin-bottom:.5rem}
+.fcols a{display:block;color:#C5D6DD;text-decoration:none;padding:.15rem 0}
+.fcols a:hover{color:#fff;text-decoration:underline}
+.fine{max-width:1200px;margin:2.2rem auto 0;font-size:.95rem;color:#AFC1C8;line-height:1.55}
+@media (max-width:700px){.fcols{grid-template-columns:1fr}}
+
+/* ---------- trip book ---------- */
+.veil{position:fixed;inset:0;background:rgba(6,18,26,.6);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s}
+.veil.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--paper);color:var(--text);z-index:90;transform:translateX(102%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.25)}
+.drawer.on{transform:none;visibility:visible;transition:transform .3s ease}
+.dr-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.3rem;background:var(--ink);color:#fff}
+.dr-head h2{font-size:1.9rem}
+.dr-close{background:none;border:2px solid rgba(255,255,255,.5);color:#fff;font:600 1rem var(--sans);padding:.3rem .8rem;cursor:pointer}
+.dr-body{overflow:auto;padding:1.2rem 1.3rem 2rem;flex:1}
+.dr-empty{font-size:1.08rem;color:var(--muted)}
+.dr-empty .btn{margin-top:1rem;--k-accent:var(--ink);--k-fg:var(--ink);--k-on:#fff}
+.dr-note{margin-top:1rem;font-size:.92rem;color:var(--muted)}
+.tbi{border-left:8px solid var(--k-accent);background:#fff;padding:1rem 1.1rem;margin-bottom:1.1rem}
+.tbi-h{display:flex;justify-content:space-between;gap:.8rem;align-items:flex-start}
+.tbi h3{font-size:1.55rem}
+.tbi .sub{font-size:.95rem;color:var(--muted);margin-top:.15rem}
+.tbi h4{font:700 .95rem var(--sans);margin:.9rem 0 .3rem}
+.tbi .rm{background:none;border:0;text-decoration:underline;font:400 .92rem var(--sans);cursor:pointer;color:var(--muted);padding:0}
+.bar{height:7px;background:#E1E9E5;margin:.8rem 0 .5rem}
+.bar i{display:block;height:100%;background:var(--k-accent);width:0;transition:width .3s}
+.ck{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.ck li{display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem}
+.ck label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer;font-size:1rem;line-height:1.35}
+.ck input{margin-top:.28rem;width:1.05rem;height:1.05rem;accent-color:var(--ink)}
+.ck input:checked + span{text-decoration:line-through;opacity:.55}
+.ck li a{font:600 .92rem var(--sans);flex:none;text-underline-offset:4px}
+.tbi-a{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+.tbi .btn,.dr-foot .btn{--k-accent:var(--ink);--k-fg:var(--ink);--k-on:#fff}
+.dr-foot{padding:.9rem 1.3rem;border-top:1px solid var(--line);display:flex;gap:.6rem;flex-wrap:wrap;background:#fff}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:.7rem 1.1rem;font:600 1rem var(--sans);opacity:0;transition:.25s;z-index:120;pointer-events:none;max-width:90vw}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+noscript div{padding:2rem;background:#F6D9A4;color:#1B1305;font-size:1.15rem}
+.fine a{text-underline-offset:4px}
+@media print{
+  body>*:not(#tripbook){display:none!important}
+  #tripbook{position:static!important;transform:none!important;visibility:visible!important;width:auto!important;box-shadow:none!important;display:block!important}
+  .dr-close,.tbi-a,.dr-foot,.rm{display:none!important}
+  .dr-head{background:none!important;color:#000!important;padding:0 0 .5rem}
+  .dr-body{overflow:visible}
+}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo">YSKAIPE <span>escape</span></a>
-      <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../series.html" class="active">Series</a>
-        <a href="../catalog.html">Catalog</a>
-        <a href="../authors.html">Authors</a>
-        <a href="../about.html">Our Story</a>
-      </nav>
-      <a href="../series.html" class="btn btn-primary">Start a Series</a>
+<a class="skip" href="#books">Skip to the books</a>
+
+<header class="site-head">
+  <a class="brand" href="../index.html">YSKAIPE</a>
+  <a class="here" href="#top"><b>The Tidewater Novels</b><small>An YSKAIPE Guide</small></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="../series.html">All series</a>
+    <a href="#books">The trilogy</a>
+    <a href="#hazel">Hazel</a>
+    <a href="#season">The year</a>
+    <a href="#quiz">Find your hour</a>
+    <button class="tb-open" id="tbOpen" type="button" aria-haspopup="dialog" aria-controls="tripbook">Trip Book <span class="tb-count" id="tbCount">0</span></button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="hero-art" id="heroScene"><div class="hero-scrim"></div></div>
+  <div class="hero-in">
+    <div class="hero-copy">
+      <h1 id="h1">The Tidewater Novels</h1>
+      <p class="hook">Seventy years. One secret. Two women who loved the same water.</p>
+      <p class="by">A dual-timeline historical romance by Deb Conenna, set on the Cape Fear coast of North Carolina, with the real Hurricane Hazel of 1954 at its heart.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#books">Meet the trilogy</a>
+        <a class="btn" href="#escapes">Plan the trip</a>
+      </div>
+      <p class="kick" id="kick"></p>
     </div>
-  </header>
+    <div class="tidebar" id="tidebar">
+      <div class="tb-lab">Move the tide <span>Drag, or pick an hour</span></div>
+      <div class="ro" aria-live="polite">
+        <div class="ro-t" id="roT"></div>
+        <p class="ro-p" id="roP"></p>
+        <div class="ro-a" id="roA"></div>
+      </div>
+      <input class="tide-range" id="tideRange" type="range" min="0" max="2" step="0.005" value="0" aria-label="Move the tide from dusk through night to dawn">
+      <div class="stops3" id="stops3"></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Series hero -->
-  <section class="section" style="padding-top: 48px;">
-    <div class="container">
-      <div class="tw-hero">
-
-        <div class="tw-cover">
-          <svg viewBox="0 0 420 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sketch study for the cover of The Tides of Battery Island — a schooner on the shoals, a compass rose, and the 1954 high-water mark">
-            <rect x="0" y="0" width="420" height="540" fill="#F3E9D2"/>
-
-            <g stroke="#6E4B2A" stroke-width="1.3" fill="none">
-              <path d="M70 210 Q210 246 350 210 L330 226 Q210 258 90 226 Z" />
-              <line x1="150" y1="210" x2="150" y2="112" />
-              <line x1="255" y1="210" x2="255" y2="96" />
-              <path d="M150 118 L204 176 L150 176 Z" />
-              <path d="M255 100 L204 176 L255 176 Z" />
-              <path d="M150 176 L96 176 L150 210" />
-              <g stroke-width="0.7">
-                <line x1="100" y1="216" x2="130" y2="220"/>
-                <line x1="140" y1="222" x2="170" y2="225"/>
-                <line x1="230" y1="225" x2="260" y2="222"/>
-                <line x1="270" y1="220" x2="300" y2="216"/>
-              </g>
-            </g>
-
-            <circle cx="150" cy="210" r="6" fill="none" stroke="#2E6F68" stroke-width="1.2"/>
-            <text x="150" y="214" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="8" fill="#2E6F68">I</text>
-            <path d="M156 208 L196 178" stroke="#2E6F68" stroke-width="0.7" stroke-dasharray="2 3" fill="none"/>
-            <text x="200" y="176" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#6E4B2A">manifest, sealed brass</text>
-
-            <circle cx="255" cy="145" r="6" fill="none" stroke="#2E6F68" stroke-width="1.2"/>
-            <text x="255" y="149" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="8" fill="#2E6F68">II</text>
-            <path d="M261 143 L300 130" stroke="#2E6F68" stroke-width="0.7" stroke-dasharray="2 3" fill="none"/>
-            <text x="304" y="132" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#6E4B2A">foremast, cut away</text>
-
-            <path d="M20 372 Q60 366 100 372 T180 372 T260 372 T340 372 T400 372" stroke="#6E4B2A" stroke-width="1" fill="none"/>
-            <line x1="20" y1="352" x2="400" y2="352" stroke="#2E6F68" stroke-width="1" stroke-dasharray="5 4"/>
-            <text x="24" y="345" font-family="Georgia, serif" font-style="italic" font-size="11" fill="#2E6F68">high-water mark, 15 Oct 1954</text>
-
-            <g transform="translate(96,452)">
-              <circle r="52" fill="none" stroke="#6E4B2A" stroke-width="1"/>
-              <circle r="38" fill="none" stroke="#6E4B2A" stroke-width="0.6"/>
-              <g stroke="#6E4B2A" stroke-width="0.8">
-                <line x1="0" y1="-52" x2="0" y2="52"/>
-                <line x1="-52" y1="0" x2="52" y2="0"/>
-                <line x1="-37" y1="-37" x2="37" y2="37"/>
-                <line x1="-37" y1="37" x2="37" y2="-37"/>
-              </g>
-              <line x1="0" y1="0" x2="0" y2="-52" stroke="#2E6F68" stroke-width="1.6"/>
-              <text x="0" y="-60" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="10" fill="#2E6F68">N</text>
-            </g>
-
-            <text x="210" y="500" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#8B6239">Battery Island, Cape Fear River</text>
-          </svg>
-          <p class="tw-cover-caption">Study for the cover of Book One — final art forthcoming</p>
-        </div>
-
-        <div>
-          <div class="hero-label">Historical Fiction · Coastal Carolina</div>
-          <h1>The Tidewater Novels</h1>
-          <p class="tw-lead">
-            Storms, salvage, and inheritance along the Cape Fear. Each book opens on a wreck
-            the record never accounted for — and a descendant who has to decide what to do
-            about it. Dual timelines, one coastline, real weather.
-          </p>
-
-          <div class="tw-stub">
-            <dl class="tw-fields">
-              <dt>Author</dt><dd>Dee Conenna</dd>
-              <dt>Setting</dt><dd>Southport, NC &amp; the Cape Fear coast</dd>
-              <dt>Structure</dt><dd>Dual timeline — a historical storm, a present-day inheritance</dd>
-              <dt>Status</dt><dd>Book One forthcoming</dd>
-            </dl>
-          </div>
-
-          <a href="#book-one" class="btn btn-primary">Read about Book One</a>
-        </div>
-
+<section class="section books" id="books">
+  <div class="wrap">
+    <div class="b-head">
+      <div>
+        <h2 class="sec-title">Three books, one tide</h2>
+        <p class="sec-sub">Each book is a novelette and belongs to one hour of the day. Read them in order and the story runs from dusk to dawn, and from 1954 to today.</p>
+      </div>
+      <div class="series-box" id="seriesBox">
+        <img src="../images/cover-tobi.jpeg" alt="Series cover: The Tides of Battery Island" width="96" height="144" onerror="this.parentNode.style.display='none'">
+        <p><b>The trilogy in one set</b>Three novelettes, $5.99 on Kindle. By Deb Conenna.</p>
       </div>
     </div>
-  </section>
+    <div class="plates" id="plates"></div>
+    <div class="cast" id="cast"></div>
+  </div>
+</section>
 
-  <!-- Reading order -->
-  <section class="section" style="background: var(--bg-elevated);">
-    <div class="container">
-      <div class="section-header">
-        <h2>Reading order</h2>
-        <p>One book so far, with the coastline built to hold more.</p>
+<section class="section hazel" id="hazel">
+  <div class="wrap">
+    <h2 class="sec-title">The storm was real</h2>
+    <p class="sec-sub">Charles, Eleanor and Charlotte are invented. Hurricane Hazel, Southport and Battery Island are not. Follow the storm from its first day to landfall.</p>
+    <div class="hz">
+      <div>
+        <div class="hz-tabs" role="tablist" aria-label="Hazel, day by day" id="hzTabs"></div>
+        <div class="hz-card" id="hzCard" role="tabpanel" aria-live="polite"></div>
+        <div class="hz-nav"><button class="btn" type="button" id="hzPrev">Earlier</button><button class="btn" type="button" id="hzNext">Next day</button></div>
+        <p class="hz-note">Book 1 begins in the summer of 1954 and builds to the morning of 15 October. What happens in the storm is the secret at the centre of the trilogy.</p>
+        <p class="srcs" id="hzSrcs"></p>
       </div>
-
-      <div id="book-one" class="tw-book-row">
-        <div class="tw-book-thumb">
-          <span>THE TIDES OF<br>BATTERY ISLAND</span>
-        </div>
-        <div>
-          <div class="tw-book-num">Book One</div>
-          <h3 class="tw-book-title">The Tides of Battery Island</h3>
-          <p class="tw-book-status">Forthcoming — final research trip to Southport underway</p>
-          <p class="tw-book-desc">
-            Hurricane Hazel put a cargo schooner on the oyster shoals behind Battery Island
-            in October of 1954 — and something went down with her that never made it into
-            the harbor log. Seventy years later, Charlotte Lynch comes home to Southport to
-            bury her grandfather and finds a codicil naming her family heir to the island
-            itself, and a neighbor who makes it clear the marsh has been waiting for someone
-            to come asking.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="container" style="text-align: center; max-width: 640px;">
-      <h2 style="font-size: 2.2rem; margin-bottom: 16px;">More from the Cape Fear coast is coming.</h2>
-      <p style="color: var(--text-muted); margin-bottom: 32px;">
-        Sign up to hear the moment Book One is out.
-      </p>
-      <a href="../index.html#battery-island" class="btn btn-outline">Back to the house</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">YSKAIPE <span>escape</span></div>
-          <p>Independent publishing house. Multiple series. Worlds built to last. Est. 2025 · Thriving 2028.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Series</h4>
-          <a href="blackthorn.html">Blackthorn Syndicate</a>
-          <a href="thorns.html">Thorns of the Veil</a>
-          <a href="harbor.html">Harbor &amp; Hearth</a>
-          <a href="tidewater.html">The Tidewater Novels</a>
-          <a href="../series.html">All series</a>
-        </div>
-        <div class="footer-col">
-          <h4>House</h4>
-          <a href="../authors.html">Authors</a>
-          <a href="../about.html">Our Story</a>
-          <a href="../catalog.html">Full Catalog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <a href="#">Newsletter</a>
-          <a href="#">X / Twitter</a>
-          <a href="#">Instagram</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>© 2028 YSKAIPE Publishing · Peaking Waters LLC</div>
-        <div>Stories that escape the harbor log — and keep going.</div>
+      <div class="gauge">
+        <svg id="gauge" viewBox="0 0 340 470" role="img" aria-label="A tide gauge from 0 to 20 feet beside a one-story cottage for scale. On 15 October 1954 the storm surge rose to about 18 feet, above the cottage roof."></svg>
+        <p class="cap">Storm surge is the water Hazel pushed ashore on top of the normal tide. A one-story cottage, roughly 15 feet to its peak, is drawn for scale (approximate).</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
+
+<section class="section season" id="season">
+  <div class="wrap">
+    <h2 class="sec-title">The year on the river</h2>
+    <p class="sec-sub">When the birds nest, when the storms come, when the boats come out, and the dates the coast marks. Tap a date to jump to it.</p>
+    <div class="gantt" id="gantt"></div>
+    <ol class="fixtures" id="fixtures"></ol>
+  </div>
+</section>
+
+<section class="section quiz-sec" id="quiz">
+  <div class="wrap">
+    <h2 class="sec-title">Which hour is yours?</h2>
+    <p class="sec-sub">Four questions. It picks the book and the trip that fit you. No email needed.</p>
+    <div class="quiz" id="quizBox"></div>
+  </div>
+</section>
+
+<div id="escapes"></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <h2>Real places. Nobody paid to be here.</h2>
+    <p>Every YSKAIPE book ends with a travel journal to the places in the story. The Tidewater Novels are still being finished, and their trips are ready now. Read the book, then walk it.</p>
+    <div class="hero-cta">
+      <a class="btn solid" id="launchCta" href="../index.html#launch-list">Join the launch list</a>
+      <button class="btn" type="button" id="footTrip">Open my Trip Book</button>
+    </div>
+  </div>
+  <div class="fcols">
+    <div><h4>Series</h4><a href="../series.html">All series</a><a href="tidewater.html">The Tidewater Novels</a><a href="festival-league.html">The Festival League</a><a href="to-stay.html">To Stay</a><a href="cubit-and-quark.html">The Cubit and the Quark</a></div>
+    <div><h4>House</h4><a href="../authors.html">Authors</a><a href="../about.html">Our story</a><a href="../catalog.html">Full catalog</a></div>
+    <div><h4>Connect</h4><a href="mailto:hello@yskaipe.com">hello@yskaipe.com</a><a href="../index.html#launch-list">Launch list</a></div>
+  </div>
+  <p class="fine">Dates, hours and ferry schedules change. Confirm with the organisers before you book anything non-refundable. Hurricane season runs 1 June to 30 November, so keep bookings flexible. The people in these books are invented; the storm and the places are not. Storm facts come from the National Weather Service, the North Carolina Department of Natural and Cultural Resources and NC Sea Grant. &copy; 2026 YSKAIPE Publishing &middot; Peaking Waters LLC &middot; The journey is the reward.</p>
+</footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="tripbook" role="dialog" aria-modal="true" aria-labelledby="tbTitle" aria-hidden="true">
+  <div class="dr-head"><h2 id="tbTitle">My Trip Book</h2><button class="dr-close" id="tbClose" type="button">Close</button></div>
+  <div class="dr-body" id="tbBody"></div>
+  <div class="dr-foot" id="tbFoot"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><div>The Tidewater Novels page needs JavaScript to draw the scenes, dates and itineraries. Please enable it and reload.</div></noscript>
+
+<script>
+/* ------------------------------------------------------------------ */
+/* Helpers                                                             */
+/* ------------------------------------------------------------------ */
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const sm = u => { u = clamp(u, 0, 1); return u * u * (3 - 2 * u); };
+const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+const toHex = a => '#' + a.map(v => Math.round(clamp(v, 0, 255)).toString(16).padStart(2, '0')).join('');
+const mix = (a, b, u) => { const A = hex(a), B = hex(b); return toHex(A.map((v, i) => v + (B[i] - v) * u)); };
+const kfc = (t, k) => t <= 1 ? mix(k[0], k[1], sm(t)) : mix(k[1], k[2], sm(t - 1));
+const kfn = (t, k) => t <= 1 ? k[0] + (k[1] - k[0]) * sm(t) : k[1] + (k[2] - k[1]) * sm(t - 1);
+const rnd = (i, k = 1) => { const s = Math.sin(i * 12.9898 * k + 78.233) * 43758.5453; return s - Math.floor(s); };
+
+/* ------------------------------------------------------------------ */
+/* The marsh scene: one drawing, three hours (t = 0 dusk, 1 night, 2 dawn) */
+/* ------------------------------------------------------------------ */
+function blades(x0, x1, n, seed, hmin, hmax) {
+  const g = ['', '', '', '', '', ''];
+  for (let i = 0; i < n; i++) {
+    const x = x0 + (x1 - x0) * rnd(i, seed), hg = hmin + (hmax - hmin) * Math.pow(rnd(i, seed + 1), 1.3);
+    const lean = (rnd(i, seed + 2) - .5) * 70, w = 2.2 + rnd(i, seed + 3) * 2, y = 720 - hg;
+    g[i % 6] += `<path d="M${(x - w).toFixed(1)} 722Q${(x + lean * .35 - w * .4).toFixed(1)} ${(722 - hg * .55).toFixed(1)} ${(x + lean).toFixed(1)} ${y.toFixed(1)}Q${(x + lean * .35 + w * .6).toFixed(1)} ${(722 - hg * .5).toFixed(1)} ${(x + w).toFixed(1)} 722Z"/>`;
+  }
+  return g.map((s, i) => `<g class="sway sw${i + 1}">${s}</g>`).join('');
+}
+function ridge(y0, amp, step, seed, bottom) {
+  let d = `M-20 ${bottom}L-20 ${y0}`;
+  for (let x = -20; x <= 1220; x += step) d += `L${x} ${(y0 - rnd(x, seed) * amp).toFixed(0)}`;
+  return d + `L1220 ${bottom}Z`;
+}
+const cloudBand = (y, seed, n) => {
+  let s = '';
+  for (let i = 0; i < n; i++) {
+    const cx = -100 + i * (1400 / n) + rnd(i, seed) * 70, cy = y + rnd(i, seed + 1) * 46, rx = 110 + rnd(i, seed + 2) * 120, ry = 24 + rnd(i, seed + 3) * 30;
+    s += `<ellipse cx="${cx.toFixed(0)}" cy="${cy.toFixed(0)}" rx="${rx.toFixed(0)}" ry="${ry.toFixed(0)}"/>`;
+  }
+  return s;
+};
+
+function buildScene(p, lite) {
+  const N = lite ? 34 : 70;
+  let stars = '', rain = '', refS = '', refM = '', birds = '';
+  for (let i = 0; i < N; i++) stars += `<circle cx="${(rnd(i, 1) * 1200).toFixed(0)}" cy="${(rnd(i, 2) * 340).toFixed(0)}" r="${(.7 + rnd(i, 3) * 1.4).toFixed(1)}"/>`;
+  for (let i = 0; i < 40; i++) { const x = 620 + rnd(i, 4) * 580, y = 180 + rnd(i, 5) * 240, l = 60 + rnd(i, 6) * 70; rain += `<line x1="${x.toFixed(0)}" y1="${y.toFixed(0)}" x2="${(x - 16).toFixed(0)}" y2="${(y + l).toFixed(0)}"/>`; }
+  for (let i = 0; i < 8; i++) { const w = 130 - i * 13; refS += `<rect x="${-w / 2}" y="${i * 15}" width="${w}" height="5"/>`; refM += `<rect x="${-(w * .6) / 2}" y="${i * 15}" width="${w * .6}" height="4"/>`; }
+  [[0, 0], [46, -16], [92, 6], [30, 34], [120, -28], [76, 26], [150, 12]].forEach(([x, y]) => birds += `<path d="M${x} ${y}q7 -8 14 0q7 -8 14 0"/>`);
+  const couple = `<circle cx="-11" cy="-66" r="6.5"/><path d="M-19 -58Q-11 -62 -3 -58L-4 -30L-19 -30Z"/><rect x="-18" y="-30" width="6" height="30"/><rect x="-10" y="-30" width="6" height="30"/><circle cx="12" cy="-62" r="6"/><path d="M6 -55Q12 -58 18 -55L23 -6L1 -6Z"/><rect x="8" y="-6" width="3" height="6"/><rect x="13" y="-6" width="3" height="6"/>`;
+  const woman = (dx, s) => `<g transform="translate(${dx} 0) scale(${s})"><circle cy="-74" r="7"/><path d="M-9 -66Q0 -70 9 -66L13 -8L-13 -8Z"/><rect x="-8" y="-8" width="5" height="8"/><rect x="3" y="-8" width="5" height="8"/></g>`;
+  return `<svg viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A salt marsh on the Cape Fear coast. The light and the tide change from a stormy dusk in 1954, to a moonlit night, to a calm dawn.">
+<defs>
+<linearGradient id="${p}-sky" x1="0" y1="0" x2="0" y2="1"><stop data-r="skyTop" offset="0"/><stop data-r="skyMid" offset=".55"/><stop data-r="skyLow" offset="1"/></linearGradient>
+<linearGradient id="${p}-wat" x1="0" y1="0" x2="0" y2="1"><stop data-r="wTop" offset="0"/><stop data-r="wBot" offset="1"/></linearGradient>
+<radialGradient id="${p}-hz"><stop data-r="hzC" offset="0" stop-opacity=".95"/><stop data-r="hzC" offset="1" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="520" fill="url(#${p}-sky)"/>
+<g data-r="stars" fill="#fff">${stars}</g>
+<ellipse data-r="hzE" cy="440" rx="720" ry="150" fill="url(#${p}-hz)"/>
+<g data-r="sunG"><circle data-r="sunGlow" r="125" opacity=".28"/><circle data-r="sunDisc" r="46"/></g>
+<g data-r="moonG"><circle r="112" fill="#BFD6E6" opacity=".15"/><circle r="36" fill="#EAF1F6"/><circle cx="-11" cy="-7" r="7" fill="#C6D4DE" opacity=".55"/><circle cx="9" cy="10" r="9" fill="#C6D4DE" opacity=".4"/><circle cx="12" cy="-13" r="4" fill="#C6D4DE" opacity=".5"/></g>
+<g data-r="dawnC" fill="#F7C9BC">${'<ellipse cx="260" cy="150" rx="230" ry="9"/><ellipse cx="520" cy="196" rx="300" ry="8"/><ellipse cx="940" cy="132" rx="260" ry="9"/><ellipse cx="760" cy="250" rx="200" ry="6"/>'}</g>
+<g data-r="storm"><g class="drift"><g fill="#1D1830">${cloudBand(30, 21, 9)}</g><g fill="#2A2040" opacity=".9">${cloudBand(120, 31, 9)}</g><g fill="#3A2A4A" opacity=".85">${cloudBand(206, 41, 8)}</g></g></g>
+<g data-r="rain" stroke="#C9B8D2" stroke-width="1.4" opacity=".4">${rain}</g>
+<path data-r="trees" d="${ridge(418, 26, 14, 7, 540)}"/>
+<path data-r="marsh" d="${ridge(452, 14, 22, 3, 540)}"/>
+<g data-r="coupleG"><g transform="translate(640 447) scale(.86)" data-r="couple">${couple}</g></g>
+<path data-r="mud" d="M-20 530Q300 512 600 526T1220 520L1220 740L-20 740Z"/>
+<g data-r="postG"><rect data-r="postC" x="780" y="372" width="16" height="320"/><circle cx="788" cy="402" r="8" fill="none" stroke="#C9A24D" stroke-width="3.2"/></g>
+<rect data-r="water" x="0" width="1200" fill="url(#${p}-wat)" opacity=".95"/>
+<g data-r="refSun">${refS}</g>
+<g data-r="refMoon">${refM}</g>
+<rect data-r="postRef" x="780" width="16"/>
+<g data-r="rip"><ellipse class="ripple" cx="788" rx="26" ry="6" fill="none" stroke="#fff" stroke-width="1.6"/><ellipse class="ripple r2" cx="788" rx="26" ry="6" fill="none" stroke="#fff" stroke-width="1.6"/></g>
+<g data-r="womenG">${woman(0, 1)}${woman(46, .93)}</g>
+<g data-r="birds" fill="none" stroke-width="2.4" stroke-linecap="round"><g class="flock" transform="translate(0 0)"><g transform="translate(-120 240)">${birds}</g></g></g>
+<g data-r="grass">${blades(-10, 230, lite ? 22 : 56, 11, 110, 270)}${blades(960, 1210, lite ? 22 : 56, 23, 110, 250)}</g>
+</svg>`;
+}
+
+function applyScene(svg, t) {
+  const R = svg.__r || (svg.__r = (() => { const m = {}; svg.querySelectorAll('[data-r]').forEach(e => { (m[e.dataset.r] = m[e.dataset.r] || []).push(e); }); return m; })());
+  const S = (r, a, v) => { const l = R[r]; if (l) for (const e of l) e.setAttribute(a, v); };
+  const wy = kfn(t, [455, 500, 568]);
+  S('skyTop', 'stop-color', kfc(t, ['#1B1A34', '#050C15', '#88AAC8']));
+  S('skyMid', 'stop-color', kfc(t, ['#7A4A5E', '#0B2137', '#EDB9B2']));
+  S('skyLow', 'stop-color', kfc(t, ['#F0A66E', '#17405A', '#FBE0A4']));
+  S('wTop', 'stop-color', kfc(t, ['#7C5468', '#16374E', '#D9A99B']));
+  S('wBot', 'stop-color', kfc(t, ['#171B30', '#050D16', '#2C5568']));
+  S('hzC', 'stop-color', kfc(t, ['#FF9A5A', '#2F6F8F', '#FFD98A']));
+  S('hzE', 'opacity', kfn(t, [.8, .3, .9]));
+  S('hzE', 'cx', kfn(t, [960, 830, 650]));
+  S('stars', 'opacity', (.95 * sm(1 - Math.abs(t - 1) / .8)).toFixed(3));
+  S('storm', 'opacity', (t <= 1 ? 1 - .86 * sm(t) : .14 * (1 - sm(t - 1))).toFixed(3));
+  S('rain', 'opacity', (.5 * (1 - sm(t / .7))).toFixed(3));
+  S('dawnC', 'opacity', (.8 * sm((t - 1.3) / .7)).toFixed(3));
+  const sunY = t <= 1 ? 400 + 175 * sm(t / .75) : 575 - 180 * sm((t - 1.3) / .7), sunX = t <= 1 ? 960 : 640;
+  const sunC = kfc(t, ['#FFB27A', '#FFB27A', '#FFE3A8']);
+  S('sunG', 'transform', `translate(${sunX} ${sunY.toFixed(1)})`);
+  S('sunDisc', 'fill', sunC); S('sunGlow', 'fill', sunC);
+  S('refSun', 'transform', `translate(${sunX} ${(wy + 6).toFixed(1)})`);
+  S('refSun', 'fill', sunC);
+  S('refSun', 'opacity', (clamp((480 - sunY) / 90, 0, 1) * .8).toFixed(3));
+  const mv = sm(clamp(1 - Math.abs(t - 1) / .95, 0, 1)), moonY = 470 - 300 * clamp(1 - Math.pow((t - 1) / .9, 2), 0, 1);
+  S('moonG', 'transform', `translate(930 ${moonY.toFixed(1)})`);
+  S('moonG', 'opacity', mv.toFixed(3));
+  S('refMoon', 'transform', `translate(930 ${(wy + 6).toFixed(1)})`);
+  S('refMoon', 'fill', '#EAF1F6');
+  S('refMoon', 'opacity', (mv * (moonY < 440 ? .7 : 0)).toFixed(3));
+  S('trees', 'fill', kfc(t, ['#241E33', '#08131D', '#7B9585']));
+  S('marsh', 'fill', kfc(t, ['#2A2338', '#0B1A26', '#5C7A62']));
+  S('mud', 'fill', kfc(t, ['#211B2B', '#0C1620', '#8A7462']));
+  S('postC', 'fill', kfc(t, ['#3B2C33', '#1B2B37', '#5A4B3E']));
+  S('postRef', 'fill', kfc(t, ['#3B2C33', '#1B2B37', '#5A4B3E']));
+  S('postRef', 'y', (wy + 1).toFixed(1));
+  S('postRef', 'height', Math.max(0, (wy - 372) * .6).toFixed(1));
+  S('postRef', 'opacity', '.28');
+  S('water', 'y', wy.toFixed(1));
+  S('water', 'height', (740 - wy).toFixed(1));
+  S('rip', 'transform', `translate(0 ${(wy + 3).toFixed(1)})`);
+  S('grass', 'fill', kfc(t, ['#14111F', '#050B12', '#2E4A3A']));
+  S('couple', 'fill', kfc(t, ['#1A1425', '#0A141E', '#0A141E']));
+  S('coupleG', 'opacity', (1 - sm((t - .15) / .6)).toFixed(3));
+  S('womenG', 'transform', `translate(900 ${(wy + 12).toFixed(1)})`);
+  S('womenG', 'fill', '#2A3542');
+  S('womenG', 'opacity', sm((t - 1.45) / .5).toFixed(3));
+  S('birds', 'stroke', kfc(t, ['#1A1425', '#DDE7EE', '#FFFFFF']));
+  S('birds', 'opacity', Math.max(.6 * (1 - sm(t / .5)), sm((t - 1.3) / .5)).toFixed(3));
+}
+
+/* ------------------------------------------------------------------ */
+/* Escape illustrations (one place-specific scene per trip)            */
+/* ------------------------------------------------------------------ */
+function artDusk() {
+  let lights = '', planks = '', posts = '', shimmer = '';
+  for (let i = 0; i <= 14; i++) { const u = i / 14, x = 30 + u * 400, y = 296 + 34 * (1 - Math.pow(2 * u - 1, 2)); lights += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9" fill="#FFD98A" opacity=".22"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2" fill="#FFE6A8"/>`; }
+  for (let x = 0; x < 470; x += 34) planks += `<line x1="${x}" y1="372" x2="${x}" y2="386" stroke="#150F20" stroke-width="2"/>`;
+  for (let x = 30; x < 470; x += 80) posts += `<rect x="${x}" y="386" width="10" height="80" fill="#150F20"/>`;
+  for (let i = 0; i < 9; i++) { const w = 150 - i * 15; shimmer += `<rect x="${430 - w / 2}" y="${296 + i * 14}" width="${w}" height="${4 - i * .2}" fill="#FFE0A6" opacity="${(.8 - i * .08).toFixed(2)}"/>`; }
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: golden hour at the Southport waterfront, a shrimp boat on the river, a string-lit pier, and Old Baldy lighthouse on the far shore">
+<defs><linearGradient id="d-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2C55"/><stop offset=".55" stop-color="#B85C70"/><stop offset="1" stop-color="#F3A65E"/></linearGradient><linearGradient id="d-wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9C5470"/><stop offset="1" stop-color="#1D1B3A"/></linearGradient></defs>
+<rect width="600" height="300" fill="url(#d-sky)"/>
+<circle cx="430" cy="284" r="94" fill="#FFD9A0" opacity=".28"/><circle cx="430" cy="284" r="44" fill="#FFE2B0"/>
+<path d="M-10 296L-10 282Q80 274 170 284T340 280T520 286T610 280L610 296Z" fill="#2B2040"/>
+<path d="M62 290L66 222L82 222L86 290Z" fill="#231A34"/><path d="M60 222L74 205L88 222Z" fill="#231A34"/><rect x="68" y="212" width="12" height="9" fill="#FFD98A"/>
+<rect y="292" width="600" height="170" fill="url(#d-wat)"/>${shimmer}
+<g fill="#1C1428"><path d="M150 300h112l-14 15h-84Z"/><rect x="182" y="282" width="32" height="18"/><rect x="228" y="246" width="3" height="56"/><path d="M230 262L160 292M230 262L304 286" stroke="#1C1428" stroke-width="2" fill="none"/><path d="M160 292L166 312M304 286L298 310" stroke="#1C1428" stroke-width="1.4" fill="none"/></g>
+<g fill="none" stroke="#2B2040" stroke-width="2.4" stroke-linecap="round"><path d="M470 214q7 -8 14 0q7 -8 14 0"/><path d="M510 196q6 -7 12 0q6 -7 12 0"/><path d="M548 230q6 -7 12 0q6 -7 12 0"/></g>
+<rect y="372" width="470" height="14" fill="#2A1E36"/>${planks}${posts}
+<rect x="26" y="292" width="8" height="96" fill="#150F20"/><rect x="426" y="292" width="8" height="96" fill="#150F20"/>${lights}
+<path d="M-10 462L-10 424Q120 410 230 428T470 430L470 462Z" fill="#0F0A18" opacity=".55"/>
+</svg>`;
+}
+
+function artNight() {
+  let stars = '', refl = '', tufts = '';
+  for (let i = 0; i < 55; i++) stars += `<circle cx="${(rnd(i, 1) * 600).toFixed(0)}" cy="${(rnd(i, 2) * 240).toFixed(0)}" r="${(.6 + rnd(i, 3) * 1.2).toFixed(1)}" fill="#fff" opacity="${(.4 + rnd(i, 4) * .5).toFixed(2)}"/>`;
+  for (let i = 0; i < 9; i++) { const w = 100 - i * 9; refl += `<rect x="${170 - w / 2}" y="${278 + i * 14}" width="${w}" height="4" fill="#DDE9F1" opacity="${(.75 - i * .07).toFixed(2)}"/>`; }
+  const tuft = (x, y, h, k) => { let s = ''; for (let j = 0; j < 7; j++) { const l = (rnd(j + k, 9) - .5) * 26, hh = h * (.55 + rnd(j + k, 8) * .5); s += `<path d="M${x + j * 2 - 6} ${y}Q${x + l * .4} ${y - hh * .6} ${x + l} ${y - hh}" stroke="#060E17" stroke-width="2.2" fill="none" stroke-linecap="round"/>`; } return s; };
+  [[20, 452, 70, 1], [70, 440, 50, 2], [120, 458, 64, 3], [230, 400, 30, 4], [420, 430, 46, 5], [520, 452, 74, 6], [572, 440, 54, 7], [360, 372, 24, 8], [90, 330, 20, 9]].forEach(([x, y, h, k]) => tufts += tuft(x, y, h, k));
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: a full moon over a flooded salt marsh at high tide, a weathered dock post with a brass ring, and a lighthouse beam sweeping across the water">
+<defs><linearGradient id="n-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#030811"/><stop offset="1" stop-color="#123048"/></linearGradient><linearGradient id="n-wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15384F"/><stop offset="1" stop-color="#03080F"/></linearGradient><linearGradient id="n-beam" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#FFF6D8" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6D8" stop-opacity="0"/></linearGradient></defs>
+<rect width="600" height="300" fill="url(#n-sky)"/>${stars}
+<circle cx="170" cy="104" r="96" fill="#BFD6E6" opacity=".12"/><circle cx="170" cy="104" r="40" fill="#EEF4F8"/><circle cx="157" cy="96" r="8" fill="#C9D7E0" opacity=".6"/><circle cx="182" cy="116" r="10" fill="#C9D7E0" opacity=".45"/>
+<polygon points="474,118 0,84 0,166" fill="url(#n-beam)"/>
+<path d="M-10 276L-10 262Q100 252 220 262T420 258T610 264L610 276Z" fill="#050C14"/>
+<path d="M458 270L464 132L482 132L488 270Z" fill="#C9D6DE"/><rect x="460" y="176" width="26" height="14" fill="#18232E"/><rect x="458" y="222" width="30" height="14" fill="#18232E"/><rect x="458" y="120" width="30" height="14" fill="#18232E"/><path d="M456 120L473 100L490 120Z" fill="#18232E"/><circle cx="473" cy="127" r="7" fill="#FFF6D8"/><circle cx="473" cy="127" r="18" fill="#FFF6D8" opacity=".25"/>
+<rect y="270" width="600" height="192" fill="url(#n-wat)"/>${refl}
+<rect x="284" y="352" width="14" height="86" fill="#0D1A26"/><circle cx="291" cy="374" r="8" fill="none" stroke="#C9A24D" stroke-width="3"/><rect x="284" y="438" width="14" height="22" fill="#0D1A26" opacity=".35"/>
+<g fill="none" stroke="#7FA6BE" stroke-opacity=".5" stroke-width="1.6"><ellipse cx="291" cy="438" rx="24" ry="5"/><ellipse cx="291" cy="438" rx="42" ry="9"/></g>
+${tufts}</svg>`;
+}
+
+function artDawn() {
+  let cedars = '', ibis = '', flock = '', refl = '', reeds = '';
+  [[112, 30], [138, 44], [170, 34], [204, 54], [240, 38], [276, 60], [312, 42], [346, 52], [382, 36], [416, 46], [446, 30]].forEach(([x, h], i) => {
+    cedars += `<path d="M${x - 15} 278L${x} ${278 - h}L${x + 15} 278Z" fill="#2A4636"/>`;
+    for (let j = 0; j < 3; j++) ibis += `<circle cx="${(x + (rnd(i * 3 + j, 5) - .5) * 26).toFixed(0)}" cy="${(278 - h * (.25 + rnd(i * 3 + j, 6) * .6)).toFixed(0)}" r="3" fill="#fff"/>`;
+  });
+  [[110, 96], [150, 72], [186, 112], [230, 86], [280, 60], [330, 100], [376, 74], [420, 120], [470, 90]].forEach(([x, y]) => flock += `<path d="M${x} ${y}q6 -6 12 0q6 -6 12 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>`);
+  for (let i = 0; i < 9; i++) { const w = 120 - i * 11; refl += `<rect x="${300 - w / 2}" y="${278 + i * 13}" width="${w}" height="4" fill="#FFF1C4" opacity="${(.8 - i * .08).toFixed(2)}"/>`; }
+  const reed = (x, y, h, k) => { let s = ''; for (let j = 0; j < 8; j++) { const l = (rnd(j + k, 9) - .5) * 30, hh = h * (.5 + rnd(j + k, 8) * .55); s += `<path d="M${x + j * 3 - 8} ${y}Q${x + l * .4} ${y - hh * .6} ${x + l} ${y - hh}" stroke="#1F3A2B" stroke-width="2.6" fill="none" stroke-linecap="round"/>`; } return s; };
+  [[10, 460, 130, 1], [64, 456, 96, 2], [540, 460, 140, 3], [584, 452, 100, 4], [110, 450, 64, 5]].forEach(([x, y, h, k]) => reeds += reed(x, y, h, k));
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: sunrise over Battery Island, white ibis roosting in the cedars and flying across the river, with Old Baldy lighthouse faint on the horizon">
+<defs><linearGradient id="w-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86A9C7"/><stop offset=".55" stop-color="#EDB9B2"/><stop offset="1" stop-color="#FBE0A4"/></linearGradient><linearGradient id="w-wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9B7A4"/><stop offset="1" stop-color="#3C6E82"/></linearGradient></defs>
+<rect width="600" height="282" fill="url(#w-sky)"/>
+<g fill="#F7C9BC" opacity=".8"><ellipse cx="120" cy="150" rx="150" ry="7"/><ellipse cx="470" cy="180" rx="170" ry="6"/></g>
+<circle cx="300" cy="278" r="96" fill="#FFF1C4" opacity=".4"/><circle cx="300" cy="270" r="38" fill="#FFF0C0"/>
+<path d="M534 282L537 236L545 236L548 282Z" fill="#8FA3AB"/><path d="M533 236L541 224L549 236Z" fill="#8FA3AB"/>
+<path d="M-10 282L-10 276Q120 268 260 276T610 274L610 282Z" fill="#6E8A7B"/>
+<rect y="278" width="600" height="190" fill="url(#w-wat)"/>${refl}
+<path d="M84 286Q110 268 170 274T330 272T470 274Q490 280 500 286Z" fill="#3F5A48"/>${cedars}${ibis}${flock}
+<g transform="translate(486 344)"><path d="M0 0h44l-6 8h-32Z" fill="#2A3542"/><rect x="18" y="-14" width="2.4" height="14" fill="#2A3542"/></g>
+<path d="M-10 462L-10 436Q120 424 260 440T610 434L610 462Z" fill="#54654F" opacity=".5"/>
+${reeds}</svg>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Data                                                                */
+/* ------------------------------------------------------------------ */
+const CONFIG = {
+  launchUrl: '../index.html#launch-list',   // where "Get launch news" points
+  buy: { 1: '', 2: '', 3: '' },              // paste the KDP link for each book when it is live
+  storageKey: 'yskaipe-tidewater-tripbook-v1'
+};
+
+const HOURS = {
+  dusk:  { idx: 0, t: 0, name: 'Dusk',  kit: 'kit-dusk'  },
+  night: { idx: 1, t: 1, name: 'Night', kit: 'kit-night' },
+  dawn:  { idx: 2, t: 2, name: 'Dawn',  kit: 'kit-dawn'  }
+};
+
+const BOOKS = [
+  { n: 1, id: 'dusk', title: 'Before the Reckoning', when: 'Dusk, 1954',
+    ro: '1954. Charles and Eleanor fall in love as fast as the tide comes in, and Hazel is on her way.',
+    blurb: "Southport, 1954. Charles has spent his whole life on the water, until the summer Eleanor arrives and gives him a reason to stay ashore a little longer. Their love grows as fast and sure as the tide, right up until the sky turns the color of a bruise and Hurricane Hazel bears down on Battery Island. What happens in the storm will follow Charles for the rest of his life, and the truth won't surface again for seventy years.",
+    past: 'Charles and Eleanor meet, fall in love and build a life on the water, up to the morning Hazel comes ashore.',
+    now: 'Not yet. Charlotte\u2019s story begins in Book 2.',
+    feel: 'You fall for Charles and Eleanor before the loss arrives.' },
+  { n: 2, id: 'night', title: 'What the Water Kept Hidden', when: 'Night, today',
+    ro: 'Today. Charlotte follows a discovery back to the marsh her grandfather never stopped loving.',
+    blurb: "Charlotte never knew her grandfather kept a secret, until a single discovery pulls her back to the marsh he never stopped loving. Seventy years after Hurricane Hazel, the truth Charles buried is finally working its way to the surface, and Charlotte isn\u2019t sure she\u2019s ready for what the water has kept hidden all this time.",
+    past: 'The aftermath. What really happened during and after the storm begins to come to light.',
+    now: 'Charlotte investigates her grandfather\u2019s past, and a present-day romance begins.',
+    feel: 'The mystery deepens and someone\u2019s reputation is at stake.' },
+  { n: 3, id: 'dawn', title: 'After the Reckoning', when: 'Dawn, both timelines',
+    ro: 'The tide gives back what it took. Both timelines find their ending.',
+    blurb: "The truth is out, and it changes everything Charlotte thought she knew about her grandfather, her family, and herself. As the tide finally gives back what it took seventy years ago, Charlotte has to decide what to do with a truth that could heal her family or break it wide open. Some storms take a lifetime to settle. This is the one that finally does.",
+    past: 'Closure for Charles and Eleanor, even if it is bittersweet.',
+    now: 'The full truth surfaces, and Charlotte\u2019s own story lands where it should.',
+    feel: 'The full payoff, in both timelines.' }
+];
+
+const CAST = [
+  ['Charles', 'Southport, 1954. A man who has spent his whole life on the water, and who carries a secret for seventy years.'],
+  ['Eleanor', 'Arrives in Southport the summer of 1954. Charles\u2019s love, and Charlotte\u2019s grandmother.'],
+  ['Charlotte', 'Charles\u2019s granddaughter, today. Drawn back to the marsh he never stopped loving.']
+];
+
+/* ---------- Hazel, day by day (sources: NWS, NC DNCR marker, NC Sea Grant, WECT) ---------- */
+const HAZEL = [
+  { d: '5 Oct', big: '5', h: 'A storm forms', surge: 0,
+    p: 'The first sign of a tropical cyclone appears about 50 miles east of Grenada, in the Windward Islands, on 5 October 1954.' },
+  { d: '9 Oct', big: '9', h: 'A major hurricane at sea', surge: 0,
+    p: 'By 9 October Hazel has grown into a powerful Category 4 storm, with winds around 135 mph.' },
+  { d: '12 Oct', big: '12', h: 'Haiti', surge: 0,
+    p: 'Hazel crashes into Haiti, where it leaves hundreds dead. Warm water lets her regain strength quickly as she crosses the Bahamas and turns north toward the Carolinas.' },
+  { d: '14 Oct', big: '14', h: 'The warning', surge: 0,
+    p: 'At 11 a.m. the Weather Bureau warns the Carolinas, still expecting the storm\u2019s centre to stay offshore. Instead Hazel turns northwest. Forecasts change, and evacuations begin along the coast.' },
+  { d: '15 Oct', big: '15', h: 'Landfall', surge: 18,
+    p: 'Around 9:30 to 10 in the morning, Hazel comes ashore near Calabash, on the North Carolina\u2013South Carolina line, as a Category 4 with winds near 140 mph. She arrives at the highest lunar tide of the year, pushing a surge of up to 18 feet onto a coast of low barrier islands. On Long Beach, now Oak Island, the water swept away 352 of 357 structures. Nineteen people died in North Carolina.' }
+];
+const HAZEL_SRCS = [
+  ['National Weather Service, Hazel event review', 'https://www.weather.gov/mhx/Oct151954EventReview'],
+  ['NC Historical Marker D-109, Oak Island', 'https://dncr.nc.gov/blog/2023/12/11/hurricane-hazel-d-109'],
+  ['NC Sea Grant, Hazel: Fast and Furious', 'https://ncseagrant.ncsu.edu/coastwatch/?p=3755'],
+  ['Southport Magazine, Remembering Hazel', 'https://southportmag.com/?p=7573']
+];
+
+/* ---------- The year on the river ---------- */
+const BARS = [
+  { id: 'storm', label: 'Hurricane season', from: 6, to: 11, color: '#D98872', note: '1 June to 30 November. Watch the forecast and keep bookings flexible.' },
+  { id: 'nest', label: 'Wading birds nest on Battery Island', from: 3, to: 8, color: '#5F7F63', note: 'Nesting starts in March. Through late spring and early summer, ibis stream across the river all day.' },
+  { id: 'tours', label: 'Local water tours', from: 4, to: 12, color: '#1B4A63', note: 'One Southport operator lists 1 April to 1 December. Check the season for yours.' },
+  { id: 'baldy', label: 'Old Baldy lighthouse closed', from: 1, to: 2, closed: true, note: 'Closed in January and February. Hours vary the rest of the year.' }
+];
+
+const firstSat = (y, m) => { const w = new Date(Date.UTC(y, m - 1, 1)).getUTCDay(); return 1 + ((6 - w + 7) % 7); };
+const EVENTS = [
+  { id: 'hazel', esc: 'night', name: 'Anniversary of Hazel\u2019s landfall', place: 'Calabash to the Cape Fear coast',
+    note: 'The morning in 1954 that Hazel came ashore, at the highest tide of the year. A good day to read the accounts the Southport Historical Society has put online.',
+    occ: y => ({ s: [y, 10, 15], e: [y, 10, 15], firm: true }) },
+  { id: 'boat', esc: 'dusk', name: 'Southport Wooden Boat Show', place: 'Old Yacht Basin, Southport',
+    note: 'Wooden boats on land and in the water, and the people who build them. Usually the first Saturday of November, 10 a.m. to 4 p.m.',
+    occ: y => { const d = y === 2026 ? 7 : firstSat(y, 11); return { s: [y, 11, d], e: [y, 11, d], firm: y === 2026 }; } },
+  { id: 'july4', esc: 'dusk', name: 'NC 4th of July Festival', place: 'Southport and Oak Island',
+    note: 'The state\u2019s official Independence Day celebration runs about a week, with the parade and fireworks on the 4th. Organisers count around 50,000 visitors a year, so book early.',
+    occ: y => ({ s: [y, 7, 4], e: [y, 7, 4], firm: true }) }
+];
+const EV = Object.fromEntries(EVENTS.map(e => [e.id, e]));
+
+/* ---------- The three trips ---------- */
+const ESCAPES = [
+{
+  id: 'dusk', num: 1, book: 'Before the Reckoning', title: 'Southport at golden hour', hour: 'Dusk',
+  where: 'Southport, North Carolina',
+  tag: 'Start where the story starts: a small river town, a working waterfront, and an island you can see but not land on.',
+  art: artDusk,
+  anchor: {
+    name: 'The Southport waterfront',
+    lead: 'Southport sits near the mouth of the Cape Fear River and is the setting for Book 1. It is small, walkable and easy to see in two days.',
+    honest: [
+      'About 4,000 people live here. Weekday mornings feel local. In the week around 4 July the NC 4th of July Festival brings tens of thousands of visitors, so book early or choose another week.',
+      'Hazel hit the waterfront hard. In October 1954 wind and surge left little standing along Southport\u2019s shore, and the Historical Society keeps accounts and photographs of that day.',
+      'Battery Island is visible from the waterfront and closed to visitors. The dawn trip explains how to watch it.',
+      'Museums keep short hours. Check opening days before you plan around them.',
+      'Bring bug spray for evenings near the marsh.'
+    ]
+  },
+  legs: [
+    { label: 'Two days in Southport', days: [
+      { t: 'Start at the Fort Johnston\u2013Southport Museum', d: 'The town\u2019s history museum and visitor center on East Bay Street. Pick up a map and check the day\u2019s hours; it has run Monday to Saturday, 10 to 4.', q: 'Fort Johnston-Southport Museum Visitors Center 203 E Bay St Southport NC' },
+      { t: 'Walk to the North Carolina Maritime Museum', d: 'On East Moore Street, a short walk away, with the river, its boats and the coast\u2019s maritime history.', q: 'North Carolina Maritime Museum at Southport 204 E Moore St' },
+      { t: 'Read the names at Old Smithville Burying Ground', d: 'Old Smithville is Southport\u2019s earlier name. The Southport Historical Society leads guided tours on some days; they ran one on 4 July 2026. Check the dates.', q: 'Old Smithville Burying Ground Southport NC' },
+      { t: 'Waterfront Park as the light goes gold', d: 'The park sits on the river. Stay for the sunset, then look across the water at the low, wooded shape of Battery Island.', q: 'Southport Waterfront Park 146 E Bay St' },
+      { t: 'Dinner where you can see the water', d: 'The waterfront has plenty of seafood kitchens. Ask for something local and stay until the light is gone.', q: 'Southport waterfront restaurants' },
+      { t: 'The last river cruise of the day', d: 'Local eco and history cruises run from spring to early December and pass Battery Island, Bald Head Island and Oak Island. Book the latest departure so you are on the water at golden hour.', q: 'Southport Yacht Basin' },
+      { t: 'Walk the Old Yacht Basin', d: 'Watch the boats come and go. In early November it fills with wooden boats for the boat show.', q: 'Old Yacht Basin 102 S Caswell Ave Southport NC' }
+    ], stretch: 'One more day? Cross to Oak Island for the beach, and read the night trip for the Hazel marker.' }
+  ],
+  signature: { t: 'A river cruise at sunset', d: 'The nearest thing to Charles\u2019s whole life on the water. Ask which local operators pass Battery Island, and go on a clear evening.' },
+  eat: ['Fresh local shrimp and oysters', 'Calabash-style fried seafood (Calabash is where Hazel came ashore)', 'Dinner on the dock at sunset'],
+  getting: 'Fly into Wilmington (ILM) and drive south, about 45 minutes. Myrtle Beach (MYR) is the other nearby airport.',
+  pack: ['Comfortable walking shoes', 'Bug spray', 'A light layer for the river breeze', 'A sun hat', 'Binoculars, for Battery Island'],
+  first: ['Book Southport lodging early if your dates touch the 4th of July festival', 'Reserve the day\u2019s last river cruise', 'Check the museums\u2019 opening days'],
+  flights: [['Wilmington', 'ILM'], ['Myrtle Beach', 'MYR']],
+  when: 'Fall gives cooler light, and the boat show lands in early November. Skip the week around 4 July unless the festival is the point. Storm season runs 1 June to 30 November, so keep bookings flexible.',
+  links: [['NC 4th of July Festival', 'https://nc4thofjuly.com'], ['Southport Wooden Boat Show', 'http://www.southportwoodenboatshow.com'], ['City of Southport', 'https://cityofsouthport.com']]
+},
+{
+  id: 'night', num: 2, book: 'What the Water Kept Hidden', title: 'The coast Hazel changed', hour: 'Night',
+  where: 'Southport and Oak Island, North Carolina',
+  tag: 'For the reader who wants the mystery: read the storm in the records, stand where it came ashore, and watch a marsh fill under the moon.',
+  art: artNight,
+  anchor: {
+    name: 'Hurricane Hazel',
+    lead: 'The storm in the books is the storm that hit in 1954. Everything below comes from the National Weather Service, the state historical marker and NC Sea Grant.',
+    honest: [
+      'Hazel came ashore on the morning of 15 October 1954 near Calabash, at the state line, as a Category 4. It is the only Category 4 hurricane on record to strike the North Carolina coast.',
+      'It arrived at the highest lunar tide of the year, which is why the surge, up to 18 feet, was so destructive.',
+      'On Oak Island, then called Long Beach, the surge swept away 352 of 357 structures. A state historical marker stands on NC 133 at Yaupon Way.',
+      'Nineteen people died in North Carolina. Families here still carry those stories, so visit the way you would any memorial.',
+      'The Southport Historical Society keeps accounts and photographs from that day, and many are online.'
+    ]
+  },
+  legs: [
+    { label: 'Two days, after the light goes', days: [
+      { t: 'Read the storm before you see the place', d: 'Start with the accounts and photographs the Southport Historical Society has put online, then decide what to visit in person.', q: 'Southport Historical Society Southport NC' },
+      { t: 'The Old Brunswick Jail', d: 'On East Nash Street, run by the Historical Society and open on set days only. Check before you go.', q: 'Old Brunswick Jail 318 E Nash St Southport NC' },
+      { t: 'Stand at the Hazel marker on Oak Island', d: 'The state historical marker is on NC 133 (Country Club Drive) at Yaupon Way. Read it slowly. The surge here was 17 feet.', q: 'Hurricane Hazel historical marker Country Club Drive Yaupon Way Oak Island NC' },
+      { t: 'Caswell Beach and the Oak Island Light', d: 'Caswell Beach is home to the Oak Island Light Station. Walk the beach at dusk and look for the light.', q: 'Oak Island Lighthouse Caswell Beach NC' },
+      { t: 'Time your evening to high water', d: 'Check the predicted tide first (NOAA station 8659084 covers Southport), then sit at the waterfront as the water comes in.', q: 'Southport Waterfront Park 146 E Bay St' },
+      { t: 'Pick a night near the full moon', d: 'Hazel struck at the full-moon high tide. Spring tides come with the full and new moon, so a moon calendar tells you which nights the water runs highest.', q: 'Southport Yacht Basin' }
+    ], stretch: 'Add a morning at the Old Smithville Burying Ground, where the dates on the stones are their own kind of record.' }
+  ],
+  signature: { t: 'High water under a full moon', d: 'Pick a night near the full moon, check the tide table, and watch the marsh fill around the docks. It is free, and it is the closest you can come to how the water works in the story.' },
+  eat: ['A late dinner on the waterfront', 'Calabash-style seafood, from the village where Hazel came ashore', 'Something hot to drink for the tide watch'],
+  getting: 'Fly into Wilmington (ILM) and drive south, about 45 minutes. Oak Island is a short drive west of Southport.',
+  pack: ['A small flashlight or headlamp', 'Layers; nights on the water run cool', 'Bug spray', 'A printed or offline tide table'],
+  first: ['Check a moon calendar and the tide table before you choose dates', 'Confirm the Historical Society\u2019s hours', 'Book lodging in Southport or Oak Island'],
+  flights: [['Wilmington', 'ILM'], ['Myrtle Beach', 'MYR']],
+  when: 'Around 15 October if you want the anniversary. Any month works if you time it to a full or new moon. Storm season runs 1 June to 30 November, so watch the forecast and keep bookings flexible.',
+  links: [['Hazel event review, NWS', 'https://www.weather.gov/mhx/Oct151954EventReview'], ['State historical marker', 'https://dncr.nc.gov/blog/2023/12/11/hurricane-hazel-d-109'], ['Tide station, Southport', 'https://tidesandcurrents.noaa.gov/stationhome.html?id=8659084']]
+},
+{
+  id: 'dawn', num: 3, book: 'After the Reckoning', title: 'Battery Island and Bald Head', hour: 'Dawn',
+  where: 'Southport and Bald Head Island, North Carolina',
+  tag: 'For the reader who wants the ending: the birds at first light, a car-free island, and a lighthouse that has watched the river since 1817.',
+  art: artDawn,
+  anchor: {
+    name: 'Battery Island',
+    lead: 'The island in the series title is real. It is an Audubon sanctuary in the Cape Fear River, just off the Southport waterfront.',
+    honest: [
+      'It holds the largest colony of nesting wading birds in North Carolina: egrets, herons and ibis, with 10,000 to 15,000 nesting pairs across eight species, and in peak years about a tenth of North America\u2019s white ibis.',
+      'You cannot land. The island is off-limits to visitors in spring and summer, and Southport asks boaters and kayakers not to land on the sanctuary islands at all.',
+      'You can watch from the Southport waterfront. Nesting begins in March, and in late spring and early summer thousands of ibis stream back and forth across the river to feed their chicks.',
+      'Bring binoculars. Local tour boats pass the island in season and keep their distance.',
+      'If you see people walking on the island, the Wildlife Resources Commission enforcement line is 800-662-7137.'
+    ]
+  },
+  legs: [
+    { label: 'Sunrise in Southport', days: [
+      { t: 'Sunrise at Waterfront Park', d: 'Get there before the light. Look across the river at Battery Island. In nesting season the birds cross all day, so come back at midday as well.', q: 'Southport Waterfront Park 146 E Bay St' },
+      { t: 'Coffee on Bay Street', d: 'Warm up in town, then walk back to the river with binoculars.', q: 'Bay Street Southport NC coffee' },
+      { t: 'A low-tide look at the shoreline', d: 'At low tide the edges of the river open up and wading birds feed on the flats. Check the tide table for NOAA station 8659084.', q: 'Southport Yacht Basin' }
+    ] },
+    { label: 'A day on Bald Head Island', days: [
+      { t: 'Catch the ferry at Deep Point Marina', d: 'The passenger ferry leaves from 1301 Ferry Road and takes about 20 minutes. The island is car-free. Check the current schedule and book ahead in busy months.', q: 'Deep Point Marina 1301 Ferry Rd Southport NC' },
+      { t: 'Climb Old Baldy', d: 'North Carolina\u2019s oldest standing lighthouse, built in 1817, with 108 steps and a short walk from the ferry landing. It is closed in January and February, and hours change by season.', q: 'Old Baldy Lighthouse Bald Head Island NC' },
+      { t: 'Smith Island Museum of History', d: 'It sits beside the lighthouse in a replica of an 1850s keeper\u2019s cottage, with the story of the lighthouse, pirates and the lifesaving crews.', q: 'Smith Island Museum of History Bald Head Island' },
+      { t: 'Walk the beach and the preserves', d: 'About 10,000 of the island\u2019s 12,000 acres are beach, marsh and maritime forest preserves. With no cars, you walk, cycle or rent a golf cart.', q: 'Bald Head Island beach' },
+      { t: 'Watch the clock for the last ferry', d: 'Check the last return before you wander far.', q: 'Bald Head Island ferry landing' }
+    ], stretch: 'Come back in late spring and go out on a local cruise. It will pass Battery Island at a respectful distance.' }
+  ],
+  signature: { t: 'The ibis crossing at first light', d: 'Be on the Southport waterfront early in nesting season, with binoculars, and watch the white birds cross the river toward the marsh.' },
+  eat: ['A slow breakfast in town before the first ferry', 'A picnic for the ferry', 'Late lunch back in Southport'],
+  getting: 'Fly into Wilmington (ILM) and drive south, about 45 minutes. The Bald Head ferry leaves from Deep Point Marina, a few minutes outside Southport.',
+  pack: ['Binoculars', 'A sun hat and sunscreen', 'Water and snacks for the walk', 'Shoes for the 108 steps', 'Bug spray'],
+  first: ['Check the Bald Head ferry schedule and book if you can', 'Confirm Old Baldy\u2019s opening days', 'Pick a tide-friendly morning'],
+  flights: [['Wilmington', 'ILM'], ['Myrtle Beach', 'MYR']],
+  when: 'March to early summer for the nesting birds. Late spring through early fall for the ferry and Old Baldy on full hours. Old Baldy is closed in January and February.',
+  links: [['Audubon North Carolina: Battery Island', 'https://nc.audubon.org/battery'], ['Old Baldy, Bald Head Island', 'https://www.baldheadisland.com/see-do/old-baldy-lighthouse/'], ['Old Baldy on VisitNC', 'https://www.visitnc.com/listing/old-baldy-lighthouse-smith-island-museum-of-history']]
+}
+];
+const ESC = Object.fromEntries(ESCAPES.map(e => [e.id, e]));
+
+const QUIZ = [
+  { q: 'It is your first morning. What are you doing?', opts: [
+    ['Sleeping in. My best hours start around four in the afternoon.', { dusk: 3 }],
+    ['Reading old records with a very large coffee.', { night: 3 }],
+    ['Up before the sun, binoculars around my neck.', { dawn: 3 }],
+    ['Walking a small town with no plan.', { dusk: 2, night: 1 }] ] },
+  { q: 'Pick a souvenir.', opts: [
+    ['A photograph of the two of us in perfect light', { dusk: 3 }],
+    ['A copy of an old newspaper account', { night: 3 }],
+    ['A feather I found, and a list of the birds I saw', { dawn: 3 }],
+    ['A jar of shells from the beach', { dusk: 1, dawn: 2 }] ] },
+  { q: 'Which view do you want?', opts: [
+    ['The river turning gold as the boats come in', { dusk: 3 }],
+    ['A dark marsh slowly filling with moonlit water', { night: 3 }],
+    ['A lighthouse looking out over the whole cape', { dawn: 3 }],
+    ['A quiet churchyard with very old names', { night: 2, dusk: 1 }] ] },
+  { q: 'What kind of trip is this?', opts: [
+    ['Slow and romantic', { dusk: 3 }],
+    ['A little haunted, very curious', { night: 3 }],
+    ['Wild and quiet', { dawn: 3 }],
+    ['A bit of everything', { dusk: 1, night: 1, dawn: 1 }] ] }
+];
+
+/* ------------------------------------------------------------------ */
+/* Dates                                                               */
+/* ------------------------------------------------------------------ */
+function utc(a) { return Date.UTC(a[0], a[1] - 1, a[2]); }
+function fromUtc(t) { const d = new Date(t); return [d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()]; }
+function addDays(a, n) { return fromUtc(utc(a) + n * 864e5); }
+
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const h = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const ordinal = n => { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
+
+  const today = () => { const d = new Date(); return [d.getFullYear(), d.getMonth() + 1, d.getDate()]; };
+  function nextOcc(ev) {
+    const t = utc(today()), y0 = today()[0];
+    for (let y = y0; y <= y0 + 3; y++) {
+      const o = ev.occ(y);
+      if (o && utc(o.e) >= t) return { s: o.s, e: o.e, firm: o.firm, live: utc(o.s) <= t };
+    }
+    return null;
+  }
+  const dm = a => `${a[2]} ${MON[a[1] - 1]}`;
+  const range = o => `${dm(o.s)} ${o.s[0]}`;
+  function whenTxt(o) {
+    if (o.live) return 'Today';
+    const dd = Math.round((utc(o.s) - utc(today())) / 864e5);
+    if (dd === 1) return 'Tomorrow';
+    if (dd <= 45) return `In ${dd} days`;
+    return `In ${Math.round(dd / 30.4)} months`;
+  }
+  const ymd = a => `${a[0]}${String(a[1]).padStart(2, '0')}${String(a[2]).padStart(2, '0')}`;
+  const calUrl = (ev, o) => 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + `&text=${encodeURIComponent(ev.name)}&dates=${ymd(o.s)}/${ymd(addDays(o.e, 1))}`
+    + `&location=${encodeURIComponent(ev.place)}`
+    + `&details=${encodeURIComponent('From The Tidewater Novels at YSKAIPE Publishing. Confirm dates with the organisers before booking anything non-refundable.')}`;
+  const mapsUrl = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+  const flightUrl = code => `https://www.google.com/travel/flights?q=${encodeURIComponent('Flights to ' + code)}`;
+
+  /* ---------------------------------------------------------------- */
+  /* Trip Book state, saved in this browser                            */
+  /* ---------------------------------------------------------------- */
+  const ITEMS = {};
+  ESCAPES.forEach(e => {
+    const list = [];
+    e.first.forEach((t, i) => list.push({ k: 'f' + i, label: t, kind: 'first' }));
+    e.legs.forEach((leg, li) => leg.days.forEach((d, di) => list.push({ k: `s${li}.${di}`, label: d.t, kind: 'stop', q: d.q })));
+    ITEMS[e.id] = Object.fromEntries(list.map(x => [x.k, x]));
+    ITEMS[e.id]._order = list.map(x => x.k);
+  });
+  const store = {
+    get() { try { return JSON.parse(localStorage.getItem(CONFIG.storageKey) || 'null'); } catch (e) { return null; } },
+    set(v) { try { localStorage.setItem(CONFIG.storageKey, JSON.stringify(v)); } catch (e) { /* storage unavailable */ } }
+  };
+  const trip = new Map();
+  (() => {
+    const saved = store.get();
+    if (!saved || !saved.items) return;
+    Object.entries(saved.items).forEach(([id, o]) => {
+      if (!ESC[id] || !o) return;
+      const keys = (o.keys || []).filter(k => ITEMS[id][k]);
+      if (keys.length) trip.set(id, { keys, done: new Set((o.done || []).filter(k => keys.includes(k))) });
+    });
+  })();
+  const persist = () => store.set({ v: 1, items: Object.fromEntries(Array.from(trip.entries()).map(([id, t]) => [id, { keys: t.keys, done: Array.from(t.done) }])) });
+  const isSaved = (id, k) => !!trip.get(id) && trip.get(id).keys.includes(k);
+  const escSaved = id => trip.has(id);
+  function addKey(id, k) {
+    if (!trip.has(id)) trip.set(id, { keys: [], done: new Set() });
+    const t = trip.get(id);
+    if (!t.keys.includes(k)) t.keys.push(k);
+    t.keys.sort((a, b) => ITEMS[id]._order.indexOf(a) - ITEMS[id]._order.indexOf(b));
+  }
+  function dropKey(id, k) {
+    const t = trip.get(id); if (!t) return;
+    t.keys = t.keys.filter(x => x !== k); t.done.delete(k);
+    if (!t.keys.length) trip.delete(id);
+  }
+  function toggleEscape(id) {
+    if (trip.has(id)) { trip.delete(id); toast('Removed from your Trip Book'); }
+    else { ITEMS[id]._order.forEach(k => addKey(id, k)); toast(`${ESC[id].title} is in your Trip Book`); }
+    sync();
+  }
+  let toastT;
+  function toast(msg) {
+    const t = $('#toast'); t.textContent = msg; t.classList.add('on');
+    clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 2400);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Hero: move the tide                                               */
+  /* ---------------------------------------------------------------- */
+  const heroBox = $('#heroScene');
+  heroBox.insertAdjacentHTML('afterbegin', buildScene('h', false));
+  const heroSvg = $('svg', heroBox);
+  function fitView() {
+    const r = heroBox.getBoundingClientRect(), asp = r.width / Math.max(1, r.height);
+    heroSvg.setAttribute('viewBox', asp < 1.5 ? '340 40 860 660' : '0 0 1200 720');
+  }
+  fitView();
+  addEventListener('resize', fitView);
+
+  const range_ = $('#tideRange'), stops3 = $('#stops3');
+  stops3.innerHTML = BOOKS.map((b, i) => `<button class="stop3" type="button" data-act="hero-go" data-i="${i}"><b>${HOURS[b.id].name}</b><span>${h(b.title)}</span></button>`).join('');
+  let t = 0, curIdx = -1;
+  function setIdx(i) {
+    curIdx = i;
+    const b = BOOKS[i];
+    $('#roT').textContent = `Book ${b.n}: ${b.title}`;
+    $('#roP').textContent = b.ro;
+    $('#roA').innerHTML = `<a class="btn solid small" href="#book-${b.n}">About this book</a><a class="btn small" href="#esc-${b.id}">Walk this book</a>`;
+    $$('.stop3', stops3).forEach((s, k) => s.setAttribute('aria-current', String(k === i)));
+  }
+  function setT(v) {
+    t = clamp(v, 0, 2);
+    applyScene(heroSvg, t);
+    range_.value = t;
+    const i = t < .5 ? 0 : t < 1.5 ? 1 : 2;
+    if (i !== curIdx) setIdx(i);
+    range_.setAttribute('aria-valuetext', `${HOURS[BOOKS[i].id].name}: ${BOOKS[i].title}`);
+  }
+  let sweeping = false, raf = 0;
+  function stopSweep() { sweeping = false; cancelAnimationFrame(raf); }
+  function goTo(target) {
+    stopSweep();
+    if (reduce) { setT(target); return; }
+    const a = t, T0 = performance.now(), D = Math.abs(target - a) * 650 + 250;
+    (function step(now) {
+      const u = clamp((now - T0) / D, 0, 1);
+      setT(a + (target - a) * u * (2 - u));
+      if (u < 1) raf = requestAnimationFrame(step);
+    })(T0);
+  }
+  function sweep() {
+    if (reduce) return;
+    sweeping = true;
+    const T0 = performance.now() + 1100, D = 14000;
+    (function step(now) {
+      if (!sweeping) return;
+      const u = clamp((now - T0) / D, 0, 1);
+      if (now >= T0) setT(2 * sm(u));
+      if (u < 1) raf = requestAnimationFrame(step); else sweeping = false;
+    })(performance.now());
+  }
+  range_.addEventListener('input', () => { stopSweep(); setT(+range_.value); });
+  $('#top').addEventListener('pointerdown', stopSweep, { passive: true });
+  $('#top').addEventListener('keydown', stopSweep);
+  setT(0);
+
+  function renderKick() {
+    const n = today();
+    let occ = [n[0], 10, 15];
+    if (utc(occ) < utc(n)) occ = [n[0] + 1, 10, 15];
+    const yrs = occ[0] - 1954, dd = Math.round((utc(occ) - utc(n)) / 864e5);
+    $('#kick').innerHTML = dd === 0
+      ? `Hazel came ashore <b>${yrs} years ago today</b>. <a href="#hazel">Follow the storm</a>`
+      : `The ${ordinal(yrs)} anniversary of Hazel\u2019s landfall is in <b>${dd} days</b>, on 15 October. <a href="#hazel">Follow the storm</a>`;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* The trilogy                                                       */
+  /* ---------------------------------------------------------------- */
+  $('#plates').innerHTML = BOOKS.map(b => {
+    const H = HOURS[b.id], buy = CONFIG.buy[b.n];
+    return `<article class="plate ${H.kit}" id="book-${b.n}"><div class="plate-art still" data-scene="${b.n}"></div>
+      <div class="plate-body"><div class="plate-n" aria-hidden="true">${b.n}</div><h3>${h(b.title)}</h3><p class="plate-hour">${h(b.when)}</p>
+        <p class="blurb">${h(b.blurb)}</p>
+        <div class="threads"><div class="thread"><b>1954</b><span>${h(b.past)}</span></div><div class="thread"><b>Today</b><span>${h(b.now)}</span></div></div>
+        <p class="feel">${h(b.feel)}</p>
+        <div class="plate-a">${buy ? `<a class="btn solid" href="${h(buy)}" target="_blank" rel="noopener">Read Book ${b.n} on Kindle</a>` : `<a class="btn solid" href="${h(CONFIG.launchUrl)}">Get launch news</a>`}<a class="btn" href="#esc-${b.id}">Walk this book</a></div>
+      </div></article>`;
+  }).join('');
+  $$('[data-scene]').forEach(el => {
+    const n = +el.dataset.scene, b = BOOKS[n - 1];
+    el.innerHTML = buildScene('p' + n, true);
+    $('svg', el).setAttribute('viewBox', '300 0 900 720');
+    applyScene($('svg', el), HOURS[b.id].t);
+  });
+  $('#cast').innerHTML = CAST.map(([n, d]) => `<div><h3>${h(n)}</h3><p>${h(d)}</p></div>`).join('');
+
+  /* ---------------------------------------------------------------- */
+  /* Hazel: day by day, with a surge gauge                             */
+  /* ---------------------------------------------------------------- */
+  (function buildGauge() {
+    let ticks = '';
+    for (let f = 0; f <= 20; f++) {
+      const y = 430 - f * 20, major = f % 2 === 0;
+      ticks += `<line x1="60" y1="${y}" x2="${major ? 80 : 70}" y2="${y}" stroke="#C9D6DE" stroke-width="${major ? 2 : 1.2}"/>`;
+      if (major) ticks += `<text x="50" y="${y + 4}" text-anchor="end" fill="#C9D6DE" font-size="13" font-family="Hanken Grotesk,sans-serif">${f}</text>`;
+    }
+    $('#gauge').innerHTML = `<defs><clipPath id="gclip"><rect x="0" y="0" width="340" height="430"/></clipPath>
+      <linearGradient id="gw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E8FB0"/><stop offset="1" stop-color="#123A55"/></linearGradient></defs>
+      <rect width="340" height="470" fill="#0F2637"/>
+      <g><rect x="290" y="152" width="12" height="44" fill="#8FA3AB"/><rect x="210" y="250" width="100" height="180" fill="#C9D6DE"/><polygon points="198,252 260,130 322,252" fill="#8FA3AB"/><rect x="250" y="360" width="22" height="70" fill="#0F2637"/><rect x="222" y="290" width="24" height="24" fill="#0F2637"/><rect x="276" y="290" width="24" height="24" fill="#0F2637"/></g>
+      <g clip-path="url(#gclip)"><g id="gWater" style="transform:translateY(400px);transition:transform 2.6s cubic-bezier(.25,.6,.3,1)">
+        <rect x="-10" y="30" width="360" height="430" fill="url(#gw)" opacity=".92"/>
+        <g class="wave"><path d="M-160 30q40 -10 80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0V62H-160Z" fill="#7FB0C8" opacity=".9"/></g></g></g>
+      <rect y="430" width="340" height="40" fill="#1A3346"/><line x1="0" y1="430" x2="340" y2="430" stroke="#5F7F63" stroke-width="3"/>
+      <line x1="60" y1="30" x2="60" y2="430" stroke="#C9D6DE" stroke-width="2"/>${ticks}
+      <text x="12" y="454" fill="#B9CBD3" font-size="12" font-family="Hanken Grotesk,sans-serif">feet above the normal tide</text>
+      <g id="gMarks" style="opacity:0;transition:opacity .8s 1.8s"><line x1="86" y1="70" x2="330" y2="70" stroke="#C9A24D" stroke-width="1.6" stroke-dasharray="5 4"/><line x1="86" y1="90" x2="330" y2="90" stroke="#C9A24D" stroke-width="1.6" stroke-dasharray="5 4"/>
+        <text x="330" y="63" text-anchor="end" fill="#F6D9A4" font-size="12.5" font-family="Hanken Grotesk,sans-serif">18 ft, measured at Calabash</text>
+        <text x="330" y="108" text-anchor="end" fill="#F6D9A4" font-size="12.5" font-family="Hanken Grotesk,sans-serif">17 ft, Long Beach (Oak Island)</text></g>
+      <text id="gVal" x="330" y="20" text-anchor="end" fill="#F6D9A4" font-size="17" font-weight="700" font-family="Hanken Grotesk,sans-serif">Surge: 0 ft</text>`;
+  })();
+  let surgeNow = 0, surgeRaf = 0;
+  function setSurge(ft) {
+    $('#gWater').style.transform = `translateY(${(20 - ft) * 20}px)`;
+    $('#gMarks').style.opacity = ft >= 17 ? 1 : 0;
+    cancelAnimationFrame(surgeRaf);
+    const a = surgeNow, T0 = performance.now(), D = reduce ? 1 : 2600;
+    (function step(now) {
+      const u = clamp((now - T0) / D, 0, 1);
+      surgeNow = a + (ft - a) * u;
+      $('#gVal').textContent = `Surge: ${Math.round(surgeNow)} ft`;
+      if (u < 1) surgeRaf = requestAnimationFrame(step);
+    })(T0);
+  }
+  let hz = 0;
+  $('#hzTabs').innerHTML = HAZEL.map((s, i) => `<button class="hz-tab" type="button" role="tab" id="hzt-${i}" data-act="hz-go" data-i="${i}" aria-selected="false" aria-controls="hzCard">${h(s.d)}</button>`).join('');
+  $('#hzSrcs').innerHTML = 'Sources: ' + HAZEL_SRCS.map(([n, u]) => `<a href="${h(u)}" target="_blank" rel="noopener">${h(n)}</a>`).join('; ') + '.';
+  function showHazel(i) {
+    hz = clamp(i, 0, HAZEL.length - 1);
+    const s = HAZEL[hz];
+    $$('.hz-tab').forEach((b, k) => { b.setAttribute('aria-selected', String(k === hz)); b.tabIndex = k === hz ? 0 : -1; });
+    $('#hzCard').setAttribute('aria-labelledby', 'hzt-' + hz);
+    $('#hzCard').innerHTML = `<div class="hz-d">${h(s.d)} 1954</div><h3 class="hz-h">${h(s.h)}</h3><p class="hz-p">${h(s.p)}</p>`;
+    $('#hzPrev').disabled = hz === 0; $('#hzNext').disabled = hz === HAZEL.length - 1;
+    $('#hzPrev').style.opacity = hz === 0 ? .4 : 1; $('#hzNext').style.opacity = hz === HAZEL.length - 1 ? .4 : 1;
+    setSurge(s.surge);
+  }
+  $('#hzPrev').addEventListener('click', () => showHazel(hz - 1));
+  $('#hzNext').addEventListener('click', () => showHazel(hz + 1));
+
+  /* ---------------------------------------------------------------- */
+  /* The year on the river                                             */
+  /* ---------------------------------------------------------------- */
+  let fixtures = [];
+  function renderSeason() {
+    fixtures = EVENTS.map(ev => ({ ev, o: nextOcc(ev) })).filter(x => x.o).sort((a, b) => utc(a.o.s) - utc(b.o.s));
+    const n = today(), cm = n[1], dim = new Date(n[0], cm, 0).getDate();
+    const todayPct = ((cm - 1) + (n[2] - 1) / dim) / 12 * 100;
+    const rows = BARS.map(b => `<div class="g-row"><div class="g-lbl">${h(b.label)}</div><div class="g-note">${h(b.note)}</div>
+      <div class="g-track"><div class="g-bar${b.closed ? ' closed' : ''}" style="grid-column:${b.from}/${b.to + 1};${b.color ? '--b:' + b.color : ''}"></div></div></div>`).join('');
+    let prevLeft = -99, prevRow = 1, dots = '';
+    fixtures.forEach(f => {
+      const left = ((f.o.s[1] - 1) + (f.o.s[2] - 1) / new Date(f.o.s[0], f.o.s[1], 0).getDate()) / 12 * 100;
+      const row = left - prevLeft < 9 ? (prevRow + 1) % 2 : 0;
+      prevLeft = left; prevRow = row;
+      dots += `<button class="g-dot ${HOURS[f.ev.esc].kit}" type="button" data-act="dot" data-ev="${f.ev.id}" style="left:${left.toFixed(2)}%;top:${row * 38 + 2}px" aria-label="${h(f.ev.name)}, ${range(f.o)}">${f.o.s[2]}</button>`;
+    });
+    $('#gantt').innerHTML = `<div class="g-months" aria-hidden="true">${MON.map((m, i) => `<span class="${i + 1 === cm ? 'now' : ''}">${m}</span>`).join('')}</div>
+      <div class="g-body">${rows}<div class="g-row"><div class="g-lbl">Dates to mark</div><div class="g-note">The number is the day of the month.</div><div class="g-dots" style="height:${dots.includes('top:40px') ? 78 : 40}px">${dots}</div></div>
+      <div class="g-today" style="left:${todayPct.toFixed(2)}%" aria-hidden="true"></div></div>`;
+    $('#fixtures').innerHTML = fixtures.map(({ ev, o }) => `<li class="fx ${HOURS[ev.esc].kit}" id="fx-${ev.id}">
+      <div class="fx-date"><span class="d">${o.s[2]}</span><span class="m">${MON[o.s[1] - 1]} ${o.s[0]}</span></div>
+      <div class="fx-main"><h3>${h(ev.name)}</h3><p class="pl">${h(ev.place)}. <a href="#esc-${ev.esc}">${HOURS[ev.esc].name} trip</a></p><p class="nt">${h(ev.note)}</p></div>
+      <div class="fx-side"><span class="when">${whenTxt(o)}</span>${o.firm ? '' : '<span class="tag">Date expected</span>'}
+        <div class="acts"><a class="btn small" href="#esc-${ev.esc}">Plan it</a><a class="btn small" href="${calUrl(ev, o)}" target="_blank" rel="noopener">Add to calendar</a></div></div></li>`).join('');
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Quiz                                                              */
+  /* ---------------------------------------------------------------- */
+  const quiz = { i: 0, picks: [], busy: false };
+  function renderQuiz(focus) {
+    const box = $('#quizBox');
+    if (quiz.i >= QUIZ.length) return renderResult(box, focus);
+    const q = QUIZ[quiz.i];
+    box.innerHTML = `<div class="q-prog" aria-hidden="true">${QUIZ.map((_, n) => `<i class="${n < quiz.i ? 'done' : ''}"></i>`).join('')}</div>
+      <h3 class="q-q" id="qq" tabindex="-1"><span class="sr">Question ${quiz.i + 1} of ${QUIZ.length}. </span>${h(q.q)}</h3>
+      <div class="q-opts">${q.opts.map((o, n) => `<button class="q-opt${quiz.picks[quiz.i] === n ? ' picked' : ''}" type="button" data-act="q-pick" data-n="${n}">${h(o[0])}</button>`).join('')}</div>
+      ${quiz.i ? '<button class="q-back" type="button" data-act="q-back">Back one question</button>' : ''}`;
+    if (focus) $('#qq').focus({ preventScroll: true });
+  }
+  function scores() {
+    const sc = { dusk: 0, night: 0, dawn: 0 };
+    quiz.picks.forEach((n, i) => Object.entries(QUIZ[i].opts[n][1]).forEach(([id, v]) => { sc[id] += v; }));
+    return Object.keys(sc).map((id, idx) => ({ id, s: sc[id], idx })).sort((a, b) => b.s - a.s || a.idx - b.idx);
+  }
+  function renderResult(box, focus) {
+    const r = scores(), w = ESC[r[0].id], bk = BOOKS[HOURS[w.id].idx], rest = r.slice(1, 3).filter(x => x.s > 0);
+    box.innerHTML = `<div class="q-prog" aria-hidden="true">${QUIZ.map(() => '<i class="done"></i>').join('')}</div>
+      <div class="q-win ${HOURS[w.id].kit}"><div class="n" aria-hidden="true">${w.num}</div>
+        <h3 id="qq" tabindex="-1"><span class="sr">Your hour: </span>${h(HOURS[w.id].name)}: ${h(w.title)}</h3>
+        <p>${h(w.tag)} It walks Book ${bk.n}, <em>${h(bk.title)}</em>.</p>
+        <div class="acts"><a class="btn solid" href="#esc-${w.id}">Read this trip</a>
+        <button class="btn" type="button" data-act="toggle-esc" data-esc="${w.id}"></button>
+        <a class="btn" href="#book-${bk.n}">About the book</a></div></div>
+      <p class="q-alt">${rest.length ? 'Close behind: ' + rest.map(x => `<button type="button" data-act="q-goto" data-esc="${x.id}">${h(HOURS[x.id].name)}</button>`).join(' or ') + '. ' : ''}<button type="button" data-act="q-retake">Take it again</button></p>`;
+    if (focus) $('#qq').focus({ preventScroll: true });
+    sync();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* The three trips                                                   */
+  /* ---------------------------------------------------------------- */
+  function escapeHtml(e) {
+    const bk = BOOKS[HOURS[e.id].idx], buy = CONFIG.buy[bk.n];
+    const tabs = e.legs.length > 1
+      ? `<div class="tabs" role="tablist" aria-label="Parts of the ${h(e.title)} trip">${e.legs.map((l, i) => `<button class="tab" type="button" role="tab" id="tab-${e.id}-${i}" aria-controls="pn-${e.id}-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-act="tab" data-esc="${e.id}" data-i="${i}">${h(l.label)}</button>`).join('')}</div>` : '';
+    const panels = e.legs.map((l, li) => `<div role="tabpanel" id="pn-${e.id}-${li}" ${e.legs.length > 1 ? `aria-labelledby="tab-${e.id}-${li}"` : ''} ${li ? 'hidden' : ''}>
+      ${e.legs.length === 1 ? `<p style="margin-bottom:.9rem;font-weight:600">${h(l.label)}</p>` : ''}
+      <ol class="stops">${l.days.map((d, di) => `<li class="stop"><h4>${h(d.t)}</h4><p>${h(d.d)}</p>
+        <div class="stop-a"><a href="${mapsUrl(d.q)}" target="_blank" rel="noopener">Open in Maps</a>
+        <button class="save" type="button" data-act="save-stop" data-esc="${e.id}" data-key="s${li}.${di}" aria-pressed="false">Save this stop</button></div></li>`).join('')}</ol>
+      ${l.stretch ? `<p class="stretch">${h(l.stretch)}</p>` : ''}
+      <div class="acts" style="margin-top:1.1rem"><button class="btn small" type="button" data-act="save-leg" data-esc="${e.id}" data-i="${li}">Save this whole part</button></div></div>`).join('');
+    return `<section class="escape ${HOURS[e.id].kit}" id="esc-${e.id}" aria-labelledby="h-${e.id}"><div class="esc-in">
+      <div class="esc-side">
+        <div class="jersey" aria-hidden="true">${e.num}</div>
+        <h2 id="h-${e.id}">${h(e.title)}</h2>
+        <p class="esc-book">Book ${bk.n}: ${h(bk.title)}</p>
+        <p class="esc-tag">${h(e.tag)}</p>
+        <p class="esc-where">${h(e.where)}</p>
+        <p class="status-note">${buy ? '' : `Book ${bk.n} is forthcoming, and its travel journal arrives with it. This trip is ready now.`}</p>
+        <div class="esc-art">${e.art()}</div>
+      </div>
+      <div class="esc-main">
+        <div class="blk fest"><h3>${h(e.anchor.name)}</h3><p class="fest-lead">${h(e.anchor.lead)}</p>
+          <h4>The honest version</h4><ul class="honest">${e.anchor.honest.map(x => `<li>${h(x)}</li>`).join('')}</ul></div>
+        <div class="blk"><h3>Your route</h3>${tabs}${panels}</div>
+        <div class="blk"><div class="trio">
+          <div><h4>Getting there</h4><p>${h(e.getting)}</p><div class="chips" style="margin-top:.7rem">${e.flights.map(([c, code]) => `<a class="chip" href="${flightUrl(code)}" target="_blank" rel="noopener">Flights to ${h(c)} (${code})</a>`).join('')}</div></div>
+          <div><h4>Pack</h4><ul>${e.pack.map(x => `<li>${h(x)}</li>`).join('')}</ul></div>
+          <div><h4>Book first</h4><ul>${e.first.map(x => `<li>${h(x)}</li>`).join('')}</ul></div></div></div>
+        <div class="blk"><div class="sig"><h4>${h(e.signature.t)}</h4><p>${h(e.signature.d)}</p></div></div>
+        <div class="blk"><h3>When to go</h3><p>${h(e.when)}</p></div>
+        <div class="blk"><h3>Eat this</h3><div class="chips">${e.eat.map(x => `<span class="chip">${h(x)}</span>`).join('')}</div></div>
+        <div class="blk"><div class="acts"><button class="btn solid" type="button" data-act="toggle-esc" data-esc="${e.id}" data-long></button>
+          <button class="btn" type="button" data-act="open-tb">Open my Trip Book</button></div>
+          <p class="esc-srcs">Official pages: ${e.links.map(([n, u]) => `<a href="${h(u)}" target="_blank" rel="noopener">${h(n)}</a>`).join(' &middot; ')}</p></div>
+      </div></div></section>`;
+  }
+  $('#escapes').innerHTML = `<div class="section esc-intro"><div class="wrap"><h2 class="sec-title">Walk the books</h2>
+    <p class="sec-sub">Every YSKAIPE book ends with a travel journal. These are the trips behind the Tidewater Novels, ready before the books are. Save any stop to your Trip Book as you read.</p>
+    <div class="chips">${ESCAPES.map(e => `<a class="chip" href="#esc-${e.id}">${e.num}. ${h(e.title)}</a>`).join('')}</div></div></div>` + ESCAPES.map(escapeHtml).join('');
+
+  /* ---------------------------------------------------------------- */
+  /* Trip Book drawer                                                  */
+  /* ---------------------------------------------------------------- */
+  let lastFocus = null;
+  function mailBody() {
+    return Array.from(trip.entries()).map(([id, tp]) => {
+      const e = ESC[id], line = k => `[${tp.done.has(k) ? 'x' : ' '}] ${ITEMS[id][k].label}`;
+      const f = tp.keys.filter(k => ITEMS[id][k].kind === 'first').map(line), s = tp.keys.filter(k => ITEMS[id][k].kind === 'stop').map(line);
+      return `${e.title} (${e.where})\n${f.length ? 'Book first:\n' + f.join('\n') + '\n' : ''}${s.length ? 'Stops:\n' + s.join('\n') : ''}`;
+    }).join('\n\n');
+  }
+  function renderTrip() {
+    const body = $('#tbBody'), foot = $('#tbFoot');
+    if (!trip.size) {
+      body.innerHTML = `<div class="dr-empty"><p>Nothing saved yet. Save a whole trip from the quiz or any section, or tap Save on the stops you like. Everything you save shows up here as a checklist, and it stays on this device.</p>
+        <a class="btn" href="#quiz" data-act="tb-close-jump">Find my hour</a></div>`;
+      foot.innerHTML = ''; return;
+    }
+    body.innerHTML = Array.from(trip.entries()).map(([id, tp]) => {
+      const e = ESC[id], total = tp.keys.length, done = tp.done.size, pct = Math.round(done / total * 100);
+      const row = k => { const it = ITEMS[id][k]; return `<li><label><input type="checkbox" data-act="tb-check" data-esc="${id}" data-key="${k}"${tp.done.has(k) ? ' checked' : ''}><span>${h(it.label)}</span></label>${it.q ? `<a href="${mapsUrl(it.q)}" target="_blank" rel="noopener">Map</a>` : ''}</li>`; };
+      const firsts = tp.keys.filter(k => ITEMS[id][k].kind === 'first'), stops = tp.keys.filter(k => ITEMS[id][k].kind === 'stop');
+      return `<article class="tbi ${HOURS[id].kit}"><div class="tbi-h"><div><h3>${h(e.title)}</h3><div class="sub">${h(e.where)}</div></div>
+        <button class="rm" type="button" data-act="tb-remove" data-esc="${id}">Remove</button></div>
+        <div class="bar" role="progressbar" aria-label="${h(e.title)} progress" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${done}"><i style="width:${pct}%"></i></div>
+        <div class="sub">${done} of ${total} done</div>
+        ${firsts.length ? `<h4>Book first</h4><ul class="ck">${firsts.map(row).join('')}</ul>` : ''}
+        ${stops.length ? `<h4>Stops</h4><ul class="ck">${stops.map(row).join('')}</ul>` : ''}
+        <div class="tbi-a">${e.flights.map(([c, code]) => `<a class="btn small" href="${flightUrl(code)}" target="_blank" rel="noopener">Flights to ${code}</a>`).join('')}</div></article>`;
+    }).join('') + '<p class="dr-note">Saved on this device only.</p>';
+    foot.innerHTML = `<button class="btn small" type="button" data-act="tb-print">Print</button><a class="btn small" href="mailto:?subject=${encodeURIComponent('My Tidewater trip book')}&body=${encodeURIComponent(mailBody())}">Email it to me</a><button class="btn small" type="button" data-act="tb-clear">Clear all</button>`;
+  }
+  function openTrip() {
+    lastFocus = document.activeElement;
+    renderTrip();
+    $('#veil').classList.add('on'); const d = $('#tripbook'); d.classList.add('on'); d.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    $('#tbClose').focus();
+  }
+  function closeTrip(restore = true) {
+    $('#veil').classList.remove('on'); const d = $('#tripbook'); d.classList.remove('on'); d.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (restore && lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  const tripOpen = () => $('#tripbook').classList.contains('on');
+
+  function sync(save) {
+    if (save) persist();
+    $('#tbCount').textContent = trip.size;
+    $$('.save').forEach(b => { const on = isSaved(b.dataset.esc, b.dataset.key); b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); b.textContent = on ? 'Saved' : 'Save this stop'; });
+    $$('[data-act="toggle-esc"]').forEach(b => {
+      const on = escSaved(b.dataset.esc), long = b.hasAttribute('data-long');
+      b.setAttribute('aria-pressed', String(on));
+      b.textContent = on ? 'Saved to my Trip Book' : (long ? 'Add this trip to my Trip Book' : 'Save to my Trip Book');
+    });
+    $$('[data-act="save-leg"]').forEach(b => {
+      const e = ESC[b.dataset.esc], keys = e.legs[+b.dataset.i].days.map((_, di) => `s${b.dataset.i}.${di}`);
+      const all = keys.every(k => isSaved(e.id, k));
+      b.textContent = all ? 'This part is saved' : 'Save this whole part';
+    });
+    if (tripOpen()) renderTrip();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Events                                                            */
+  /* ---------------------------------------------------------------- */
+  function selectTab(id, i, focus) {
+    $$(`[data-act="tab"][data-esc="${id}"]`).forEach(b => { const on = +b.dataset.i === i; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; if (on && focus) b.focus(); });
+    ESC[id].legs.forEach((_, li) => { const p = $(`#pn-${id}-${li}`); if (p) p.hidden = li !== i; });
+  }
+  document.addEventListener('click', ev => {
+    const el = ev.target.closest('[data-act]');
+    if (!el) return;
+    const act = el.dataset.act, id = el.dataset.esc;
+    switch (act) {
+      case 'hero-go': goTo(+el.dataset.i); break;
+      case 'hz-go': showHazel(+el.dataset.i); break;
+      case 'toggle-esc': toggleEscape(id); sync(true); break;
+      case 'save-stop':
+        if (isSaved(id, el.dataset.key)) { dropKey(id, el.dataset.key); toast('Removed'); }
+        else { addKey(id, el.dataset.key); toast('Saved to your Trip Book'); }
+        sync(true); break;
+      case 'save-leg': {
+        const keys = ESC[id].legs[+el.dataset.i].days.map((_, di) => `s${el.dataset.i}.${di}`), all = keys.every(k => isSaved(id, k));
+        keys.forEach(k => all ? dropKey(id, k) : addKey(id, k));
+        toast(all ? 'Removed' : 'Saved to your Trip Book'); sync(true); break;
+      }
+      case 'tab': selectTab(id, +el.dataset.i); break;
+      case 'open-tb': openTrip(); break;
+      case 'tb-close-jump': closeTrip(false); break;
+      case 'tb-remove': trip.delete(id); toast('Removed from your Trip Book'); sync(true); break;
+      case 'tb-clear': trip.clear(); sync(true); break;
+      case 'tb-print': window.print(); break;
+      case 'dot': {
+        const f = $('#fx-' + el.dataset.ev);
+        if (f) { f.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); f.classList.remove('flash'); void f.offsetWidth; f.classList.add('flash'); }
+        break;
+      }
+      case 'q-pick':
+        if (quiz.busy) break; quiz.busy = true;
+        quiz.picks[quiz.i] = +el.dataset.n;
+        $$('.q-opt').forEach(b => b.classList.toggle('picked', b === el));
+        setTimeout(() => { quiz.i++; quiz.busy = false; renderQuiz(true); }, 240);
+        break;
+      case 'q-back': quiz.i = Math.max(0, quiz.i - 1); renderQuiz(true); break;
+      case 'q-retake': quiz.i = 0; quiz.picks = []; renderQuiz(true); break;
+      case 'q-goto': { const s = $('#esc-' + id); if (s) s.scrollIntoView({ behavior: 'smooth' }); break; }
+    }
+  });
+  document.addEventListener('change', ev => {
+    const c = ev.target.closest('[data-act="tb-check"]'); if (!c) return;
+    const s = trip.get(c.dataset.esc); if (!s) return;
+    c.checked ? s.done.add(c.dataset.key) : s.done.delete(c.dataset.key);
+    persist(); renderTrip();
+  });
+  document.addEventListener('keydown', ev => {
+    const tab = ev.target.closest && ev.target.closest('[role="tab"]');
+    if (tab && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(ev.key)) {
+      ev.preventDefault();
+      const tabs = $$('[role="tab"]', tab.parentElement); let i = tabs.indexOf(tab);
+      i = ev.key === 'ArrowRight' ? (i + 1) % tabs.length : ev.key === 'ArrowLeft' ? (i + tabs.length - 1) % tabs.length : ev.key === 'Home' ? 0 : tabs.length - 1;
+      tabs[i].focus(); tabs[i].click(); return;
+    }
+    if (tripOpen()) {
+      if (ev.key === 'Escape') { closeTrip(); return; }
+      if (ev.key === 'Tab') {
+        const f = $$('a[href],button,input', $('#tripbook')).filter(n => !n.disabled && n.offsetParent !== null);
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+        else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+        else if (!$('#tripbook').contains(document.activeElement)) { ev.preventDefault(); first.focus(); }
+      }
+    }
+  });
+  $('#tbOpen').addEventListener('click', openTrip);
+  $('#footTrip').addEventListener('click', openTrip);
+  $('#tbClose').addEventListener('click', () => closeTrip());
+  $('#veil').addEventListener('click', () => closeTrip());
+  $('#launchCta').href = CONFIG.launchUrl;
+
+  /* ---------------------------------------------------------------- */
+  /* Boot                                                              */
+  /* ---------------------------------------------------------------- */
+  renderKick();
+  renderSeason();
+  renderQuiz(false);
+  showHazel(0);
+  sync(false);
+  sweep();
+})();
+
+</script>
 </body>
 </html>
