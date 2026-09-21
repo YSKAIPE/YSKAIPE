@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Festival League — Real escapes from the YSKAIPE Guides</title>
+<meta name="description" content="Seven romances, six real festivals. Plan the trip behind every book in The Festival League: itineraries, dates, honest festival advice, and a Trip Book to carry with you.">
+<meta name="theme-color" content="#0E2A3B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12232E; --sea:#0E2A3B; --sea-2:#173C52; --salt:#E9EEEB; --paper:#FBFCFA; --line:#C7D2CD;
+  --amber:#F2A541; --amber-ink:#8A4B00;
+  --display:"Big Shoulders Display","Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --text:"Newsreader",Georgia,"Times New Roman",serif;
+  /* default kit = Costa Brava */
+  --k-bg:#0B4F6C; --k-fg:#F4F7F7; --k-accent:#F2A541; --k-on:#1B1305; --k-soft:rgba(255,255,255,.09); --k-line:rgba(255,255,255,.24);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--salt);color:var(--ink);font:400 1.125rem/1.62 var(--text);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:.95;margin:0}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--amber);color:#1B1305;padding:.6rem 1rem;z-index:200;font:700 1.1rem var(--display)}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:60;height:64px;display:flex;align-items:center;gap:1.4rem;padding:0 clamp(1rem,3vw,2.5rem);background:rgba(10,32,46,.94);backdrop-filter:blur(8px);color:#fff}
+.brand{font:900 1.7rem/1 var(--display);text-decoration:none;color:#fff;white-space:nowrap}
+.brand small{display:block;font:italic 400 .82rem/1.1 var(--text);opacity:.7;margin-top:3px}
+.nav{display:flex;gap:1.5rem;margin-left:auto;align-items:center}
+.nav a{color:#fff;text-decoration:none;font:700 1.12rem var(--display);opacity:.86}
+.nav a:hover{opacity:1;text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:3px;text-underline-offset:7px}
+.tb-open{display:inline-flex;align-items:center;gap:.55rem;background:transparent;border:2px solid var(--amber);color:#fff;padding:.32rem .8rem;font:700 1.1rem var(--display);cursor:pointer}
+.tb-open:hover{background:var(--amber);color:#1B1305}
+.tb-count{min-width:1.5rem;height:1.5rem;background:var(--amber);color:#1B1305;display:inline-grid;place-items:center;border-radius:99px;font-size:.95rem;padding:0 .35rem}
+.tb-open:hover .tb-count{background:#1B1305;color:var(--amber)}
+@media (max-width:820px){.nav a{display:none}.nav{margin-left:auto}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--sea);color:#fff;overflow:hidden;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 84px,transparent 84px 168px)}
+.hero-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.4fr);gap:clamp(1rem,3vw,3rem);align-items:center;max-width:1440px;margin:0 auto;padding:clamp(1.5rem,4vw,3rem) clamp(1rem,3vw,2.5rem) clamp(2rem,4vw,3.5rem);min-height:calc(100svh - 64px)}
+.hero h1{font-size:clamp(3.7rem,8.8vw,8.6rem);font-weight:900;line-height:.85;letter-spacing:-.005em}
+.lede{font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.45;max-width:31ch;margin-top:1.3rem;color:#DCE8EA}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:800 1.15rem/1 var(--display);padding:.75rem 1.15rem;border:2px solid transparent;cursor:pointer;text-decoration:none;background:none;letter-spacing:.01em}
+.btn.solid{background:var(--k-accent);color:var(--k-on);border-color:var(--k-accent)}
+.btn.solid:hover{filter:brightness(1.08)}
+.btn.line{border-color:var(--k-accent);color:var(--k-fg)}
+.btn.line:hover{background:var(--k-accent);color:var(--k-on)}
+.btn.small{font-size:1rem;padding:.5rem .8rem}
+.btn[aria-pressed="true"]{background:transparent;color:var(--k-fg);border-color:var(--k-fg)}
+.hero .btn{--k-accent:var(--amber);--k-on:#1B1305;--k-fg:#fff}
+
+.kick{margin-top:2rem;border-top:2px solid var(--amber);padding-top:1rem;max-width:34rem}
+.kick-l{font:italic 400 1rem var(--text);opacity:.75}
+.kick-n{font:800 clamp(1.7rem,3vw,2.3rem)/1 var(--display);margin-top:.2rem}
+.kick-p{font:400 1rem var(--text);opacity:.8;margin-top:.15rem}
+.digits{display:flex;gap:.7rem;margin-top:.8rem}
+.dig{min-width:4.1rem;text-align:center;background:rgba(255,255,255,.07);padding:.4rem .5rem .3rem}
+.dig b{display:block;font:800 2.5rem/1 var(--display);color:var(--amber);font-variant-numeric:tabular-nums}
+.dig i{font:italic 400 .85rem var(--text);opacity:.75}
+
+.mapbox{position:relative}
+#map{width:100%;height:auto;display:block;overflow:visible}
+.land{fill:none;stroke:#79B5B0;stroke-width:3.1;stroke-linecap:round;opacity:.5}
+.arc-next{fill:none;stroke:#9FB6C2;stroke-width:1.6;stroke-dasharray:5 6;opacity:.55}
+.pin{cursor:pointer;outline:none}
+.pin .dot{stroke:#fff;stroke-width:2.5;transition:r .15s}
+.pin .lbl{font:800 17px var(--display);fill:#fff;paint-order:stroke;stroke:#0E2A3B;stroke-width:5px;stroke-linejoin:round;pointer-events:none}
+.pin.minor .lbl{font-size:14px;font-weight:700;opacity:.9}
+.pin .ring{fill:none;stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.pin.on .ring{opacity:1;animation:pulse 2s ease-out infinite}
+.pin:hover .dot,.pin:focus-visible .dot{stroke-width:4}
+.pin:focus-visible .dot{stroke:var(--amber)}
+.pin{animation:pop .5s cubic-bezier(.2,1.4,.4,1) backwards;animation-delay:calc(var(--i)*90ms + 1.1s);transform-box:fill-box;transform-origin:center}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes pulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font:italic 400 .95rem var(--text);color:#B9CBD1;margin-top:.5rem}
+.legend span{display:inline-flex;align-items:center;gap:.5rem}
+.legend svg{width:34px;height:8px}
+
+.mapcard{margin-top:.9rem;background:var(--k-bg);color:var(--k-fg);border-left:9px solid var(--k-accent);padding:.9rem 1.1rem;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.4rem 1rem;align-items:center;transition:background .3s,border-color .3s}
+.mc-num{font:900 4.4rem/.8 var(--display);color:var(--k-accent);grid-row:span 2}
+.mc-t{font:800 1.75rem/1 var(--display)}
+.mc-f{font-size:1rem;line-height:1.35}
+.mc-f b{font-weight:600}
+.mc-a{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.3rem}
+@media (max-width:900px){.hero-in{grid-template-columns:1fr;min-height:0}.lede{max-width:40ch}}
+
+/* ---------- sections ---------- */
+.section{padding:clamp(3.2rem,7vw,6.2rem) clamp(1rem,3vw,2.5rem)}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-title{font-size:clamp(2.8rem,6.2vw,5.4rem);font-weight:900;line-height:.9}
+.sec-sub{max-width:52ch;margin-top:1rem;font-size:1.2rem;color:#37505E}
+
+/* season */
+.year{display:grid;grid-template-columns:repeat(12,1fr);margin-top:2rem;background:var(--paper);border:1px solid var(--line)}
+.ym{min-height:104px;padding:.45rem .4rem .5rem;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:.35rem;position:relative}
+.ym:first-child{border-left:0}
+.ym .mn{font:700 1.05rem var(--display);color:#5B7280}
+.ym.now{background:#FFF3D9}
+.ym.now .mn::after{content:" · today";font:italic 400 .85rem var(--text);color:var(--amber-ink)}
+.ydots{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:auto}
+.ydot{width:26px;height:26px;border-radius:50%;border:0;background:var(--k-bg);cursor:pointer;box-shadow:0 0 0 2px var(--paper),0 0 0 3px rgba(0,0,0,.25);position:relative}
+.ydot:hover{transform:scale(1.15)}
+.ydot span{position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font:600 .9rem var(--display);padding:.25rem .5rem;white-space:nowrap;opacity:0;pointer-events:none;z-index:5}
+.ydot:hover span,.ydot:focus-visible span{opacity:1}
+@media (max-width:760px){.year{grid-template-columns:repeat(6,1fr)}.ym:nth-child(7){border-left:0}.ym:nth-child(n+7){border-top:1px solid var(--line)}}
+
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:2.2rem 0 0}
+.fchip{border:2px solid var(--ink);background:transparent;padding:.3rem .9rem;border-radius:99px;font:700 1.05rem var(--display);cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.fixtures{list-style:none;margin:1.3rem 0 0;padding:0;display:grid;gap:.85rem}
+.fx{display:grid;grid-template-columns:158px minmax(0,1fr) auto;background:#fff;position:relative;scroll-margin-top:90px}
+.fx::before,.fx::after{content:"";position:absolute;left:158px;width:18px;height:18px;border-radius:50%;background:var(--salt);transform:translateX(-50%)}
+.fx::before{top:-9px}.fx::after{bottom:-9px}
+.fx.flash{animation:flash 1.4s}
+@keyframes flash{0%,60%{box-shadow:0 0 0 4px var(--amber)}100%{box-shadow:0 0 0 0 transparent}}
+.fx-date{background:var(--k-bg);color:var(--k-fg);padding:1rem .8rem;display:flex;flex-direction:column;justify-content:center;text-align:center;border-right:2px dashed var(--k-line)}
+.fx-date .d{font:900 2.35rem/1 var(--display)}
+.fx-date .m{font:700 1.05rem var(--display);opacity:.9;margin-top:.15rem}
+.fx-main{padding:1rem 1.3rem}
+.fx-main h3{font-size:1.85rem}
+.fx-main .pl{margin-top:.25rem;font-size:1.02rem;color:#37505E}
+.fx-main .nt{margin-top:.5rem;font-size:1rem;font-style:italic;color:#4E6470}
+.fx-side{padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem;align-items:flex-end;justify-content:center;text-align:right}
+.when{font:800 1.5rem/1 var(--display)}
+.tag{display:inline-block;font:700 .95rem var(--display);padding:.15rem .6rem;border-radius:99px;background:#E4ECE8;color:#2B4350}
+.tag.free{background:#DDF0DD;color:#1F5B2B}
+.fx-acts{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:flex-end}
+.fx .btn.line{--k-fg:var(--ink);--k-accent:var(--ink);--k-on:#fff}
+.fx.empty{opacity:.75}
+@media (max-width:760px){
+  .fx{grid-template-columns:104px minmax(0,1fr)}
+  .fx::before,.fx::after{left:104px}
+  .fx-side{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;text-align:left;border-top:1px dashed var(--line)}
+  .fx-date .d{font-size:1.6rem}
+}
+
+/* quiz */
+.quiz-sec{background:var(--sea);color:#fff}
+.quiz-sec .sec-sub{color:#C8DAE0}
+.quiz{margin-top:2rem;max-width:860px}
+.q-prog{display:flex;gap:.45rem;margin-bottom:1.2rem}
+.q-prog i{flex:1;height:6px;background:rgba(255,255,255,.2)}
+.q-prog i.done{background:var(--amber)}
+.q-q{font:800 clamp(1.9rem,4vw,3rem)/1 var(--display)}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.4rem}
+.q-opt{text-align:left;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.22);padding:1rem 1.15rem;font:400 1.12rem/1.35 var(--text);cursor:pointer;color:#fff;min-height:5rem}
+.q-opt:hover{border-color:var(--amber);background:rgba(255,255,255,.1)}
+.q-opt.picked{background:var(--amber);color:#1B1305;border-color:var(--amber)}
+.q-back{margin-top:1.1rem;background:none;border:0;color:#B9CBD1;font:italic 400 1rem var(--text);cursor:pointer;text-decoration:underline;padding:0}
+@media (max-width:640px){.q-opts{grid-template-columns:1fr}}
+.q-res{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+.q-win{background:var(--k-bg);color:var(--k-fg);padding:1.4rem 1.5rem;border-left:10px solid var(--k-accent)}
+.q-win .n{font:900 5.5rem/.8 var(--display);color:var(--k-accent)}
+.q-win h3{font-size:2.6rem;margin-top:.5rem}
+.q-win p{margin-top:.6rem;max-width:52ch}
+.q-win .acts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem}
+.q-alt{font-size:1.05rem;color:#C8DAE0}
+.q-alt button{background:none;border:0;padding:0;color:#fff;text-decoration:underline;cursor:pointer;font:inherit}
+
+/* ---------- escapes ---------- */
+.escape{background:var(--k-bg);color:var(--k-fg);scroll-margin-top:64px}
+.esc-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6.2fr);gap:clamp(1.5rem,4vw,4.5rem);max-width:1320px;margin:0 auto;padding:clamp(3rem,7vw,6rem) clamp(1rem,3vw,2.5rem)}
+.esc-side{position:sticky;top:84px;align-self:start}
+.esc-head{display:flex;gap:1rem;align-items:flex-start}
+.jersey{font:900 clamp(5.5rem,10vw,8.5rem)/.78 var(--display);color:var(--k-accent)}
+.status{display:inline-block;margin-top:.5rem;font:700 .98rem var(--display);padding:.15rem .65rem;border:2px solid var(--k-accent);border-radius:99px;color:var(--k-fg)}
+.status.out{background:var(--k-accent);color:var(--k-on)}
+.esc-side h2{font-size:clamp(2.8rem,5.6vw,4.9rem);font-weight:900;line-height:.88;margin-top:.15rem}
+.esc-tag{font-size:1.25rem;font-style:italic;line-height:1.4;margin-top:.9rem;max-width:34ch}
+.esc-where{margin-top:.7rem;font:700 1.2rem var(--display);opacity:.85}
+.esc-art{margin-top:1.5rem}
+.esc-art svg{display:block;width:100%;height:auto;outline:2px solid var(--k-line);outline-offset:8px}
+.blk{border-top:1px solid var(--k-line);padding-top:1.5rem;margin-top:2rem}
+.blk:first-child{border-top:0;margin-top:0;padding-top:0}
+.blk h3{font-size:1.75rem;margin-bottom:.8rem}
+.fest{background:var(--k-soft);border-left:7px solid var(--k-accent);padding:1.4rem 1.5rem}
+.fest h3{font-size:clamp(2rem,3.4vw,2.7rem);margin:0}
+.fest-when{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin:.6rem 0 .9rem}
+.fest-when b{font:800 1.6rem/1 var(--display)}
+.pill{display:inline-block;background:var(--k-accent);color:var(--k-on);font:800 1rem/1 var(--display);padding:.3rem .65rem}
+.fest h4{font-size:1.35rem;margin:1.2rem 0 .5rem}
+.honest{margin:0;padding:0;list-style:none;display:grid;gap:.7rem}
+.honest li{padding-left:1.5rem;position:relative}
+.honest li::before{content:"";position:absolute;left:0;top:.55em;width:.7rem;height:.7rem;border-radius:50%;background:var(--k-accent)}
+.tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.2rem}
+.tab{font:700 1.1rem var(--display);padding:.4rem .9rem;background:transparent;border:2px solid var(--k-line);cursor:pointer}
+.tab:hover{border-color:var(--k-accent)}
+.tab[aria-selected="true"]{background:var(--k-accent);color:var(--k-on);border-color:var(--k-accent)}
+.stops{list-style:none;margin:0;padding:0 0 0 1.6rem;position:relative;display:grid;gap:1.15rem}
+.stops::before{content:"";position:absolute;left:5px;top:.7rem;bottom:.7rem;width:2px;background:var(--k-line)}
+.stop{position:relative}
+.stop::before{content:"";position:absolute;left:-1.6rem;top:.42rem;width:12px;height:12px;border-radius:50%;background:var(--k-accent);box-shadow:0 0 0 4px var(--k-bg)}
+.stop h4{font:800 1.3rem/1.1 var(--display)}
+.stop p{margin-top:.25rem}
+.stop .nov{margin-top:.35rem;font-style:italic;opacity:.9}
+.stop .nov b{font-style:normal;font-weight:600}
+.stop a{font:700 1rem var(--display);margin-top:.35rem;display:inline-block;text-underline-offset:4px}
+.stretch{margin-top:1.1rem;font-style:italic;opacity:.92}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.trio h4{font-size:1.3rem;margin-bottom:.4rem}
+.trio ul{margin:0;padding-left:1.1rem}
+.trio li{margin:.15rem 0}
+.sig{background:var(--k-accent);color:var(--k-on);padding:1.1rem 1.2rem}
+.sig h4{font-size:1.5rem}
+.sig p{margin-top:.35rem;font-size:1.05rem}
+@media (max-width:1000px){.trio{grid-template-columns:1fr 1fr}.sig{grid-column:1/-1}}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{border:1px solid var(--k-line);padding:.2rem .75rem;border-radius:99px;font-size:1rem}
+.first{margin:0;padding-left:1.2rem}
+.first li{margin:.2rem 0}
+.acts{display:flex;flex-wrap:wrap;gap:.6rem}
+.srcs{margin-top:1rem;font-size:1rem;opacity:.9}
+.srcs a{text-underline-offset:4px}
+.status-note{margin-top:1rem;font-style:italic;opacity:.9}
+@media (max-width:900px){.esc-in{grid-template-columns:1fr}.esc-side{position:static}}
+
+/* ---------- footer ---------- */
+.foot{background:var(--sea);color:#fff;padding:clamp(3.5rem,8vw,7rem) clamp(1rem,3vw,2.5rem) 2.5rem;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 84px,transparent 84px 168px)}
+.foot h2{font-size:clamp(3rem,8vw,7.5rem);font-weight:900;line-height:.86;max-width:12ch}
+.foot p{max-width:56ch;margin-top:1.3rem;font-size:1.2rem;color:#D3E1E5}
+.foot .hero-cta{margin-top:1.6rem}
+.fine{max-width:1180px;margin:3.5rem auto 0;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.2);font-size:.98rem;color:#B5C7CD}
+
+/* ---------- trip book ---------- */
+.veil{position:fixed;inset:0;background:rgba(6,18,26,.6);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s}
+.veil.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--paper);color:var(--ink);z-index:90;transform:translateX(102%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.25)}
+.drawer.on{transform:none}
+.dr-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.3rem;background:var(--sea);color:#fff}
+.dr-head h2{font-size:2rem}
+.dr-close{background:none;border:2px solid rgba(255,255,255,.5);color:#fff;font:700 1.05rem var(--display);padding:.3rem .8rem;cursor:pointer}
+.dr-body{overflow:auto;padding:1.2rem 1.3rem 2rem;flex:1}
+.dr-empty{font-size:1.1rem;color:#37505E}
+.dr-empty .btn{margin-top:1rem;--k-accent:var(--ink);--k-fg:var(--ink);--k-on:#fff}
+.tbi{border-left:8px solid var(--k-accent);background:#fff;padding:1rem 1.1rem;margin-bottom:1.1rem}
+.tbi-h{display:flex;justify-content:space-between;gap:.8rem;align-items:flex-start}
+.tbi h3{font-size:1.7rem}
+.tbi .sub{font-size:1rem;color:#37505E;margin-top:.15rem}
+.tbi .rm{background:none;border:0;text-decoration:underline;font:italic 400 .95rem var(--text);cursor:pointer;color:#4E6470;padding:0}
+.bar{height:7px;background:#E1E9E5;margin:.8rem 0 .6rem}
+.bar i{display:block;height:100%;background:var(--k-accent);width:0;transition:width .3s}
+.ck{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.ck label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer;font-size:1.02rem;line-height:1.35}
+.ck input{margin-top:.28rem;width:1.05rem;height:1.05rem;accent-color:var(--ink)}
+.ck input:checked + span{text-decoration:line-through;opacity:.55}
+.tbi-a{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+.tbi .btn{--k-accent:var(--ink);--k-fg:var(--ink);--k-on:#fff}
+.dr-foot{padding:.9rem 1.3rem;border-top:1px solid var(--line);display:flex;gap:.6rem;flex-wrap:wrap;background:#fff}
+.dr-foot .btn{--k-accent:var(--ink);--k-fg:var(--ink);--k-on:#fff}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:.7rem 1.1rem;font:700 1.1rem var(--display);opacity:0;transition:.25s;z-index:120;pointer-events:none;max-width:90vw}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+noscript div{padding:2rem;background:#fff3d9;font-size:1.2rem}
+
+@media print{
+  body>*:not(#tripbook){display:none!important}
+  #tripbook{position:static!important;transform:none!important;width:auto!important;box-shadow:none!important;display:block!important}
+  .dr-close,.tbi-a,.dr-foot,.rm{display:none!important}
+  .dr-head{background:none!important;color:#000!important;padding:0 0 .5rem}
+  .dr-body{overflow:visible}
+}
+/* ---------- additions: motion, map details, lineup, escape details ---------- */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .ball{display:none}
+}
+@media print{.js .rv{opacity:1!important;transform:none!important}}
+
+.sea{font:italic 400 15px var(--text);fill:#8FB9C4;opacity:.45;letter-spacing:.16em;pointer-events:none}
+.landfill{fill:rgba(255,255,255,.05);stroke:none}
+.route{fill:none;stroke:#F2A541;stroke-width:3.6;stroke-linecap:round;stroke-dasharray:.1 8}
+.ball circle:first-child{filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+
+.drawer{visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
+.drawer.on{visibility:visible;transition:transform .3s ease}
+
+.hero .btn.small{font-size:1.05rem}
+.kick .btn{margin-top:1rem}
+.live-now{display:inline-flex;align-items:center;gap:.6rem;margin-top:.6rem;font:800 1.5rem/1 var(--display);color:var(--amber)}
+.live-now::before{content:"";width:.8rem;height:.8rem;border-radius:50%;background:var(--amber);animation:pulse 1.6s ease-out infinite}
+
+.ydot{display:inline-grid;place-items:center;font:800 .95rem/1 var(--display);color:var(--k-fg)}
+.ym .yr{font:italic 400 .8rem var(--text);color:#5B7280}
+.tag.soft{background:#FFF3D9;color:var(--amber-ink)}
+.range{font:italic 400 1rem var(--text);color:#4E6470}
+.fx-date .pk{font:italic 400 .82rem var(--text);opacity:.85;margin-top:.3rem}
+
+/* lineup */
+.lineup{background:var(--salt);padding-bottom:1rem}
+.sq{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.sq-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.15rem 1rem;align-items:center;background:var(--k-bg);color:var(--k-fg);border-left:9px solid var(--k-accent);padding:1rem 1.1rem;text-decoration:none;transition:transform .15s ease}
+.sq-card:hover{transform:translateY(-3px)}
+.sq-n{font:900 4.6rem/.8 var(--display);color:var(--k-accent);grid-row:span 3}
+.sq-t{font:800 1.7rem/1 var(--display)}
+.sq-w{font-size:1rem;line-height:1.3}
+.sq-d{font:700 1rem var(--display);opacity:.95}
+.sq-note{margin-top:1.3rem;font-style:italic;color:#37505E;max-width:60ch}
+@media (max-width:980px){.sq{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.sq{grid-template-columns:1fr}}
+
+/* escape details */
+.pill.soft{background:transparent;color:var(--k-fg);border:2px solid var(--k-accent);padding:.2rem .55rem}
+.fest-ev{margin-top:1.1rem}
+.fest-ev:first-of-type{margin-top:.4rem}
+.ev-n{font-size:1rem;line-height:1.45;margin:.3rem 0 .7rem}
+.esc-maplink{margin-top:.8rem}
+.esc-maplink a{font:700 1.1rem var(--display);text-underline-offset:5px}
+.stop-a{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;align-items:center;margin-top:.35rem}
+.stop-a a,.save{font:700 1rem var(--display);text-underline-offset:4px;margin:0}
+.save{background:none;border:0;padding:0;text-decoration:underline;cursor:pointer;color:inherit}
+.save.on{text-decoration:none;background:var(--k-accent);color:var(--k-on);padding:.05rem .5rem}
+a.chip{text-decoration:none;color:inherit}
+a.chip:hover{background:var(--k-soft);border-color:var(--k-accent)}
+.sig{grid-column:1/-1}
+.btn.on{background:transparent;color:var(--k-fg);border-color:var(--k-fg)}
+.tbi h4{font:800 1.05rem/1.1 var(--display);margin:1rem 0 .4rem;color:#37505E}
+.tbi.sect .btn{margin-top:1rem}
+.status-note{max-width:44ch}
+.esc-book{margin-top:.6rem}
+
+@media (max-width:600px){
+  .hero h1{font-size:clamp(3.4rem,17vw,5rem)}
+  .fest{padding:1.1rem 1.1rem}
+  .esc-in{padding-top:2.6rem}
+}
+
+.ck li{display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem}
+.ck li a{font:700 .95rem var(--display);flex:none;text-underline-offset:4px}
+.esc-intro{background:var(--salt)}
+.esc-intro .chip{border-color:var(--ink);font:700 1.05rem var(--display);padding:.3rem .9rem}
+.esc-intro .chip:hover{background:var(--ink);color:#fff}
+@media print{.drawer{visibility:visible!important}}
+@media (min-width:901px){.hero-in{grid-template-columns:minmax(0,5.7fr) minmax(0,6fr)}}
+.hero h1{font-size:clamp(3.7rem,7.2vw,7.6rem)}
+#map{max-height:calc(100svh - 64px - 230px);min-height:360px}
+.pin .lbl{font-size:19px}.pin.minor .lbl{font-size:16px}
+.fest.blk:first-child{padding-top:1.4rem}
+.escape .range{color:inherit;opacity:.85}
+.fest-when .btn{margin-left:auto}
+html,body{overflow-x:clip}
+@media (max-width:640px){.pin .dot{r:12px}.pin.minor .dot{r:8px}.pin .ring{r:12px}.pin .lbl{font-size:29px;stroke-width:7px}.pin.minor .lbl{font-size:23px}}
+@media (max-width:760px){.ydot span{display:none}.ym .yr{display:none}.fest-when .btn{margin-left:0}}
+@media (max-width:900px){#map{max-height:none;min-height:0}}
+
+
+</style>
+</head>
+<body>
+<a class="skip" href="#season">Skip to the season</a>
+
+<header class="site-head">
+  <a class="brand" href="#top">The Festival League<small>A YSKAIPE Guide</small></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#top">Map</a>
+    <a href="#lineup">Lineup</a>
+    <a href="#season">Season</a>
+    <a href="#quiz">Find your escape</a>
+    <button class="tb-open" id="tbOpen" type="button" aria-haspopup="dialog" aria-controls="tripbook">Trip Book <span class="tb-count" id="tbCount">0</span></button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div class="hero-copy">
+      <h1>The journey<br>is the reward.</h1>
+      <p class="lede">Seven romances. Six real festivals. Every one of them bookable. Pick a pin, read the honest version, and go.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#quiz" data-jump>Find my escape</a>
+        <a class="btn line" href="#season" data-jump>See the season</a>
+      </div>
+      <div class="kick" id="kick" aria-live="off"></div>
+    </div>
+    <div class="mapbox">
+      <svg id="map" viewBox="0 0 720 742" role="group" aria-label="Map of Europe. Each pin is a Festival League destination; select one to read about it."></svg>
+      <div class="legend" aria-hidden="true">
+        <span><svg viewBox="0 0 34 8"><line x1="2" y1="4" x2="32" y2="4" stroke="#F2A541" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="0.1 8"/></svg>Stoppage Time's route</span>
+        <span><svg viewBox="0 0 34 8"><line x1="1" y1="4" x2="33" y2="4" stroke="#9FB6C2" stroke-width="1.6" stroke-dasharray="5 6"/></svg>Where the series goes next</span>
+      </div>
+      <div class="mapcard" id="mapCard" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section lineup" id="lineup">
+  <div class="wrap">
+    <h2 class="sec-title">The lineup</h2>
+    <p class="sec-sub">One striker, one keeper, one playmaker and the rest of the squad, each sent to a real festival. Tap a card to jump to that trip.</p>
+    <div class="sq" id="squad"></div>
+    <p class="sq-note">Book 7, Academy, has no festival yet, so it has no escape yet. The other six do.</p>
+  </div>
+</section>
+
+<section class="section" id="season">
+  <div class="wrap">
+    <h2 class="sec-title">The season</h2>
+    <p class="sec-sub">Every festival in the league, in the order the calendar reaches it. Dates are the next ones coming up from today.</p>
+    <div class="year" id="year" role="list" aria-label="Twelve months with festival markers"></div>
+    <div class="filters" id="filters" role="group" aria-label="Filter the season"></div>
+    <ol class="fixtures" id="fixtures"></ol>
+  </div>
+</section>
+
+<section class="section quiz-sec" id="quiz">
+  <div class="wrap">
+    <h2 class="sec-title">Which escape is yours?</h2>
+    <p class="sec-sub">Four questions. No wrong answers, and no email required.</p>
+    <div class="quiz" id="quizBox"></div>
+  </div>
+</section>
+
+<div id="escapes"></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <h2>Nothing sponsored. Everything bookable.</h2>
+    <p>Every Festival League book ends with a travel journal, and the journals now live under one name: the YSKAIPE Guides. If a place got a mention, it earned it in the story first. Read the book, then walk it.</p>
+    <div class="hero-cta">
+      <a class="btn solid" id="bookCta" href="#" target="_blank" rel="noopener">Start with Stoppage Time</a>
+      <button class="btn line" type="button" id="footTrip">Open my Trip Book</button>
+    </div>
+    <p class="fine" style="max-width:none">Festival dates and times were checked in September 2026 and can change, especially with weather, elections and league schedules. Confirm with the official organisers before you book anything non-refundable. Books 2 to 7 are in development or planned; their escapes are ready now, and their travel journals arrive with the books. &copy; Peaking Waters LLC &middot; YSKAIPE Publishing.</p>
+  </div>
+</footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="tripbook" role="dialog" aria-modal="true" aria-labelledby="tbTitle" aria-hidden="true">
+  <div class="dr-head"><h2 id="tbTitle">My Trip Book</h2><button class="dr-close" id="tbClose" type="button">Close</button></div>
+  <div class="dr-body" id="tbBody"></div>
+  <div class="dr-foot" id="tbFoot"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><div>The Festival League escapes need JavaScript to draw the map, countdowns and itineraries. Please enable it and reload.</div></noscript>
+
+<script>
+/* ------------------------------------------------------------------ */
+/* Illustrations — one scene per escape, drawn as inline SVG           */
+/* ------------------------------------------------------------------ */
+const rnd = (i, k = 1) => { const s = Math.sin(i * 12.9898 * k + 78.233) * 43758.5453; return s - Math.floor(s); };
+const burst = (cx, cy, r, color, n = 14) => {
+  let o = '';
+  for (let i = 0; i < n; i++) {
+    const a = (i / n) * Math.PI * 2, c = Math.cos(a), s = Math.sin(a);
+    o += `<line x1="${(cx + c * r * .35).toFixed(1)}" y1="${(cy + s * r * .35).toFixed(1)}" x2="${(cx + c * r).toFixed(1)}" y2="${(cy + s * r).toFixed(1)}" stroke="${color}" stroke-width="2.4" stroke-linecap="round"/>`;
+    o += `<circle cx="${(cx + c * r * 1.18).toFixed(1)}" cy="${(cy + s * r * 1.18).toFixed(1)}" r="2.2" fill="${color}"/>`;
+  }
+  return o;
+};
+const pine = (x, y, s = 1, c = '#0F5B4A') =>
+  `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-2" y="-2" width="4" height="10" fill="#3B2A1B"/><polygon points="0,-46 -13,-20 13,-20" fill="${c}"/><polygon points="0,-34 -16,-6 16,-6" fill="${c}"/><polygon points="0,-20 -19,8 19,8" fill="${c}"/></g>`;
+
+function artCosta() {
+  const flags = ['#C8102E', '#F2C230', '#1E4FA3', '#2E8B57', '#FFFFFF', '#E07B39', '#7A3E9D'];
+  const P0 = [-10, 30], P1 = [300, 96], P2 = [610, 26];
+  let bunting = `<path d="M${P0} Q${P1} ${P2}" stroke="#25160C" stroke-width="2" fill="none"/>`;
+  for (let i = 0; i <= 15; i++) {
+    const t = i / 15, u = 1 - t;
+    const x = u * u * P0[0] + 2 * u * t * P1[0] + t * t * P2[0];
+    const y = u * u * P0[1] + 2 * u * t * P1[1] + t * t * P2[1];
+    bunting += `<polygon points="${(x - 12).toFixed(1)},${y.toFixed(1)} ${(x + 12).toFixed(1)},${y.toFixed(1)} ${x.toFixed(1)},${(y + 30).toFixed(1)}" fill="${flags[i % flags.length]}"/>`;
+  }
+  let seams = '';
+  for (let i = 0; i < 5; i++) {
+    const a = (-90 + i * 72) * Math.PI / 180, c = Math.cos(a), s = Math.sin(a);
+    seams += `<line x1="${385 + c * 21}" y1="${215 + s * 21}" x2="${385 + c * 64}" y2="${215 + s * 64}" stroke="#C77A2A" stroke-opacity=".55" stroke-width="3"/>`;
+  }
+  const pent = [0, 1, 2, 3, 4].map(i => { const a = (-90 + i * 72) * Math.PI / 180; return `${(385 + Math.cos(a) * 21).toFixed(1)},${(215 + Math.sin(a) * 21).toFixed(1)}`; }).join(' ');
+  let refl = '';
+  for (let i = 0; i < 7; i++) refl += `<rect x="${385 - (120 - i * 15) / 2}" y="${298 + i * 13}" width="${120 - i * 15}" height="4" fill="#FFE9B0" opacity="${(.8 - i * .1).toFixed(2)}"/>`;
+  let houses = '';
+  const hs = [[398, 34, 40], [432, 36, 30], [468, 32, 44], [502, 36, 34], [538, 34, 46], [572, 34, 32]];
+  hs.forEach(([x, w, h], i) => {
+    const y = 318 - h;
+    houses += `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${i % 2 ? '#F7F1E4' : '#FFFFFF'}"/><polygon points="${x - 3},${y} ${x + w / 2},${y - 13} ${x + w + 3},${y}" fill="#C0562F"/>`;
+    houses += `<rect x="${x + 6}" y="${y + 8}" width="7" height="9" fill="#2A6F8F"/><rect x="${x + w - 13}" y="${y + 8}" width="7" height="9" fill="#2A6F8F"/>`;
+    houses += `<path d="M${x + 5} 318 v-9 a5 5 0 0 1 10 0 v9 M${x + w - 15} 318 v-9 a5 5 0 0 1 10 0 v9" fill="#6B4A2B"/>`;
+  });
+  let pines = '';
+  [[16, 168, 1.05], [44, 164, 1.25], [76, 176, 1], [104, 194, 1.1], [132, 214, .95], [160, 240, .8]].forEach(([x, y, s]) => pines += pine(x, y, s));
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: sunrise over a Costa Brava cove, a football for a sun, a swimmer raising one hand, and Palio flags strung across the top">
+<defs>
+<linearGradient id="c-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A6F8F"/><stop offset=".55" stop-color="#F2A15A"/><stop offset="1" stop-color="#F7CE86"/></linearGradient>
+<linearGradient id="c-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E7594"/><stop offset="1" stop-color="#082F45"/></linearGradient>
+</defs>
+<rect width="600" height="460" fill="#082F45"/>
+<rect width="600" height="292" fill="url(#c-sky)"/>
+<circle cx="385" cy="215" r="104" fill="#FFD98A" opacity=".22"/>
+<circle cx="385" cy="215" r="64" fill="#FFE9B0"/>
+${seams}<polygon points="${pent}" fill="#C77A2A" fill-opacity=".55"/>
+<rect y="290" width="600" height="170" fill="url(#c-sea)"/>
+${refl}
+<path d="M0 168 C40 150 90 175 130 215 C160 245 175 275 200 302 L214 320 L150 338 L0 350Z" fill="#0A3B4E"/>
+${pines}
+<rect x="392" y="316" width="208" height="16" fill="#D9C3A0"/>
+${houses}
+<path d="M416 336 q20 12 46 0 l-6 10 h-36z" fill="#C8102E"/><path d="M500 340 q18 10 40 0 l-5 9 h-30z" fill="#F7F1E4"/>
+<g fill="none" stroke="#9AD3E0" stroke-opacity=".55" stroke-width="2"><ellipse cx="250" cy="396" rx="26" ry="7"/><ellipse cx="250" cy="396" rx="44" ry="12"/><ellipse cx="250" cy="396" rx="66" ry="17"/></g>
+<circle cx="250" cy="392" r="8.5" fill="#E9B98C"/><path d="M242 390 q8 -12 17 -2 l-3 4 q-7 -6 -12 1z" fill="#2B1D10"/>
+<path d="M256 395 Q274 374 268 348" stroke="#E9B98C" stroke-width="5.5" fill="none" stroke-linecap="round"/><circle cx="268" cy="343" r="5.5" fill="#E9B98C"/>
+${bunting}
+</svg>`;
+}
+
+function artPorto() {
+  let stars = '';
+  [[40, 30], [120, 62], [200, 24], [290, 52], [340, 20], [420, 44], [500, 26], [560, 66], [90, 112], [470, 104], [250, 98], [566, 150]].forEach(([x, y], i) => stars += `<circle cx="${x}" cy="${y}" r="${i % 3 ? 1.3 : 2}" fill="#fff" opacity=".8"/>`);
+  const ay = t => 330 * ((1 - t) ** 2 + t ** 2) - 100 * t * (1 - t);
+  let posts = '';
+  for (let x = 90; x <= 420; x += 30) {
+    const y = ay((x - 60) / 390);
+    posts += `<line x1="${x}" y1="${y.toFixed(1)}" x2="${x}" y2="142"/>`;
+    if (y < 296) posts += `<line x1="${x}" y1="${y.toFixed(1)}" x2="${x}" y2="300"/>`;
+  }
+  let town = '';
+  const cols = ['#E2A75E', '#C8643B', '#F0D9A8', '#B0413E', '#D98A4B'];
+  for (let i = 0; i < 11; i++) {
+    const x = 392 + i * 19, base = 340 - i * 4, h = 34 + Math.floor(rnd(i) * 30);
+    town += `<rect x="${x}" y="${base - h}" width="18" height="${h}" fill="${cols[i % cols.length]}"/><polygon points="${x - 1},${base - h} ${x + 9},${base - h - 8} ${x + 19},${base - h}" fill="#7A2E22"/>`;
+    for (let r = 0; r < 3; r++) town += `<rect x="${x + 4 + (r % 2) * 6}" y="${base - h + 8 + r * 12}" width="4" height="5" fill="#FFD166" opacity=".9"/>`;
+  }
+  let lights = '';
+  for (let i = 0; i < 12; i++) lights += `<rect x="${70 + i * 34 + rnd(i, 2) * 10}" y="${346 + rnd(i, 3) * 60}" width="${8 + rnd(i, 4) * 18}" height="2" fill="#FFB347" opacity=".45"/>`;
+  const lantern = ([x, y, s]) => `<g><circle cx="${x}" cy="${y}" r="${28 * s}" fill="#FFB347" opacity=".22"/><ellipse cx="${x}" cy="${y}" rx="${9 * s}" ry="${12 * s}" fill="#FFA62B"/><rect x="${x - 3 * s}" y="${y + 11 * s}" width="${6 * s}" height="${4 * s}" fill="#5A3A14"/></g>`;
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: Porto's Dom Luís I bridge on São João night, paper lanterns rising, fireworks, and a squeaky plastic hammer">
+<defs>
+<linearGradient id="p-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1B3F"/><stop offset="1" stop-color="#2557B5"/></linearGradient>
+<pattern id="p-tile" width="36" height="36" patternUnits="userSpaceOnUse"><rect width="36" height="36" fill="#F3F6FB"/><rect x=".5" y=".5" width="35" height="35" fill="none" stroke="#1E4FA3"/><path d="M18 6 L24 18 L18 30 L12 18Z" fill="#1E4FA3"/><circle cx="18" cy="18" r="3" fill="#F3F6FB"/><path d="M4 18h5M27 18h5M18 1v4M18 31v4" stroke="#1E4FA3" stroke-width="2"/></pattern>
+</defs>
+<rect width="600" height="460" fill="url(#p-sky)"/>
+${stars}
+<rect y="334" width="600" height="126" fill="#08163A"/>
+${lights}
+${burst(300, 76, 54, '#FFD166', 16)}${burst(528, 56, 36, '#FF7096', 12)}${burst(96, 118, 30, '#9AE6FF', 10)}
+${town}
+<g stroke="#C9D3EC" stroke-width="3" fill="none">${posts}</g>
+<path d="M60 330 Q255 -50 450 330" stroke="#C9D3EC" stroke-width="9" fill="none"/>
+<rect x="30" y="138" width="450" height="7" fill="#C9D3EC"/><rect x="60" y="298" width="390" height="6" fill="#C9D3EC"/>
+<rect x="48" y="138" width="22" height="196" fill="#AEBBDD"/><rect x="440" y="138" width="22" height="196" fill="#AEBBDD"/>
+${[[130, 96, 1], [214, 150, .8], [340, 120, 1.1], [404, 60, .7], [30, 190, .7], [560, 130, .9], [172, 40, .6]].map(lantern).join('')}
+<g transform="translate(112 392) rotate(-26)"><rect x="-4.5" y="4" width="9" height="66" rx="4" fill="#F4D58D"/><rect x="-30" y="-22" width="60" height="32" rx="11" fill="#E63946"/><rect x="-22" y="-16" width="44" height="6" rx="3" fill="#fff" opacity=".55"/></g>
+<rect y="424" width="600" height="36" fill="url(#p-tile)"/>
+</svg>`;
+}
+
+function artValais() {
+  let pines = '';
+  [[24, 372, 1.2], [56, 384, 1], [92, 366, .9], [548, 374, 1.1], [576, 388, .9]].forEach(([x, y, s]) => pines += pine(x, y, s, '#2F5D3A'));
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: a dark Hérens cow with lowered horns in an alpine meadow, snowy peaks behind, and a Saint Bernard with a small barrel watching">
+<defs><linearGradient id="v-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFD9EE"/><stop offset="1" stop-color="#F6F9FB"/></linearGradient></defs>
+<rect width="600" height="460" fill="url(#v-sky)"/>
+<ellipse cx="120" cy="70" rx="60" ry="14" fill="#fff" opacity=".85"/><ellipse cx="160" cy="58" rx="38" ry="12" fill="#fff" opacity=".85"/><ellipse cx="470" cy="96" rx="70" ry="13" fill="#fff" opacity=".7"/>
+<polygon points="0,290 70,190 120,240 200,120 270,230 330,170 410,250 470,150 540,230 600,190 600,340 0,340" fill="#9DB6CC"/>
+<g fill="#fff"><polygon points="200,120 176,168 191,160 203,176 218,161 232,172"/><polygon points="470,150 448,192 462,184 474,198 488,186 500,196"/><polygon points="70,190 54,222 66,216 76,226 88,214"/><polygon points="330,170 314,198 325,193 334,203 346,192"/></g>
+<polygon points="0,338 90,272 170,304 260,258 350,304 430,268 520,304 600,276 600,370 0,370" fill="#6F8BA6"/>
+<g fill="#EAF1F6" opacity=".9"><polygon points="260,258 244,282 256,278 264,288 276,276"/><polygon points="600,276 570,296 584,294 600,300"/><polygon points="90,272 74,292 86,289 96,298 106,288"/></g>
+<path d="M0 346 C120 318 240 340 360 328 C460 318 540 332 600 322 L600 460 L0 460Z" fill="#86A85E"/>
+<path d="M0 396 C150 374 300 404 450 384 C520 375 570 388 600 382 L600 460 L0 460Z" fill="#6E934B"/>
+${pines}
+<g><rect x="478" y="326" width="70" height="44" fill="#8B5A2B"/><polygon points="470,328 513,296 556,328" fill="#4A2E1A"/><rect x="490" y="338" width="10" height="12" fill="#FFD166"/><rect x="524" y="338" width="10" height="12" fill="#FFD166"/><rect x="474" y="356" width="78" height="4" fill="#5C3A1B"/></g>
+<g>
+<path d="M104 366 q-24 12 -16 46" stroke="#2B211F" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="88" cy="414" r="6" fill="#151010"/>
+<ellipse cx="185" cy="384" rx="84" ry="36" fill="#2B211F"/>
+<rect x="124" y="402" width="15" height="44" fill="#2B211F"/><rect x="148" y="406" width="15" height="40" fill="#241B19"/><rect x="216" y="406" width="15" height="40" fill="#241B19"/><rect x="238" y="402" width="15" height="44" fill="#2B211F"/>
+<rect x="124" y="440" width="15" height="8" fill="#0F0B0A"/><rect x="148" y="440" width="15" height="8" fill="#0F0B0A"/><rect x="216" y="440" width="15" height="8" fill="#0F0B0A"/><rect x="238" y="440" width="15" height="8" fill="#0F0B0A"/>
+<polygon points="236,352 276,378 264,418 226,408" fill="#2B211F"/>
+<ellipse cx="282" cy="398" rx="31" ry="22" transform="rotate(24 282 398)" fill="#2B211F"/>
+<ellipse cx="306" cy="414" rx="15" ry="11" fill="#4A3B36"/><circle cx="312" cy="416" r="2.4" fill="#111"/>
+<circle cx="288" cy="390" r="3.4" fill="#fff"/><circle cx="288.6" cy="390.4" r="1.6" fill="#111"/>
+<path d="M272 378 q-4 -28 24 -36" stroke="#F1E7D3" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+<path d="M258 384 q-18 -22 -4 -42" stroke="#F1E7D3" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+<ellipse cx="262" cy="392" rx="11" ry="6" transform="rotate(-30 262 392)" fill="#3A2E2A"/>
+<path d="M232 390 q14 22 34 16" stroke="#8B5A2B" stroke-width="5" fill="none"/><circle cx="252" cy="410" r="9.5" fill="#E8B84A"/><rect x="249" y="411" width="6" height="8" fill="#B5862A"/>
+</g>
+<g>
+<ellipse cx="482" cy="400" rx="41" ry="46" fill="#B4611F"/>
+<ellipse cx="462" cy="408" rx="20" ry="32" fill="#F7EEDF"/>
+<rect x="445" y="426" width="13" height="28" rx="6" fill="#F7EEDF"/><rect x="466" y="426" width="13" height="28" rx="6" fill="#F7EEDF"/>
+<path d="M522 410 q18 -6 20 -30" stroke="#B4611F" stroke-width="10" fill="none" stroke-linecap="round"/>
+<circle cx="462" cy="342" r="31" fill="#C2712A"/>
+<path d="M462 314 q-9 22 0 44 q9 -22 0 -44" fill="#F7EEDF"/>
+<ellipse cx="450" cy="355" rx="18" ry="13" fill="#F7EEDF"/><ellipse cx="438" cy="351" rx="5.5" ry="4.2" fill="#161616"/>
+<circle cx="452" cy="338" r="3.3" fill="#161616"/><circle cx="470" cy="338" r="3.3" fill="#161616"/>
+<path d="M438 326 q-16 20 -8 44 q13 -7 17 -30z" fill="#5B2C0F"/><path d="M486 326 q16 18 9 42 q-13 -9 -15 -30z" fill="#5B2C0F"/>
+<rect x="446" y="374" width="24" height="15" rx="4" fill="#8B5A2B" transform="rotate(-8 458 381)"/><rect x="446" y="379" width="24" height="3" fill="#5C3A1B" transform="rotate(-8 458 381)"/>
+</g>
+</svg>`;
+}
+
+function artBinche() {
+  let feathers = '', inner = '';
+  for (let a = -80; a <= 80; a += 8) {
+    const L = 150 - Math.abs(a) * .38;
+    feathers += `<path d="M0 0 C-17 -${L * .3} -15 -${L * .75} 0 -${L} C15 -${L * .75} 17 -${L * .3} 0 0Z" transform="translate(300 218) rotate(${a})" fill="#fff" stroke="#E6DABF" stroke-width="1.3"/>`;
+  }
+  for (let a = -76; a <= 76; a += 8) {
+    const L = (150 - Math.abs(a) * .38) * .78;
+    inner += `<path d="M0 0 C-13 -${L * .3} -11 -${L * .75} 0 -${L} C11 -${L * .75} 13 -${L * .3} 0 0Z" transform="translate(300 218) rotate(${a})" fill="#F7F0DF" stroke="#E6DABF" stroke-width="1"/>`;
+  }
+  let confetti = '';
+  for (let i = 0; i < 46; i++) {
+    const x = rnd(i, 5) * 600, y = rnd(i, 6) * 330;
+    confetti += `<rect x="${x.toFixed(0)}" y="${y.toFixed(0)}" width="${5 + rnd(i, 7) * 6}" height="${3 + rnd(i, 8) * 4}" fill="${i % 3 === 0 ? '#F2C230' : i % 3 === 1 ? '#161616' : '#FFFFFF'}" opacity=".8" transform="rotate(${(rnd(i, 9) * 180).toFixed(0)} ${x.toFixed(0)} ${y.toFixed(0)})"/>`;
+  }
+  let roofs = '';
+  for (let u = -10; u < 620; u += 100) {
+    const pts = [[0, 0], [0, -50]];
+    let x = 0, y = -50;
+    for (let s = 0; s < 4; s++) { x += 10; pts.push([x, y]); y -= 12; pts.push([x, y]); }
+    pts.push([x + 10, y]);
+    for (let s = 0; s < 4; s++) { x += 10; y += 12; pts.push([x + 10, y - 12 + 12]); }
+    roofs += `<polygon points="${[[0, 0], [0, -46], [10, -46], [10, -58], [20, -58], [20, -70], [30, -70], [30, -82], [40, -82], [40, -70], [50, -70], [50, -58], [60, -58], [60, -46], [70, -46], [70, 0]].map(p => `${p[0] + u},${p[1] + 460}`).join(' ')}" fill="#8E0B20"/>`;
+  }
+  const oranges = [[104, 300, 1], [150, 236, .85], [474, 262, 1], [512, 336, .9], [70, 382, .8], [520, 172, .85]].map(([x, y, s]) => `<g transform="translate(${x} ${y}) scale(${s})"><circle r="16" fill="#F28C1B"/><circle cx="-5" cy="-6" r="4.5" fill="#FFC36B" opacity=".8"/><path d="M0 -16 q8 -6 12 -2 q-6 6 -12 2z" fill="#2E8B3A"/></g>`).join('');
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: a Gille of Binche in a towering ostrich-feather hat, wax mask with green glasses, oranges flying through the air">
+<defs><pattern id="b-motif" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="26" height="26" fill="#F2C230"/><path d="M13 3 L22 21 H4Z" fill="#161616"/><circle cx="13" cy="17" r="3" fill="#C8102E"/></pattern></defs>
+<rect width="600" height="460" fill="#C8102E"/>
+${confetti}
+${roofs}
+<g stroke-linejoin="round">${feathers}${inner}</g>
+<ellipse cx="300" cy="226" rx="78" ry="17" fill="#161616" stroke="#F2C230" stroke-width="2.5"/>
+${[236, 262, 288, 314, 340, 366].map(x => `<circle cx="${x + 3}" cy="228" r="3.2" fill="#F2C230"/>`).join('')}
+<path d="M198 470 L214 382 Q300 404 386 382 L402 470Z" fill="url(#b-motif)" stroke="#161616" stroke-width="2"/>
+<rect x="200" y="436" width="200" height="12" fill="#161616"/>${Array.from({ length: 13 }, (_, i) => `<circle cx="${210 + i * 15}" cy="442" r="4.5" fill="#F2C230"/>`).join('')}
+<path d="M226 384 l11 -15 11 15 11 -15 11 15 11 -15 11 15 11 -15 11 15 11 -15 11 15 11 -15 11 15 11 -15 11 15 11 -15 11 15" fill="#fff" stroke="#C8102E" stroke-width="2"/>
+<path d="M226 384 h148 v8 h-148z" fill="#F2C230"/>
+<rect x="240" y="292" width="9" height="46" rx="4" fill="#2B1D10"/><rect x="351" y="292" width="9" height="46" rx="4" fill="#2B1D10"/>
+<ellipse cx="300" cy="308" rx="59" ry="77" fill="#F0D5A0" stroke="#C9A96A" stroke-width="3"/>
+<circle cx="258" cy="332" r="11" fill="#E9A97C" opacity=".45"/><circle cx="342" cy="332" r="11" fill="#E9A97C" opacity=".45"/>
+<circle cx="274" cy="296" r="19" fill="#BFE8C8" stroke="#1F7A3A" stroke-width="5"/><circle cx="326" cy="296" r="19" fill="#BFE8C8" stroke="#1F7A3A" stroke-width="5"/>
+<path d="M293 294 h14" stroke="#1F7A3A" stroke-width="4"/><circle cx="276" cy="298" r="4" fill="#2B1D10"/><circle cx="324" cy="298" r="4" fill="#2B1D10"/>
+<path d="M300 306 v20" stroke="#C9A96A" stroke-width="3" stroke-linecap="round"/>
+<path d="M262 336 q38 -22 76 0 q-18 24 -38 11 q-20 13 -38 -11z" fill="#2B1D10"/>
+<path d="M288 356 q12 28 24 0 q-12 9 -24 0z" fill="#2B1D10"/>
+${oranges}
+<path d="M120 292 Q160 200 196 250 M496 250 Q470 190 440 214" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-dasharray="3 7" fill="none"/>
+</svg>`;
+}
+
+function artRuhr() {
+  let frame = '', windows = '', wall = '', heads = '';
+  const lx = y => 50 + (380 - y) / 270 * 60, rx = y => 190 - (380 - y) / 270 * 62;
+  for (let y = 380; y > 130; y -= 42) {
+    frame += `<line x1="${lx(y)}" y1="${y}" x2="${rx(y)}" y2="${y}"/><line x1="${lx(y)}" y1="${y}" x2="${rx(y - 42)}" y2="${y - 42}"/><line x1="${rx(y)}" y1="${y}" x2="${lx(y - 42)}" y2="${y - 42}"/>`;
+  }
+  for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) windows += `<rect x="${272 + c * 14}" y="${230 + r * 22}" width="8" height="12" fill="${rnd(r * 4 + c, 3) > .45 ? '#FFC24B' : '#1F2C36'}"/>`;
+  for (let i = 0; i < 22; i++) wall += `<rect x="${352 + i * 11.6}" y="296" width="6" height="84" fill="#F5C518"/><rect x="${358 + i * 11.6}" y="296" width="5.6" height="84" fill="#20262B"/>`;
+  for (let i = 0; i < 25; i++) heads += `<circle cx="${356 + i * 10.4}" cy="${292 + (i % 2) * 2}" r="4.6" fill="#0E151A"/>`;
+  const mast = x => `<g><line x1="${x}" y1="380" x2="${x}" y2="188" stroke="#10181E" stroke-width="5"/><rect x="${x - 26}" y="160" width="52" height="30" fill="#1A252D" stroke="#0E151A" stroke-width="2"/>${[0, 1, 2, 3, 4, 5].map(i => `<circle cx="${x - 19 + (i % 3) * 19}" cy="${168 + Math.floor(i / 3) * 14}" r="4.4" fill="#FFF6D8"/>`).join('')}<polygon points="${x - 22},190 ${x + 22},190 ${x + 70},380 ${x - 70},380" fill="url(#r-beam)"/></g>`;
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: a Ruhr colliery winding tower and chimney beside a floodlit stadium with a wall of yellow-and-black stripes and a football rising into the beams">
+<defs>
+<linearGradient id="r-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2831"/><stop offset=".62" stop-color="#4E6373"/><stop offset="1" stop-color="#F0803C"/></linearGradient>
+<linearGradient id="r-beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6D8" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6D8" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="600" height="460" fill="url(#r-sky)"/>
+<circle cx="236" cy="172" r="14" fill="#fff" opacity=".18"/><circle cx="250" cy="146" r="18" fill="#fff" opacity=".14"/><circle cx="270" cy="116" r="22" fill="#fff" opacity=".1"/>
+<rect x="228" y="182" width="16" height="200" fill="#2B3A45"/><rect x="225" y="178" width="22" height="8" fill="#1B2831"/>
+<rect x="262" y="212" width="64" height="170" fill="#2F4150"/>${windows}
+<g stroke="#0F171D" stroke-width="4" fill="none" stroke-linecap="round">${frame}<line x1="${lx(380)}" y1="380" x2="${lx(128)}" y2="128"/><line x1="${rx(380)}" y1="380" x2="${rx(128)}" y2="128"/></g>
+<g stroke="#0F171D" stroke-width="4" fill="none"><circle cx="120" cy="98" r="30"/><circle cx="120" cy="98" r="5" fill="#0F171D"/>${[0, 1, 2, 3, 4, 5, 6, 7].map(i => { const a = i * Math.PI / 4; return `<line x1="120" y1="98" x2="${120 + Math.cos(a) * 30}" y2="${98 + Math.sin(a) * 30}"/>`; }).join('')}</g>
+<rect x="88" y="124" width="64" height="8" fill="#0F171D"/>
+<rect y="380" width="600" height="80" fill="#151D23"/>
+${mast(392)}${mast(482)}${mast(572)}
+${wall}${heads}
+<rect x="344" y="296" width="262" height="5" fill="#0E151A"/>
+<g transform="translate(470 120)"><circle r="25" fill="#fff"/><polygon points="0,-10 9.5,-3 6,8 -6,8 -9.5,-3" fill="#20262B"/>${[0, 1, 2, 3, 4].map(i => { const a = (-90 + i * 72) * Math.PI / 180; return `<line x1="${Math.cos(a) * 10}" y1="${Math.sin(a) * 10}" x2="${Math.cos(a) * 24}" y2="${Math.sin(a) * 24}" stroke="#20262B" stroke-width="2.5"/>`; }).join('')}</g>
+<path d="M390 262 Q420 180 456 148" stroke="#fff" stroke-opacity=".6" stroke-width="2.4" stroke-dasharray="3 8" fill="none"/>
+</svg>`;
+}
+
+function artMerce() {
+  const shirt = '#D7263D', skin = ['#F0C9A0', '#D9A574', '#B9784B', '#E9B98C'];
+  const fig = (x, y, s = 1, i = 0, arms = false) => `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-6.5" y="8" width="13" height="17" fill="#F4EFE6"/><rect x="-8.5" y="-14" width="17" height="24" rx="4" fill="${shirt}"/><rect x="-8.5" y="4" width="17" height="4" fill="#161616"/><circle cy="-21" r="7.5" fill="${skin[i % 4]}"/>${arms ? `<path d="M-8 -12 L-16 -34 M8 -12 L16 -34" stroke="${skin[i % 4]}" stroke-width="4" stroke-linecap="round"/>` : ''}</g>`;
+  let tower = '';
+  for (let i = 0; i < 15; i++) tower += fig(166 + i * 19, 424 + (i % 2) * 4, 1, i, i % 3 === 0);
+  [[5, 26, 376], [3, 24, 342], [2, 15, 308], [1, 0, 274]].forEach(([n, gap, y], lvl) => {
+    for (let i = 0; i < n; i++) tower += fig(300 + (i - (n - 1) / 2) * gap * (n === 5 ? 1.05 : 1), y, 1, lvl + i);
+  });
+  tower += `<g transform="translate(300 240) scale(.78)"><rect x="-6.5" y="8" width="13" height="17" fill="#F4EFE6"/><rect x="-8.5" y="-14" width="17" height="24" rx="4" fill="${shirt}"/><circle cy="-21" r="7.5" fill="#F0C9A0"/><path d="M-8 -12 L-13 -30 M8 -12 L20 -46" stroke="#F0C9A0" stroke-width="4.4" stroke-linecap="round"/><circle cx="20.6" cy="-47.6" r="4.2" fill="#F0C9A0"/></g>`;
+  let sparks = '';
+  for (let i = 0; i < 26; i++) {
+    const x = rnd(i, 11) * 150, y = 460 - rnd(i, 12) * 150, l = 8 + rnd(i, 13) * 16, a = -0.9 + rnd(i, 14) * .8;
+    sparks += `<line x1="${x.toFixed(0)}" y1="${y.toFixed(0)}" x2="${(x + Math.cos(a) * l).toFixed(0)}" y2="${(y + Math.sin(a) * l).toFixed(0)}" stroke="${i % 3 ? '#FF7A3D' : '#FFC857'}" stroke-width="2.4" stroke-linecap="round"/>`;
+  }
+  const gegant = (x, skirt, cloak, crown) => `<g transform="translate(${x} 0)"><polygon points="-42,440 -14,262 14,262 42,440" fill="${skirt}"/><path d="M-22 270 Q0 250 22 270 L30 330 L-30 330Z" fill="${cloak}"/><circle cy="238" r="21" fill="#F0D0A8"/><circle cx="-7" cy="235" r="2.4" fill="#161616"/><circle cx="7" cy="235" r="2.4" fill="#161616"/><path d="M-6 246 q6 4 12 0" stroke="#A8443A" stroke-width="2" fill="none"/><polygon points="-19,222 -15,202 -7,214 0,198 7,214 15,202 19,222" fill="${crown}"/></g>`;
+  return `<svg viewBox="0 0 600 460" role="img" aria-label="Illustration: a human tower of castellers rising against fireworks, with giant figures on each side and correfoc sparks flying">
+<defs><linearGradient id="m-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22102F"/><stop offset="1" stop-color="#7D3182"/></linearGradient></defs>
+<rect width="600" height="460" fill="url(#m-sky)"/>
+${burst(112, 96, 56, '#FFC857', 16)}${burst(470, 74, 46, '#FF4D8D', 14)}${burst(300, 48, 26, '#FFFFFF', 10)}${burst(548, 196, 26, '#7CF0D3', 10)}
+${[[60, 40], [210, 26], [400, 30], [560, 90], [30, 160], [180, 130], [430, 150]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.6" fill="#fff" opacity=".8"/>`).join('')}
+${gegant(60, '#F2C230', '#1E4FA3', '#FFC857')}${gegant(542, '#2E8B57', '#C8102E', '#FFC857')}
+${tower}
+${sparks}
+</svg>`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Data                                                                */
+/* ------------------------------------------------------------------ */
+const CONFIG = {
+  bookUrl: 'https://www.amazon.com/s?k=Stoppage+Time+Nick+Conenna' // swap for the direct book link
+};
+
+const LAND = [
+  // Continental Europe (clockwise from Cabo de São Vicente)
+  [[-9.0,37.0],[-7.9,37.0],[-7.4,37.2],[-6.3,36.5],[-5.6,36.0],[-5.35,36.1],[-4.4,36.7],[-2.5,36.8],[-2.15,36.7],[-1.0,37.55],[-0.5,38.3],[0.2,38.7],[-0.3,39.45],[0.0,40.0],[0.9,40.7],[1.25,41.1],[2.2,41.4],[3.2,41.8],[3.3,42.3],[3.05,42.7],[3.7,43.4],[4.6,43.4],[5.4,43.3],[5.9,43.1],[7.0,43.55],[7.3,43.7],[8.9,44.4],[9.85,44.05],[10.3,43.55],[10.5,42.95],[11.1,42.4],[11.8,42.1],[12.3,41.7],[13.5,41.2],[14.25,40.85],[14.8,40.65],[15.5,40.0],[15.9,38.7],[15.65,38.1],[16.05,37.9],[16.6,38.7],[17.2,39.05],[16.6,39.7],[17.2,40.45],[17.95,40.05],[18.4,39.8],[17.95,40.65],[16.85,41.15],[16.2,41.9],[14.2,42.45],[13.5,43.6],[12.6,44.1],[12.5,44.6],[12.3,45.4],[13.75,45.65],[14.45,45.3],[15.2,44.1],[16.45,43.5],[18.1,42.65],[19.1,42.1],[19.4,40.45],[20.1,39.65],[21,39.0],[21,54.4],[18.7,54.35],[17.0,54.75],[15.6,54.2],[14.3,53.9],[13.6,54.6],[12.1,54.2],[10.9,54.0],[10.15,54.45],[9.5,54.85],[9.4,55.05],[9.5,55.5],[9.9,55.7],[10.2,56.15],[10.9,56.35],[10.3,56.95],[10.65,57.75],[9.95,57.6],[8.4,57.0],[8.1,56.6],[8.1,55.8],[8.4,55.5],[8.6,55.05],[8.9,54.5],[8.85,54.1],[8.7,53.9],[8.1,53.55],[7.2,53.4],[6.2,53.45],[4.75,52.95],[4.55,52.4],[4.1,52.0],[3.5,51.5],[2.9,51.2],[2.35,51.05],[1.85,50.95],[1.6,50.75],[1.1,49.9],[0.1,49.5],[-0.4,49.35],[-1.25,49.4],[-1.6,49.7],[-1.6,48.85],[-2.0,48.65],[-3.4,48.8],[-4.75,48.4],[-4.7,48.05],[-3.4,47.75],[-2.2,47.25],[-1.15,46.15],[-1.05,45.6],[-1.25,44.65],[-1.55,43.5],[-2.0,43.3],[-3.8,43.45],[-5.65,43.55],[-8.4,43.4],[-9.25,42.95],[-8.85,42.2],[-8.7,41.15],[-8.7,40.6],[-9.4,39.35],[-9.5,38.7],[-9.2,38.4],[-8.85,37.95]],
+  // Great Britain
+  [[-5.7,50.05],[-4.2,50.35],[-3.4,50.6],[-2.45,50.6],[-1.3,50.75],[0.3,50.75],[1.4,51.15],[1.4,51.38],[0.75,51.45],[0.9,51.75],[1.25,51.9],[1.75,52.45],[1.7,52.75],[0.95,52.95],[0.35,52.9],[0.2,53.4],[0.1,53.6],[-0.1,54.1],[-0.6,54.5],[-1.15,54.65],[-1.4,55.0],[-2.0,55.75],[-2.5,56.0],[-2.6,56.3],[-3.0,56.45],[-2.05,57.15],[-1.8,57.5],[-3.4,57.7],[-4.2,57.5],[-3.8,57.85],[-3.1,58.45],[-3.05,58.65],[-5.0,58.6],[-5.15,57.9],[-5.7,57.3],[-5.6,56.6],[-5.7,55.7],[-4.9,55.5],[-4.6,54.85],[-3.6,54.85],[-3.5,54.4],[-3.2,54.1],[-3.05,53.85],[-3.05,53.4],[-4.0,53.3],[-4.6,53.4],[-4.7,52.85],[-4.1,52.4],[-5.25,51.9],[-4.2,51.6],[-3.15,51.45],[-3.0,51.2],[-4.2,51.2],[-4.55,51.0],[-5.0,50.55]],
+  // Ireland
+  [[-9.8,51.45],[-8.4,51.8],[-7.0,52.15],[-6.3,52.2],[-6.0,53.3],[-6.0,54.0],[-5.55,54.5],[-5.7,54.7],[-6.0,55.2],[-7.0,55.25],[-8.3,55.2],[-8.6,54.6],[-10.0,54.25],[-9.9,53.5],[-9.3,53.2],[-9.5,52.6],[-9.9,52.2],[-10.4,52.1],[-10.1,51.75]],
+  // Sicily, Sardinia, Corsica, Mallorca, Zealand, Funen
+  [[12.45,38.0],[13.4,38.25],[14.4,38.05],[15.6,38.25],[15.2,37.35],[15.1,36.75],[14.4,36.85],[13.4,37.1],[12.5,37.6]],
+  [[8.2,40.9],[9.2,41.25],[9.7,40.9],[9.7,39.9],[9.6,39.2],[8.9,38.9],[8.4,39.0],[8.4,40.0],[8.15,40.6]],
+  [[8.6,42.4],[9.4,43.0],[9.55,42.2],[9.4,41.4],[9.0,41.4],[8.6,41.9]],
+  [[2.4,39.6],[3.2,39.9],[3.45,39.65],[3.0,39.3],[2.6,39.4]],
+  [[11.2,55.7],[12.1,56.0],[12.6,55.6],[12.35,55.0],[11.8,55.1]],
+  [[9.8,55.5],[10.7,55.6],[10.6,55.1],[10.0,55.1]],
+  // Southern Sweden
+  [[12.6,56.05],[12.95,55.55],[13.6,55.4],[14.35,55.5],[14.75,56.15],[15.9,56.15],[16.4,56.65],[16.5,57.5],[16.9,58.0],[11.3,58.0],[11.9,57.7],[12.4,56.9]]
+];
+
+const MAP = { W: 720, H: 742, lon0: -11, lat1: 58, k: 33, c: 0.682 };
+const proj = (lon, lat) => [(lon - MAP.lon0) * MAP.c * MAP.k, (MAP.lat1 - lat) * MAP.k];
+
+const PINS = [
+  { id: 'costa',     esc: 'costa',  name: 'Costa Brava', lat: 41.89, lon: 3.19,  main: true,  lbl: [12, 5, 'start'] },
+  { id: 'barcelona', esc: 'merce',  name: 'Barcelona',   lat: 41.39, lon: 2.17,  main: true,  lbl: [-12, 18, 'end'] },
+  { id: 'london',    esc: 'costa',  name: 'London',      lat: 51.5,  lon: -0.12, main: false, lbl: [-9, -10, 'end'] },
+  { id: 'florence',  esc: 'costa',  name: 'Florence',    lat: 43.77, lon: 11.25, main: false, lbl: [-9, -8, 'end'] },
+  { id: 'siena',     esc: 'costa',  name: 'Siena',       lat: 43.32, lon: 11.33, main: true,  lbl: [12, 14, 'start'] },
+  { id: 'porto',     esc: 'porto',  name: 'Porto',       lat: 41.15, lon: -8.61, main: true,  lbl: [-12, 4, 'end'] },
+  { id: 'lisbon',    esc: 'porto',  name: 'Lisbon',      lat: 38.72, lon: -9.14, main: false, lbl: [-9, 5, 'end'] },
+  { id: 'valais',    esc: 'valais', name: 'Valais',      lat: 46.23, lon: 7.36,  main: true,  lbl: [12, 5, 'start'] },
+  { id: 'binche',    esc: 'binche', name: 'Binche',      lat: 50.41, lon: 4.17,  main: true,  lbl: [-4, 26, 'middle'] },
+  { id: 'ruhr',      esc: 'ruhr',   name: 'The Ruhr',    lat: 51.51, lon: 7.47,  main: true,  lbl: [12, 5, 'start'] }
+];
+const ROUTE = ['costa', 'london', 'florence', 'siena'];
+const NEXT_ARCS = ['porto', 'valais', 'binche', 'ruhr', 'barcelona'];
+
+/* ---------- festival calendar ---------- */
+/* occ(y) returns { s, e, peak?, firm } as [year, month 1-12, day], or null if that year has no occurrence.
+   firm = the organisers have published the date; otherwise the date is expected and flagged on the page. */
+const EVENTS = [
+  { id: 'merce', esc: 'merce', name: 'La Mercè', place: 'Barcelona, Spain', cost: 'free',
+    note: 'The feast day is always 24 September; the festival wraps around the nearest weekend, so the dates shift a little each year.',
+    occ: y => y === 2026 ? { s: [2026, 9, 23], e: [2026, 9, 27], peak: [2026, 9, 24], firm: true } : { s: [y, 9, 24], e: [y, 9, 24], peak: [y, 9, 24], firm: false } },
+  { id: 'derby-dec', esc: 'ruhr', name: 'Revierderby: Schalke v Dortmund', place: 'Veltins-Arena, Gelsenkirchen, Germany', cost: 'paid',
+    note: 'Matchday 12 of the 2026/27 Bundesliga. The league fixes the day and kick-off time later, so this is the weekend window.',
+    occ: y => y === 2026 ? { s: [2026, 12, 4], e: [2026, 12, 6], firm: true } : null },
+  { id: 'binche', esc: 'binche', name: 'Carnival of Binche', place: 'Binche, Belgium', cost: 'free',
+    note: 'Sunday to Shrove Tuesday, the three days before Ash Wednesday, so it moves every year. The big day is Tuesday.',
+    occ: y => { const sh = addDays(easter(y), -47); return { s: addDays(sh, -2), e: sh, peak: sh, firm: y === 2027 }; } },
+  { id: 'derby-apr', esc: 'ruhr', name: 'Revierderby: Dortmund v Schalke', place: 'Signal Iduna Park, Dortmund, Germany', cost: 'paid',
+    note: 'Matchday 29 of the 2026/27 Bundesliga. Exact day and kick-off time come later from the league.',
+    occ: y => y === 2027 ? { s: [2027, 4, 9], e: [2027, 4, 11], firm: true } : null },
+  { id: 'combat', esc: 'valais', name: 'Combat de Reines national final', place: 'Pra Bardy arena, Aproz (Sion), Switzerland', cost: 'paid',
+    note: 'A weekend in early to mid May, most recently the second one. Regional qualifiers run through spring and autumn in Valais villages. The final is due to move to a new arena in Upper Valais, but not before 2028.',
+    occ: y => { const w = new Date(Date.UTC(y, 4, 1)).getUTCDay(); const first = 1 + ((6 - w + 7) % 7); const s = [y, 5, first + 7]; return { s, e: addDays(s, 1), peak: addDays(s, 1), firm: false }; } },
+  { id: 'sao-joao', esc: 'porto', name: 'Festa de São João', place: 'Porto, Portugal', cost: 'free',
+    note: 'The party starts the afternoon of 23 June, peaks with fireworks at midnight and runs until sunrise on the 24th.',
+    occ: y => ({ s: [y, 6, 23], e: [y, 6, 24], peak: [y, 6, 23], firm: true }) },
+  { id: 'calcio', esc: 'costa', name: 'Calcio Storico final', place: 'Florence, Italy', cost: 'paid', bonus: true,
+    note: 'Bonus stop on the Stoppage Time route. The final is played on 24 June; the semi-finals are earlier in the month, and tickets are sold online.',
+    occ: y => ({ s: [y, 6, 24], e: [y, 6, 24], firm: true }) },
+  { id: 'palio-jul', esc: 'costa', name: "Palio di Provenzano", place: 'Siena, Italy', cost: 'free',
+    note: 'Race day is 2 July; the ceremonies and trial races begin on 29 June. Rain can push the race back a day or two.',
+    occ: y => ({ s: [y, 6, 29], e: [y, 7, 2], peak: [y, 7, 2], firm: true }) },
+  { id: 'palio-aug', esc: 'costa', name: "Palio dell'Assunta", place: 'Siena, Italy', cost: 'free', star: true,
+    note: 'Race day is 16 August, the date in Stoppage Time. Trials and ceremonies begin on the 13th. In 2026 rain moved the race to the 18th.',
+    occ: y => ({ s: [y, 8, 13], e: [y, 8, 16], peak: [y, 8, 16], firm: true }) }
+];
+const EV = Object.fromEntries(EVENTS.map(e => [e.id, e]));
+
+/* ---------- the escapes ---------- */
+const ESCAPES = [
+{
+  id: 'costa', num: 1, title: 'Stoppage Time', archetype: 'The Striker', status: 'out',
+  where: 'Costa Brava · London · Florence · Siena',
+  tag: "A striker who's been sold four times finds the one place on earth nobody can buy him out of.",
+  match: 'Coves at dawn, a medieval horse race, and a table for two.',
+  kit: { bg: '#0B4F6C', fg: '#F4F7F7', accent: '#F2A541', on: '#1B1305', soft: 'rgba(255,255,255,.09)', line: 'rgba(255,255,255,.26)' },
+  art: artCosta,
+  festival: {
+    name: 'The Palio di Siena', events: ['palio-aug', 'palio-jul', 'calcio'],
+    lead: "Ten horses, ten of Siena's seventeen neighbourhoods, three bareback laps around a shell-shaped square. It happens twice a year, on 2 July and 16 August, and 16 August is the day the book is built around.",
+    honest: [
+      'The race itself is over in about ninety seconds. The day around it lasts twelve hours, with a costumed procession before the start.',
+      'The middle of the Campo is free and standing-room only. It fills long before the race, so decide early whether you want the crowd or a seat.',
+      'The six trial races are free too, three mornings and three evenings. The 9 a.m. trials are the calm way in; evening trials run in near full costume.',
+      'Rain has pushed the race back again and again lately. Both 2026 Palios were postponed: 2 July ran on the 3rd, and 16 August ran on the 18th. Leave a spare night.',
+      'Private seats and balconies exist, priced by their owners and hard to find. People start looking months ahead.'
+    ]
+  },
+  legs: [
+    { label: 'Costa Brava · 3 days', days: [
+      { t: 'Calella de Palafrugell at seven a.m.', d: "Stand on the front before anyone else is up and look at the water. White houses, arched porticoes, boats pulled up on the sand. It's the closest living cousin of the book's town; the Hotel Miramar itself is invented.", q: 'Calella de Palafrugell' },
+      { t: 'The Camí de Ronda to Llafranc', d: 'The old coastguard path, about half an hour, easy underfoot, water on your left the whole way. It is free.', nov: "The path Mateo walks when he leaves town and doesn't come back for three hours.", q: 'Camí de Ronda Calella Llafranc' },
+      { t: 'Llafranc for lunch', d: 'A proper crescent beach, a promenade, a lighthouse above it. Fifteen minutes around the headland from Calella.', q: 'Llafranc' },
+      { t: 'Tamariu, early', d: 'Small, steep, ringed by umbrella pines, and the best swimming on this stretch. Come before ten: parking becomes a blood sport.', nov: 'Where Ferran sends the photographer.', q: 'Tamariu beach' },
+      { t: 'Tamariu to the Sant Sebastià lighthouse', d: 'The serious version: steeper, rougher, emptier, with some scrambling. Wear real shoes. Stop at Cala Pedrosa, where a beach bar sits on sand you can reach only on foot or by boat.', q: 'Cala Pedrosa Costa Brava' },
+      { t: 'Palamós fish market', d: 'Afternoons only, roughly half past four to half past seven, and closed at weekends because the boats stay in. Watch the auction.', q: 'Palamós fish market' },
+      { t: 'Espai del Peix, then the gamba', d: 'Upstairs from the market, chefs cook what came off the boats an hour earlier. Book ahead. Then eat the gamba de Palamós, a deep-water red prawn, barely cooked, with salt and nothing else.', q: 'Espai del Peix Palamós' }
+    ], stretch: 'One more day? Cadaqués, two hours north around the horn of Cap de Creus on a road with a hundred and fifty bends. Whitewashed, wind-scoured, Dalí\'s town. Access to the Cap de Creus park is restricted, so walk or take the bus.' },
+    { label: 'London · a weekend', days: [
+      { t: 'Take a stadium tour', d: "London's big stadiums run tours most days, and Wembley is the obvious one. Book online and check for match-day closures.", q: 'Wembley Stadium tour' },
+      { t: 'Walk the South Bank', d: 'Tate Modern to Tower Bridge along the river, with lunch at Borough Market on the way.', q: 'Borough Market London' },
+      { t: 'Catch a match if the fixtures allow', d: 'The Premier League season usually opens in mid-August. Fixtures are published months ahead; tickets go quickly, so use the clubs\' official channels only.', q: 'Premier League stadium London' }
+    ], stretch: 'Add Manchester: the National Football Museum sits in the city centre, about two hours from London by train.' },
+    { label: 'Florence · 2 days', days: [
+      { t: "Brunelleschi's dome", d: 'Climb inside the double shell of the Duomo\'s dome for the view across the red roofs. Timed entry sells out, so book ahead.', q: 'Florence Duomo dome climb' },
+      { t: 'The Uffizi', d: 'Book a timed ticket, go early, and pick three rooms rather than thirty.', q: 'Uffizi Gallery Florence' },
+      { t: 'Oltrarno for dinner', d: 'Cross the river to the artisan side: workshops by day, small trattorias by night. Try lampredotto, the Florentine tripe sandwich, if you are brave.', q: 'Oltrarno Florence' },
+      { t: 'Piazzale Michelangelo at sunset', d: 'Free, a little touristy, worth it. Bring something to drink and stay for the lights.', q: 'Piazzale Michelangelo' },
+      { t: 'In June: the Calcio Storico final', d: 'On 24 June Florence plays its 16th-century football in sand-covered Piazza Santa Croce, 27 a side and very few rules. Tickets are online only. It is the direct ancestor of the sport the whole series is named for.', q: 'Piazza Santa Croce Florence' }
+    ] },
+    { label: 'Siena & the Palio · 3 days', days: [
+      { t: 'Piazza del Campo at dawn', d: 'The square slopes like a shell toward the town hall. Sit on the bricks before the tour groups do, then climb the Torre del Mangia for the view down onto the racetrack.', q: 'Piazza del Campo Siena' },
+      { t: 'A morning trial race', d: 'Trial races run in the Campo on the days before each Palio, and they are free. The 9 a.m. trial is friendly for families and first-timers; the evening ones are the full-dress rehearsal.', q: 'Piazza del Campo Siena' },
+      { t: 'Walk the contrade', d: "Seventeen neighbourhoods, each with its own flag, fountain, museum and rivalries. On Palio week you'll know whose colours you're standing in from the scarves.", q: 'Contrada museum Siena' },
+      { t: 'Race day', d: 'The costumed procession comes first, then the race in the evening. Times shift with the sun, so check the programme. Whatever happens, stay for the singing afterward.', q: 'Piazza del Campo Siena' }
+    ] }
+  ],
+  signature: { t: 'Dawn balloon over the Tuscan hills', d: 'Local operators fly sunrise hot-air balloons over the hills south of Siena; the Val d\'Orcia is the classic. It depends on the weather, so book a day you can afford to lose.' },
+  eat: ['Gamba de Palamós', 'Pici, Siena\'s thick hand-rolled pasta', 'Panforte, dense Sienese spice cake'],
+  getting: 'Fly into Girona or Barcelona for the coast, London for the leg in the middle, and Florence (or Pisa) for Tuscany. Florence to Siena is about ninety minutes by bus or train.',
+  pack: ['Real walking shoes', 'Swimsuit', 'Small day pack', 'Sun hat for the Campo', 'Rain layer', 'Power adapters'],
+  first: ['Book Siena lodging as soon as the dates are set', 'Reserve Uffizi and Duomo timed entry', 'Book an Espai del Peix session in Palamós', 'Decide: Campo crowd or a private seat'],
+  flights: [['Florence', 'FLR'], ['Barcelona', 'BCN']],
+  links: [['Palio schedule, day by day', 'https://sienavisitor.org/daily-schedule-of-palio-events-with-toms-tips/'], ['Calcio Storico, Florence tourism', 'https://www.feelflorence.it/en/editorial-staff/calcio-storico-historical-football']]
+},
+{
+  id: 'porto', num: 2, title: 'Clean Sheet', archetype: 'The Keeper', status: 'dev',
+  where: 'Porto · Lisbon',
+  tag: 'The loneliest position in football meets the most unguarded voice in Lisbon.',
+  match: 'A city-wide street party, an all-night walk to the sea, and fado after.',
+  kit: { bg: '#F3F6FB', fg: '#10254F', accent: '#1E4FA3', on: '#FFFFFF', soft: 'rgba(30,79,163,.08)', line: 'rgba(16,37,79,.24)' },
+  art: artPorto,
+  festival: {
+    name: 'Festa de São João', events: ['sao-joao'],
+    lead: 'The night of 23 June, an entire city hits each other with plastic hammers. Nobody can quite say why, and nobody wants it to stop.',
+    honest: [
+      "It's a street party, not a show. There is no seat to buy: you're the audience and the cast, and the squeaky plastic hammer is your ticket. They sell them on street corners.",
+      'Hammers are fair game on that night only. Gentle taps on the head, from toddlers to grandparents.',
+      'Grilled sardines, caldo verde and wine come off pavement grills all evening. Paper lanterns rise over the river, and there are basil plants with love verses tucked in.',
+      'Fireworks go up over the Douro at midnight and run a quarter of an hour or so. Ribeira and the Dom Luís I bridge are the epicentre and get impassable. Higher ground, like the Jardim do Morro in Gaia, gives a wide view with less crush.',
+      'Traffic and parking are the real challenge, so use the metro and buses, which run extra overnight service. 24 June is a city holiday, so shops are shut the morning after, and the Rabelo boat regatta takes over the river that afternoon.'
+    ]
+  },
+  legs: [
+    { label: 'Porto · 3 days', days: [
+      { t: 'Ribeira and the Dom Luís I bridge', d: 'Start on the riverfront, then walk the upper deck of the iron bridge for the view over the Douro. Drop down into Vila Nova de Gaia for the port cellars.', q: 'Ponte Dom Luís I Porto' },
+      { t: 'Find a hammer and a spot', d: 'On the 23rd, buy a hammer, eat sardines standing up, and pick your midnight spot early. Free concerts run on stages around the city.', q: 'Ribeira Porto' },
+      { t: 'Midnight on the river', d: 'Fireworks along the Douro, then the long walk. The crowds thin the further you go from the centre.', q: 'Vila Nova de Gaia riverfront' },
+      { t: 'Sunrise at Foz do Douro', d: 'After the fireworks, locals walk to the Atlantic at Foz and wait for the sun, some with a dip. Then sleep. Then a francesinha, Porto\'s enormous sandwich.', q: 'Foz do Douro Porto' }
+    ] },
+    { label: 'Lisbon · 2 days', days: [
+      { t: 'Train south', d: 'Porto to Lisbon takes about three hours by intercity train. Book a window seat on the river side.', q: 'Porto Campanhã railway station' },
+      { t: 'Alfama at dusk', d: 'Climb the tangle of lanes and stop at a miradouro, a viewpoint, for the light going gold over the river.', q: 'Miradouro de Santa Luzia Lisbon' },
+      { t: 'A fado house', d: 'Small Alfama fado houses put a singer on stage several nights a week. Book a table, go late, and stay quiet while she sings.', q: 'Museu do Fado Lisbon' }
+    ] }
+  ],
+  signature: { t: 'The walk to the sea at dawn', d: 'Join the crowd moving from the Ribeira to the Atlantic as the fireworks fade. It costs nothing, takes an hour, and you will remember it longer than the fireworks.' },
+  eat: ['Sardinhas assadas', 'Caldo verde', 'Francesinha and bifana', 'Pastel de nata in Lisbon'],
+  getting: 'Fly into Porto (OPO). Lisbon (LIS) is about three hours by train, which makes an open-jaw ticket easy.',
+  pack: ['Comfortable shoes for hills and cobbles', 'A light jacket for river nights', 'Small bag worn in front', 'Phone battery pack', 'A plastic hammer (buy one there)'],
+  first: ['Book Porto lodging; the city fills fast for 23 June', 'Reserve a river-view dinner if you don\'t want the pavement grill', 'Book a fado house table in Lisbon'],
+  flights: [['Porto', 'OPO'], ['Lisbon', 'LIS']],
+  links: [['About the festival', 'https://en.wikipedia.org/wiki/Festa_de_S%C3%A3o_Jo%C3%A3o_do_Porto']]
+},
+{
+  id: 'valais', num: 3, title: 'The Through Ball', archetype: 'The Playmaker', status: 'dev',
+  where: 'Valais, Switzerland',
+  tag: 'The funny one finally gets a story of his own.',
+  match: 'Mountains, a very good dog, and cows that settle things with their horns.',
+  kit: { bg: '#A61E2B', fg: '#FDF6F3', accent: '#FFFFFF', on: '#7E141F', soft: 'rgba(255,255,255,.1)', line: 'rgba(255,255,255,.3)' },
+  art: artValais,
+  festival: {
+    name: 'The Combat de Reines', events: ['combat'],
+    lead: "Hérens cows lock horns to decide who leads the herd, and the winner in each category is crowned queen. It's the mountains' oldest soap opera, and it has a very good final in May.",
+    honest: [
+      'The cows do this by instinct. You can watch it on mountain pastures in summer; the events stage the same herd-order behaviour, and each contest usually ends when one cow turns away.',
+      'The national final is held on a weekend in early to mid May at the Pra Bardy arena in Aproz, near Sion. More than 12,000 people watched the 2026 final. It is due to move to a new arena in Upper Valais, but not before 2028.',
+      'Regional qualifiers run in spring and autumn in villages across the canton. Smaller crowds, the same cows, and often cheaper.',
+      'Food stalls sell raclette, cured meats and local wine. Parking is paid, and public transport works, so use it.',
+      'It is a working-farm tradition first and a spectacle second. Ask before photographing the owners, who are in the ring with the cows.'
+    ]
+  },
+  legs: [
+    { label: 'Sion & the queens · 3 days', days: [
+      { t: 'Valère and Tourbillon', d: 'Two hilltop fortresses over Sion\'s old town. Take the walk up rather than the taxi; the views justify the legs.', q: 'Château de Valère Sion' },
+      { t: 'Valais wines at lunch', d: 'Ask for a Fendant or a Petite Arvine (whites) or a Cornalin (red), the local grapes you rarely find outside Switzerland.', q: 'Sion old town restaurants' },
+      { t: 'The final, or a qualifier', d: 'In May, the national final at Pra Bardy. Outside May, ask the tourist office which village is hosting a spring or autumn qualifier.', q: 'Arène de Pra Bardy Aproz' },
+      { t: 'Walk a bisse', d: 'Bisses are centuries-old irrigation channels cut along mountainsides, and the paths beside them are gentle and dramatic at once. The Sion and Nendaz tourist offices can point you to easy ones.', q: 'Nendaz bisse walk' },
+      { t: 'Barryland, Martigny', d: 'A park and museum entirely about the Saint Bernards, open every day except 24 and 25 December. Meet the dogs up close and follow their story back to the Great St Bernard Pass. Somewhere out there a dog like Barrique is having strong opinions about the cows.', q: 'Barryland Martigny' }
+    ], stretch: 'In summer, drive up to the Great St Bernard Pass, the dogs\' historic home.' }
+  ],
+  signature: { t: 'A via ferrata above the Rhône valley', d: 'Fixed cables and iron rungs up a rock face, harnessed and helmeted, with the valley falling away beneath you. Nax, above Sion, is a classic. Beginners should book a guide.' },
+  eat: ['Raclette', 'Viande séchée, air-dried beef', 'Fendant and Petite Arvine', 'Valais apricots in summer'],
+  getting: 'Fly into Geneva (GVA) and take the train up the Rhône valley to Sion in under two hours. Martigny is on the same line.',
+  pack: ['Layers; mountain weather flips', 'Sturdy shoes or boots', 'Rain jacket', 'Sun protection', 'A small pack for the bisse'],
+  first: ['Book Sion lodging for the final weekend', 'Check the official site for final tickets', 'Book a via ferrata guide'],
+  flights: [['Geneva', 'GVA']],
+  links: [['The national final, Nendaz tourism', 'https://www.nendaz.ch/en/P76869/national-final-of-the-herens-breed-of-cattle'], ['Barryland', 'https://www.barryland.ch']]
+},
+{
+  id: 'binche', num: 4, title: 'The Half Space', archetype: 'The Artist', status: 'planned',
+  where: 'Binche, Belgium',
+  tag: "Nobody buys a ticket to watch him. That's exactly the point.",
+  match: 'Drums before dawn, ostrich feathers, and a town that throws oranges.',
+  kit: { bg: '#F2C230', fg: '#1A1408', accent: '#C8102E', on: '#FFFFFF', soft: 'rgba(0,0,0,.07)', line: 'rgba(26,20,8,.28)' },
+  art: artBinche,
+  festival: {
+    name: 'Carnival of Binche', events: ['binche'],
+    lead: 'Once a year, the Gilles of Binche dance through the streets in wax masks and ostrich-feather hats, throwing oranges to the crowd. The tradition is UNESCO-listed and about six hundred years old.',
+    honest: [
+      'Only people born in Binche, or who have lived there for years, can be a Gille. You can\'t rent your way in; you\'re the audience, and the town likes it that way.',
+      'Tuesday begins in the dark. From around 4 a.m. drummers gather the Gilles, who wear wax masks with green glasses at the town hall reception in the morning.',
+      'The feather hats appear for the big afternoon parade, which starts around 3 p.m. Evening brings a lit procession and fireworks at 9:30 p.m.',
+      'Oranges are a gift of luck. Catch them, keep them, and never throw one back: that is an insult. Wear a hat; shopkeepers board their windows.',
+      'Tens of thousands come on the Tuesday. Sunday and Monday are calmer, with children\'s groups and folk dances, and are a better first taste.'
+    ]
+  },
+  legs: [
+    { label: 'Carnival weekend · 3 days', days: [
+      { t: 'Sunday: the ramparts and the mask museum', d: 'Walk Binche\'s medieval ramparts, then visit the International Carnival and Mask Museum to see the Gille costume up close before you see it move.', q: 'Musée international du Carnaval et du Masque Binche' },
+      { t: 'Monday: the gentle day', d: 'Children\'s and youth groups, folk dances on the Grand-Place, fireworks in the evening. Meet the town at a walking pace.', q: 'Grand-Place Binche' },
+      { t: 'Tuesday at dawn', d: 'Be on the Grand-Place before the drums. The reception, the parade, the oranges and the lights follow through to the fireworks. Bring patience and dry socks.', q: 'Grand-Place Binche' }
+    ], stretch: 'Add Mons, twenty minutes away: a Grand-Place and belfry that are both UNESCO-listed, and a good base if Binche is full.' }
+  ],
+  signature: { t: 'Dawn on the Grand-Place with the Gilles', d: 'Stand in the cold as the drummers bring the Gilles into the square. It is free, it starts in the dark, and it is the most alive-feeling hour of the whole trip.' },
+  eat: ['Frites and a Belgian waffle', 'A saison, the farmhouse ale of Hainaut', 'Oysters and champagne (the Gilles\' breakfast tradition)'],
+  getting: 'Fly into Brussels (BRU). Trains reach Binche with a change, typically in about an hour and a half; check the carnival timetable, since services get crowded.',
+  pack: ['Warm layers and waterproof shoes', 'A hat you don\'t mind losing', 'Earplugs for the drums', 'Small bag worn in front'],
+  first: ['Book lodging in Mons or Brussels; Binche fills up', 'Check carnival-day train times', 'Confirm the programme with the tourist office'],
+  flights: [['Brussels', 'BRU']],
+  links: [['Carnival programme, Wallonia tourism', 'https://visitwallonia.com/en-gb/content/carnival-binche-les-gilles-de-binche']]
+},
+{
+  id: 'ruhr', num: 5, title: 'The Wall', archetype: 'The Loanee', status: 'planned',
+  where: 'The Ruhr, Germany',
+  tag: 'A stadium, a story, and a currywurst afterwards.',
+  match: 'A stadium, a story, and a currywurst afterwards.',
+  kit: { bg: '#33424F', fg: '#F2F4F5', accent: '#F26B21', on: '#1A1208', soft: 'rgba(255,255,255,.07)', line: 'rgba(255,255,255,.26)' },
+  art: artRuhr,
+  festival: {
+    name: 'The Revierderby', events: ['derby-dec', 'derby-apr'],
+    lead: "Dortmund against Schalke, the Ruhr's great rivalry, is back. Schalke won promotion last season, so the 2026/27 Bundesliga has two derbies: December in Gelsenkirchen and April in Dortmund.",
+    honest: [
+      'Both dates are matchday windows, not exact kick-offs. The league fixes the day and time later, so hold off on non-refundable travel until it does.',
+      'Derby tickets are notoriously hard to get and mostly go to members and season-ticket holders. Treat the match as a bonus, not the plan.',
+      'The Yellow Wall, the standing terrace at Dortmund\'s stadium, is one of the biggest in Europe. Other home matches are far easier to get into than the derby.',
+      'Stadium tours and the German Football Museum run whether or not there is a match, and they make a good trip on their own.',
+      'Buy tickets only from the clubs\' official channels. The resale market has scams.'
+    ]
+  },
+  legs: [
+    { label: 'Ruhr · 3 days', days: [
+      { t: 'Dortmund: football museum and stadium', d: 'The German Football Museum sits by the main station. Then take the stadium tour and stand at the foot of the Yellow Wall. Book the tour online.', q: 'Deutsches Fußballmuseum Dortmund' },
+      { t: 'Essen: Zollverein', d: 'A former coal mine and coking plant, UNESCO-listed, with the Ruhr Museum inside. Give it half a day and stay for the light on the old steel.', q: 'Zeche Zollverein Essen' },
+      { t: 'Gelsenkirchen and Duisburg', d: "Tour Schalke's stadium so you've seen both sides of the derby, then finish at Duisburg's old blast-furnace park, lit up at night.", q: 'Landschaftspark Duisburg-Nord' }
+    ] }
+  ],
+  signature: { t: 'Stand where the wall stands', d: 'A Dortmund home match on the terrace, when tickets allow. If they don\'t, the stadium tour gets you onto the same concrete without the noise.' },
+  eat: ['Currywurst with fries', 'A Dortmund-brewed pils', 'Pommes rot-weiß, fries with ketchup and mayo'],
+  getting: 'Fly into Düsseldorf (DUS) or Cologne/Bonn (CGN). Regional trains link the Ruhr cities, usually within an hour of each other.',
+  pack: ['Layers; Ruhr weather changes fast', 'Shoes for stadium concourses and industrial sites', 'A scarf if you dare to pick a side'],
+  first: ['Book stadium tours and museum tickets online', 'Wait for the derby kick-off time before booking non-refundable travel', 'Buy any match ticket only from an official channel'],
+  flights: [['Düsseldorf', 'DUS']],
+  links: [['The derby returns, Bundesliga', 'https://www.bundesliga.com/en/bundesliga/news/revierderby-return-borussia-dortmund-schalke-2026-27-37946']]
+},
+{
+  id: 'merce', num: 6, title: 'Nuria\u2019s book', archetype: 'The One Who Got Out', status: 'planned',
+  where: 'Barcelona, Spain',
+  tag: 'Human towers, giants in the street, and fire in the old city.',
+  match: 'Human towers, giants in the street, and fire in the old city.',
+  kit: { bg: '#3F1F52', fg: '#FBF3F7', accent: '#FFB627', on: '#2A1338', soft: 'rgba(255,255,255,.08)', line: 'rgba(255,255,255,.26)' },
+  art: artMerce,
+  festival: {
+    name: 'La Mercè', events: ['merce'],
+    lead: "Barcelona's biggest street festival: giants in the streets, human towers in the square, devils with fireworks and a closing display over the city. The feast day is 24 September.",
+    honest: [
+      'Almost everything is free. The challenge is the crowd, not the ticket.',
+      'For the castellers, the human towers in Plaça de Sant Jaume, arrive at least an hour early and expect to stand.',
+      'The correfoc is participatory: you run with the devils, and the sparks land on you. Wear long sleeves and trousers in natural fibres, a hat or scarf over your hair, closed shoes, and earplugs.',
+      '24 September is a local holiday, so shops close and the streets fill with families.',
+      'In 2026 the festival runs 23 to 27 September. The castellers build on the 24th, the correfoc runs on the Saturday, and the closing pyromusical is on Sunday the 27th, moved this year to Bogatell Beach.',
+      'Dates wrap around the weekend nearest the 24th, so they shift a little each year, and venues do too. Check the city\'s day-by-day programme before you go.'
+    ]
+  },
+  legs: [
+    { label: 'Barcelona · 3 days', days: [
+      { t: 'The Gothic Quarter and Sant Jaume', d: 'Get lost in the old streets, then find the square where the towers rise. See it empty first so you know what to compare it with.', q: 'Plaça de Sant Jaume Barcelona' },
+      { t: 'Santa Maria del Mar and the Born', d: 'A Gothic church that feels like a sailors\' cathedral, then tapas in the lanes around it.', q: 'Santa Maria del Mar Barcelona' },
+      { t: 'Giants and towers', d: 'The giant papier-mâché figures parade, and the castellers build in the square. Find a spot with a wall behind you.', q: 'Plaça de Sant Jaume Barcelona' },
+      { t: 'Sunset at the Bunkers del Carmel', d: 'A free hilltop with a 360° view of the city, and the spot to see fireworks from a distance.', q: 'Bunkers del Carmel Barcelona' },
+      { t: 'The correfoc and the closing fireworks', d: 'Fire, drums and devils through the old city, and then the closing show. Dress for sparks, and go with a plan for getting home.', q: 'Barcelona Gothic Quarter' }
+    ], stretch: 'Book the Sagrada Família for a timed slot on your quieter day; walk-up tickets are rarely available.' }
+  ],
+  signature: { t: 'Watch a human tower rise', d: 'Castellers climb onto each other\'s shoulders, storeys high, while a band plays. When the smallest child reaches the top and raises a hand, the whole square erupts.' },
+  eat: ['Pa amb tomàquet', 'Crema catalana', 'Cava with anything', 'Bombas in Barceloneta'],
+  getting: 'Fly into Barcelona (BCN). The metro and an airport bus reach the centre in about half an hour.',
+  pack: ['Long-sleeved cotton layers for the correfoc', 'Earplugs', 'Small bag worn in front', 'Refillable water bottle'],
+  first: ['Book lodging early; festival dates fill fast', 'Timed entry for the Sagrada Família', 'Check the city programme for the day-by-day'],
+  flights: [['Barcelona', 'BCN']],
+  links: [['Official La Mercè programme', 'https://www.barcelona.cat/lamerce']]
+}
+];
+const ESC = Object.fromEntries(ESCAPES.map(e => [e.id, e]));
+
+const QUIZ = [
+  { q: "It's your first morning. Where are you?", opts: [
+    ['In the sea before anyone else is awake', { costa: 3, porto: 1 }],
+    ['On a trail with a view that justifies the climb', { valais: 3, costa: 1 }],
+    ['At a market with a coffee and no plan', { merce: 2, porto: 2, binche: 1 }],
+    ['Outside a stadium, hungry, early', { ruhr: 3, binche: 1 }] ] },
+  { q: 'Which crowd do you want to get lost in?', opts: [
+    ['Thousands of strangers, all in on the same joke', { porto: 3, merce: 2, binche: 2 }],
+    ['Locals doing what their grandparents did', { valais: 3, costa: 2, binche: 1 }],
+    ["A terrace of people who'd run through walls for a club", { ruhr: 3 }],
+    ['No crowd at all. A table for two', { costa: 3, valais: 1 }] ] },
+  { q: 'When can you go?', opts: [
+    ['Winter', { binche: 3, ruhr: 1 }],
+    ['Spring', { valais: 3, ruhr: 1, porto: 1 }],
+    ['Summer', { porto: 3, costa: 3 }],
+    ['Autumn', { merce: 3, ruhr: 2 }] ] },
+  { q: 'What sounds most like your trip?', opts: [
+    ['Slow and romantic', { costa: 3, valais: 1 }],
+    ['Loud and joyful', { porto: 3, merce: 3, binche: 2 }],
+    ['Outdoors, and a little bit scary', { valais: 3, costa: 1 }],
+    ['Curious: old stones, new stories', { costa: 2, merce: 2, ruhr: 2, binche: 1 }] ] }
+];
+
+
+/* ------------------------------------------------------------------ */
+/* Dates                                                               */
+/* ------------------------------------------------------------------ */
+function utc(a) { return Date.UTC(a[0], a[1] - 1, a[2]); }
+function fromUtc(t) { const d = new Date(t); return [d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()]; }
+function addDays(a, n) { return fromUtc(utc(a) + n * 864e5); }
+function easter(y) { // Meeus/Jones/Butcher
+  const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4,
+    f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30,
+    i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7,
+    m = Math.floor((a + 11 * h + 22 * l) / 451), mo = Math.floor((h + l - 7 * m + 114) / 31),
+    da = ((h + l - 7 * m + 114) % 31) + 1;
+  return [y, mo, da];
+}
+
+(() => {
+  'use strict';
+  document.documentElement.classList.add('js');
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const h = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const DOW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const STATUS = { out: 'Out now', dev: 'In development', planned: 'Planned' };
+  const PIN = Object.fromEntries(PINS.map(p => [p.id, p]));
+  // brighter tones for the dark map, deeper tones for light cards
+  const SIGD = { costa: '#F2A541', porto: '#5B93F0', valais: '#E8485B', binche: '#F2C230', ruhr: '#F26B21', merce: '#B784E8' };
+  const SIGL = { costa: ['#0B4F6C', '#F4F7F7', 'rgba(255,255,255,.35)'], porto: ['#1E4FA3', '#FFFFFF', 'rgba(255,255,255,.35)'],
+    valais: ['#A61E2B', '#FFFFFF', 'rgba(255,255,255,.35)'], binche: ['#E3A90F', '#1A1408', 'rgba(0,0,0,.3)'],
+    ruhr: ['#33424F', '#FFFFFF', 'rgba(255,255,255,.35)'], merce: ['#3F1F52', '#FFFFFF', 'rgba(255,255,255,.35)'] };
+
+  const kit = e => { const k = e.kit; return `--k-bg:${k.bg};--k-fg:${k.fg};--k-accent:${k.accent};--k-on:${k.on};--k-soft:${k.soft};--k-line:${k.line}`; };
+  const sigStyle = id => `--k-bg:${SIGL[id][0]};--k-fg:${SIGL[id][1]};--k-line:${SIGL[id][2]};--k-accent:${SIGL[id][0]}`;
+
+  const today = () => { const d = new Date(); return [d.getFullYear(), d.getMonth() + 1, d.getDate()]; };
+  function nextOcc(ev) {
+    const t = utc(today()), y0 = today()[0];
+    for (let y = y0 - 1; y <= y0 + 3; y++) {
+      const o = ev.occ(y);
+      if (o && utc(o.e) >= t) return { s: o.s, e: o.e, peak: o.peak, firm: o.firm, live: utc(o.s) <= t };
+    }
+    return null;
+  }
+  const dm = a => `${a[2]} ${MON[a[1] - 1]}`;
+  function range(o) {
+    const { s, e } = o, y = e[0];
+    if (utc(s) === utc(e)) return `${dm(s)} ${y}`;
+    return s[1] === e[1] ? `${s[2]}\u2013${e[2]} ${MON[s[1] - 1]} ${y}` : `${dm(s)} \u2013 ${dm(e)} ${y}`;
+  }
+  function whenTxt(o) {
+    if (o.live) return 'On now';
+    const dd = Math.round((utc(o.s) - utc(today())) / 864e5);
+    if (dd === 1) return 'Tomorrow';
+    if (dd <= 45) return `In ${dd} days`;
+    return `In ${Math.round(dd / 30.4)} months`;
+  }
+  const ymd = a => `${a[0]}${String(a[1]).padStart(2, '0')}${String(a[2]).padStart(2, '0')}`;
+  const calUrl = (ev, o) => 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + `&text=${encodeURIComponent(ev.name)}&dates=${ymd(o.s)}/${ymd(addDays(o.e, 1))}`
+    + `&location=${encodeURIComponent(ev.place)}`
+    + `&details=${encodeURIComponent('From The Festival League. Confirm dates with the organisers before booking anything non-refundable.')}`;
+  const mapsUrl = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+  const flightUrl = code => `https://www.google.com/travel/flights?q=${encodeURIComponent('Flights to ' + code)}`;
+
+  // headline event for an escape: the first listed event that still has a date ahead
+  function headline(e) {
+    for (const id of e.festival.events) { const ev = EV[id], o = ev && nextOcc(ev); if (o) return { ev, o }; }
+    return null;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Trip Book state (in memory only)                                  */
+  /* ---------------------------------------------------------------- */
+  const trip = new Map(); // escId -> { keys: [], done: Set }
+  const ITEMS = {};
+  ESCAPES.forEach(e => {
+    const list = [];
+    e.first.forEach((t, i) => list.push({ k: 'f' + i, label: t, kind: 'first' }));
+    e.legs.forEach((leg, li) => leg.days.forEach((d, di) => list.push({ k: `s${li}.${di}`, label: d.t, kind: 'stop', leg: leg.label, q: d.q })));
+    ITEMS[e.id] = Object.fromEntries(list.map(x => [x.k, x]));
+    ITEMS[e.id]._order = list.map(x => x.k);
+  });
+  const isSaved = (id, k) => !!trip.get(id) && trip.get(id).keys.includes(k);
+  const escSaved = id => trip.has(id);
+  function addKey(id, k) {
+    if (!trip.has(id)) trip.set(id, { keys: [], done: new Set() });
+    const t = trip.get(id);
+    if (!t.keys.includes(k)) t.keys.push(k);
+    t.keys.sort((a, b) => ITEMS[id]._order.indexOf(a) - ITEMS[id]._order.indexOf(b));
+  }
+  function dropKey(id, k) {
+    const t = trip.get(id); if (!t) return;
+    t.keys = t.keys.filter(x => x !== k); t.done.delete(k);
+    if (!t.keys.length) trip.delete(id);
+  }
+  function toggleEscape(id) {
+    if (trip.has(id)) { trip.delete(id); toast('Removed from your Trip Book'); }
+    else { ITEMS[id]._order.forEach(k => addKey(id, k)); toast(`${ESC[id].title} is in your Trip Book`); }
+    sync();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Toast                                                             */
+  /* ---------------------------------------------------------------- */
+  let toastT;
+  function toast(msg) {
+    const t = $('#toast'); t.textContent = msg; t.classList.add('on');
+    clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 2400);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Map                                                               */
+  /* ---------------------------------------------------------------- */
+  const xy = p => proj(p.lon, p.lat).map(v => +v.toFixed(1));
+  function ctrl(a, b, k) {
+    const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2, dx = b[0] - a[0], dy = b[1] - a[1], len = Math.hypot(dx, dy) || 1;
+    let nx = -dy / len, ny = dx / len;
+    if (ny > 0) { nx = -nx; ny = -ny; }
+    return [+(mx + nx * len * k).toFixed(1), +(my + ny * len * k).toFixed(1)];
+  }
+  const curve = (pts, k) => pts.slice(1).map((b, i) => { const a = pts[i], c = ctrl(a, b, k); return `Q${c} ${b}`; }).join(' ');
+
+  function drawMap() {
+    const landD = LAND.map(poly => 'M' + poly.map(pt => proj(pt[0], pt[1]).map(v => v.toFixed(1)).join(',')).join('L') + 'Z').join(' ');
+    const at = id => xy(PIN[id]);
+    const routePts = ROUTE.map(at);
+    const routeD = `M${routePts[0]} ` + curve(routePts, 0.12);
+    const chain = ['siena', ...NEXT_ARCS].map(at);
+    const arcs = chain.slice(1).map((b, i) => { const a = chain[i], c = ctrl(a, b, 0.2); return `<path class="arc-next" d="M${a} Q${c} ${b}"/>`; }).join('');
+    const sea = (lon, lat, t) => { const p = proj(lon, lat); return `<text class="sea" x="${p[0].toFixed(0)}" y="${p[1].toFixed(0)}">${t}</text>`; };
+    const pins = PINS.map((p, i) => {
+      const [x, y] = xy(p), col = SIGD[p.esc], r = p.main ? 9 : 6;
+      return `<g class="pin${p.main ? '' : ' minor'}" data-pin="${p.id}" tabindex="0" role="button" aria-label="${h(p.name)}: ${h(ESC[p.esc].title)}" style="--i:${i}">
+        <circle class="ring" cx="${x}" cy="${y}" r="${r}" stroke="${col}"/>
+        <circle cx="${x}" cy="${y}" r="20" fill="transparent"/>
+        <circle class="dot" cx="${x}" cy="${y}" r="${r}" fill="${col}"/>
+        <text class="lbl" x="${x + p.lbl[0]}" y="${y + p.lbl[1]}" text-anchor="${p.lbl[2]}">${h(p.name)}</text></g>`;
+    }).join('');
+    const ball = `<g class="ball" aria-hidden="true"><circle r="8" fill="#fff"/><circle r="3.4" fill="#12232E"/>
+      <animateMotion dur="11s" repeatCount="indefinite" path="${routeD}" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/></g>`;
+    $('#map').innerHTML = `<path class="landfill" d="${landD}"/><path class="land" d="${landD}"/>`
+      + sea(-10.6, 46.4, 'Atlantic') + sea(2.6, 55.6, 'North Sea') + sea(4.5, 39.6, 'Mediterranean')
+      + arcs + `<path class="route" d="${routeD}"/>` + ball + pins;
+  }
+
+  function showPin(id, announce) {
+    const p = PIN[id], e = ESC[p.esc];
+    $$('.pin').forEach(g => g.classList.toggle('on', g.dataset.pin === id));
+    const c = $('#mapCard');
+    c.setAttribute('style', kit(e));
+    c.innerHTML = `<div class="mc-num" aria-hidden="true">${e.num}</div><div class="mc-t">${h(e.title)}</div>
+      <div class="mc-f"><b>${h(p.name)}</b> &middot; ${h(e.archetype)}. ${h(e.match)}</div>
+      <div class="mc-a"><a class="btn solid small" href="#esc-${e.id}">Read the escape</a>
+      <button class="btn line small" type="button" data-act="toggle-esc" data-esc="${e.id}"></button></div>`;
+    sync();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Hero countdown                                                    */
+  /* ---------------------------------------------------------------- */
+  function soonest() {
+    let best = null;
+    EVENTS.forEach(ev => { const o = nextOcc(ev); if (!o) return; const key = o.live ? -1 : utc(o.s); if (!best || key < best.key) best = { ev, o, key }; });
+    return best;
+  }
+  function renderKick() {
+    const b = soonest(); if (!b) { $('#kick').innerHTML = ''; return; }
+    const { ev, o } = b, e = ESC[ev.esc];
+    let mid;
+    if (o.live) mid = `<div class="live-now">On right now</div>`;
+    else {
+      const diff = Math.max(0, new Date(o.s[0], o.s[1] - 1, o.s[2]) - new Date());
+      const d = Math.floor(diff / 864e5), hr = Math.floor(diff % 864e5 / 36e5), mi = Math.floor(diff % 36e5 / 6e4);
+      mid = `<div class="digits" role="timer" aria-label="${d} days, ${hr} hours, ${mi} minutes to go">
+        <div class="dig"><b>${d}</b><i>days</i></div><div class="dig"><b>${hr}</b><i>hours</i></div><div class="dig"><b>${mi}</b><i>minutes</i></div></div>`;
+    }
+    $('#kick').innerHTML = `<div class="kick-l">Next on the calendar</div><div class="kick-n">${h(ev.name)}</div>
+      <div class="kick-p">${h(ev.place)} &middot; ${range(o)}</div>${mid}
+      <a class="btn solid small" href="#esc-${e.id}">Plan this escape</a>`;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Lineup                                                            */
+  /* ---------------------------------------------------------------- */
+  function renderSquad() {
+    $('#squad').innerHTML = ESCAPES.map(e => {
+      const hl = headline(e);
+      return `<a class="sq-card rv" href="#esc-${e.id}" style="${kit(e)}"><span class="sq-n" aria-hidden="true">${e.num}</span>
+        <span class="sq-t">${h(e.title)}</span><span class="sq-w">${h(e.archetype)} &middot; ${h(e.where)}</span>
+        <span class="sq-d">${STATUS[e.status]}${hl ? ' &middot; ' + range(hl.o) : ''}</span></a>`;
+    }).join('');
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Season                                                            */
+  /* ---------------------------------------------------------------- */
+  const FILTERS = [
+    ['all', 'All'], ['soon', 'Next four months'], ['free', 'Free to watch'], ['paid', 'Ticketed'],
+    ['winter', 'Winter'], ['spring', 'Spring'], ['summer', 'Summer'], ['autumn', 'Autumn']
+  ];
+  const SEASON = m => (m === 12 || m <= 2) ? 'winter' : m <= 5 ? 'spring' : m <= 8 ? 'summer' : 'autumn';
+  let filter = 'all';
+  let fixtures = [];
+
+  function buildFixtures() {
+    fixtures = EVENTS.map(ev => ({ ev, o: nextOcc(ev) })).filter(x => x.o).sort((a, b) => utc(a.o.s) - utc(b.o.s));
+  }
+  function renderYear() {
+    const [cy, cm] = today();
+    const cells = Array.from({ length: 12 }, (_, i) => ({ m: ((cm - 1 + i) % 12) + 1, y: cy + Math.floor((cm - 1 + i) / 12), dots: [] }));
+    fixtures.forEach(f => {
+      const idx = (f.o.s[0] - cy) * 12 + (f.o.s[1] - cm);
+      if (idx >= 0 && idx < 12) cells[idx].dots.push(f);
+    });
+    $('#year').innerHTML = cells.map((c, i) => `<div class="ym${i === 0 ? ' now' : ''}" role="listitem"><div class="mn">${MON[c.m - 1]}</div><div class="yr">${c.y}</div>
+      <div class="ydots">${c.dots.map(f => `<button class="ydot" type="button" data-act="dot" data-ev="${f.ev.id}" style="${sigStyle(f.ev.esc)}" aria-label="${h(f.ev.name)}, ${range(f.o)}">${f.o.s[2]}<span aria-hidden="true">${h(f.ev.name)} &middot; ${dm(f.o.s)}</span></button>`).join('')}</div></div>`).join('');
+  }
+  function renderFilters() {
+    $('#filters').innerHTML = FILTERS.map(([k, t]) => `<button class="fchip" type="button" data-act="filter" data-f="${k}" aria-pressed="${k === filter}">${t}</button>`).join('');
+  }
+  function passes(f) {
+    if (filter === 'all') return true;
+    if (filter === 'soon') return (utc(f.o.s) - utc(today())) / 864e5 <= 122;
+    if (filter === 'free') return f.ev.cost === 'free';
+    if (filter === 'paid') return f.ev.cost === 'paid';
+    return SEASON(f.o.s[1]) === filter;
+  }
+  function renderFixtures() {
+    const list = fixtures.filter(passes);
+    if (!list.length) { $('#fixtures').innerHTML = `<li class="fx empty"><div class="fx-main" style="grid-column:1/-1"><h3>Nothing in that window</h3><p class="pl">Try another filter. The season is spread across the whole year.</p></div></li>`; return; }
+    $('#fixtures').innerHTML = list.map(({ ev, o }) => {
+      const e = ESC[ev.esc], pk = o.peak && utc(o.peak) !== utc(o.s) ? `Big day: ${DOW[new Date(utc(o.peak)).getUTCDay()]} ${dm(o.peak)}` : '';
+      return `<li class="fx rv" id="fx-${ev.id}" style="${sigStyle(ev.esc)}">
+        <div class="fx-date"><span class="d">${o.s[2]}</span><span class="m">${MON[o.s[1] - 1]} ${String(o.s[0]).slice(2) !== String(today()[0]).slice(2) ? o.s[0] : ''}</span>${pk ? `<span class="pk">${pk}</span>` : ''}</div>
+        <div class="fx-main"><h3>${h(ev.name)}</h3><p class="pl">${h(ev.place)} &middot; <a href="#esc-${e.id}">${h(e.title)}</a></p>
+          <p class="nt">${h(ev.note)}</p></div>
+        <div class="fx-side"><span class="when">${whenTxt(o)}</span><span class="range">${range(o)}</span>
+          <div><span class="tag${ev.cost === 'free' ? ' free' : ''}">${ev.cost === 'free' ? 'Free to watch' : 'Ticketed'}</span>${ev.bonus ? ' <span class="tag">Bonus stop</span>' : ''}${ev.star ? ' <span class="tag soft">The date in the book</span>' : ''}${o.firm ? '' : ' <span class="tag soft">Date expected</span>'}</div>
+          <div class="fx-acts"><a class="btn line small" href="#esc-${e.id}">Plan it</a><a class="btn line small" href="${calUrl(ev, o)}" target="_blank" rel="noopener">Add to calendar</a></div></div></li>`;
+    }).join('');
+    observe();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Quiz                                                              */
+  /* ---------------------------------------------------------------- */
+  const quiz = { i: 0, picks: [], busy: false };
+  function renderQuiz(focus) {
+    const box = $('#quizBox');
+    if (quiz.i >= QUIZ.length) return renderResult(box, focus);
+    const q = QUIZ[quiz.i];
+    box.innerHTML = `<div class="q-prog" aria-hidden="true">${QUIZ.map((_, n) => `<i class="${n < quiz.i ? 'done' : ''}"></i>`).join('')}</div>
+      <h3 class="q-q" id="qq" tabindex="-1"><span class="sr">Question ${quiz.i + 1} of ${QUIZ.length}. </span>${h(q.q)}</h3>
+      <div class="q-opts">${q.opts.map((o, n) => `<button class="q-opt${quiz.picks[quiz.i] === n ? ' picked' : ''}" type="button" data-act="q-pick" data-n="${n}">${h(o[0])}</button>`).join('')}</div>
+      ${quiz.i ? '<button class="q-back" type="button" data-act="q-back">Back one question</button>' : ''}`;
+    if (focus) $('#qq').focus({ preventScroll: true });
+  }
+  function scores() {
+    const sc = Object.fromEntries(ESCAPES.map(e => [e.id, 0]));
+    quiz.picks.forEach((n, i) => Object.entries(QUIZ[i].opts[n][1]).forEach(([id, v]) => { sc[id] += v; }));
+    return ESCAPES.map((e, idx) => ({ e, s: sc[e.id], idx })).sort((a, b) => b.s - a.s || a.idx - b.idx);
+  }
+  function renderResult(box, focus) {
+    const r = scores(), w = r[0].e, rest = r.slice(1, 3).filter(x => x.s > 0);
+    const hl = headline(w);
+    box.innerHTML = `<div class="q-prog" aria-hidden="true">${QUIZ.map(() => '<i class="done"></i>').join('')}</div>
+      <div class="q-res"><div class="q-win" style="${kit(w)}"><div class="n" aria-hidden="true">${w.num}</div>
+        <h3 id="qq" tabindex="-1"><span class="sr">Your escape: </span>${h(w.title)}</h3>
+        <p>${h(w.match)} ${hl ? `Next up: ${h(hl.ev.name)}, ${range(hl.o)}.` : ''}</p>
+        <div class="acts"><a class="btn solid" href="#esc-${w.id}">Read this escape</a>
+        <button class="btn line" type="button" data-act="toggle-esc" data-esc="${w.id}"></button></div></div>
+        <p class="q-alt">${rest.length ? 'Close behind: ' + rest.map(x => `<button type="button" data-act="q-goto" data-esc="${x.e.id}">${h(x.e.title)}</button>`).join(' or ') + '. ' : ''}<button type="button" data-act="q-retake">Take it again</button></p></div>`;
+    if (focus) $('#qq').focus({ preventScroll: true });
+    sync();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Escapes                                                           */
+  /* ---------------------------------------------------------------- */
+  function renderEscapes() {
+    const intro = `<div class="section esc-intro"><div class="wrap"><h2 class="sec-title">Six escapes</h2>
+      <p class="sec-sub">Each one starts with the honest version of the festival, then the days around it, then the bookings that matter first. Save any stop to your Trip Book as you read.</p>
+      <div class="chips" style="margin-top:1.4rem">${ESCAPES.map(e => `<a class="chip" href="#esc-${e.id}">${e.num}. ${h(e.title)}</a>`).join('')}</div></div></div>`;
+    $('#escapes').innerHTML = intro + ESCAPES.map(escapeHtml).join('');
+  }
+
+  function escapeHtml(e) {
+    const mainPin = PINS.find(p => p.esc === e.id && p.main);
+    const evs = e.festival.events.map(id => ({ ev: EV[id], o: nextOcc(EV[id]) })).filter(x => x.o);
+    const festEvents = evs.length ? evs.map(({ ev, o }) => `<div class="fest-ev"><div class="fest-when"><b>${range(o)}</b><span class="pill">${whenTxt(o)}</span>${o.firm ? '' : '<span class="pill soft">Date expected</span>'}<a class="btn line small" href="${calUrl(ev, o)}" target="_blank" rel="noopener">Add to calendar</a></div>
+        <p class="ev-n"><strong>${h(ev.name)}</strong> &middot; ${h(ev.place)}. ${h(ev.note)}</p></div>`).join('')
+      : `<div class="fest-ev"><p class="ev-n">The dates for this one are set by the league. They appear here once the fixture list is out.</p></div>`;
+    const tabs = e.legs.length > 1
+      ? `<div class="tabs" role="tablist" aria-label="Legs of the ${h(e.title)} trip">${e.legs.map((l, i) => `<button class="tab" type="button" role="tab" id="tab-${e.id}-${i}" aria-controls="pn-${e.id}-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-act="tab" data-esc="${e.id}" data-i="${i}">${h(l.label)}</button>`).join('')}</div>` : '';
+    const panels = e.legs.map((l, li) => `<div role="tabpanel" id="pn-${e.id}-${li}" ${e.legs.length > 1 ? `aria-labelledby="tab-${e.id}-${li}"` : ''} ${li ? 'hidden' : ''}>
+      ${e.legs.length === 1 ? `<p class="range" style="margin-bottom:.9rem">${h(l.label)}</p>` : ''}
+      <ol class="stops">${l.days.map((d, di) => `<li class="stop"><h4>${h(d.t)}</h4><p>${h(d.d)}</p>
+        ${d.nov ? `<p class="nov"><b>${e.status === 'out' ? 'In the book:' : 'In the story:'}</b> ${h(d.nov)}</p>` : ''}
+        <div class="stop-a"><a href="${mapsUrl(d.q)}" target="_blank" rel="noopener">Open in Maps</a>
+        <button class="save" type="button" data-act="save-stop" data-esc="${e.id}" data-key="s${li}.${di}" aria-pressed="false">Save this stop</button></div></li>`).join('')}</ol>
+      ${l.stretch ? `<p class="stretch">${h(l.stretch)}</p>` : ''}
+      <div class="acts" style="margin-top:1.1rem"><button class="btn line small" type="button" data-act="save-leg" data-esc="${e.id}" data-i="${li}">Save this whole leg</button></div></div>`).join('');
+    return `<section class="escape" id="esc-${e.id}" style="${kit(e)}" aria-labelledby="h-${e.id}"><div class="esc-in">
+      <div class="esc-side">
+        <div class="esc-head"><div class="jersey" aria-hidden="true">${e.num}</div><div><span class="status ${e.status}">${STATUS[e.status]}</span></div></div>
+        <h2 id="h-${e.id}">${h(e.title)}</h2>
+        <p class="esc-tag">${h(e.tag)}</p>
+        <p class="esc-where">${h(e.archetype)} &middot; ${h(e.where)}</p>
+        ${e.status === 'out' ? `<p class="esc-book"><a class="btn solid" href="${h(CONFIG.bookUrl)}" target="_blank" rel="noopener" data-book>Read ${h(e.title)}</a></p>`
+          : `<p class="status-note">Book ${e.num} is ${e.status === 'dev' ? 'in development' : 'planned'}. Its travel journal arrives with the book. This escape is ready now.</p>`}
+        <div class="esc-art">${e.art()}</div>
+        ${mainPin ? `<p class="esc-maplink"><a href="#top" data-act="show-pin" data-pin="${mainPin.id}">Find it on the map</a></p>` : ''}
+      </div>
+      <div class="esc-main">
+        <div class="blk fest rv"><h3>${h(e.festival.name)}</h3>${festEvents}
+          <p style="margin-top:1rem">${h(e.festival.lead)}</p>
+          <h4>The honest version</h4><ul class="honest">${e.festival.honest.map(t => `<li>${h(t)}</li>`).join('')}</ul></div>
+        <div class="blk rv"><h3>Your route</h3>${tabs}${panels}</div>
+        <div class="blk rv"><div class="trio">
+          <div><h4>Getting there</h4><p>${h(e.getting)}</p><div class="chips" style="margin-top:.7rem">${e.flights.map(([c, code]) => `<a class="chip" href="${flightUrl(code)}" target="_blank" rel="noopener">Flights to ${h(c)} (${code})</a>`).join('')}</div></div>
+          <div><h4>Pack</h4><ul>${e.pack.map(t => `<li>${h(t)}</li>`).join('')}</ul></div>
+          <div><h4>Book first</h4><ul class="first">${e.first.map(t => `<li>${h(t)}</li>`).join('')}</ul></div></div></div>
+        <div class="blk rv"><div class="sig"><h4>${h(e.signature.t)}</h4><p>${h(e.signature.d)}</p></div></div>
+        <div class="blk rv"><h3>Eat this</h3><div class="chips">${e.eat.map(t => `<span class="chip">${h(t)}</span>`).join('')}</div></div>
+        <div class="blk rv"><div class="acts"><button class="btn solid" type="button" data-act="toggle-esc" data-esc="${e.id}" data-long></button>
+          <button class="btn line" type="button" data-act="open-tb">Open my Trip Book</button></div>
+          ${e.links.length ? `<p class="srcs">Official pages: ${e.links.map(([t, u]) => `<a href="${h(u)}" target="_blank" rel="noopener">${h(t)}</a>`).join(' &middot; ')}</p>` : ''}</div>
+      </div></div></section>`;
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Trip Book drawer                                                  */
+  /* ---------------------------------------------------------------- */
+  let lastFocus = null;
+  function renderTrip() {
+    const body = $('#tbBody'), foot = $('#tbFoot');
+    if (!trip.size) {
+      body.innerHTML = `<div class="dr-empty"><p>Nothing saved yet. Save a whole escape from the map, the quiz or any section, or tap Save on the stops you like. Everything you save shows up here as a checklist.</p>
+        <a class="btn line" href="#quiz" data-act="tb-close-jump">Find my escape</a></div>`;
+      foot.innerHTML = ''; return;
+    }
+    body.innerHTML = Array.from(trip.entries()).map(([id, t]) => {
+      const e = ESC[id], total = t.keys.length, done = t.done.size, pct = Math.round(done / total * 100);
+      const row = k => { const it = ITEMS[id][k]; return `<li><label><input type="checkbox" data-act="tb-check" data-esc="${id}" data-key="${k}"${t.done.has(k) ? ' checked' : ''}><span>${h(it.label)}</span></label>${it.q ? `<a href="${mapsUrl(it.q)}" target="_blank" rel="noopener">Map</a>` : ''}</li>`; };
+      const firsts = t.keys.filter(k => ITEMS[id][k].kind === 'first'), stops = t.keys.filter(k => ITEMS[id][k].kind === 'stop');
+      const hl = headline(e);
+      return `<article class="tbi" style="${sigStyle(id)}"><div class="tbi-h"><div><h3>${h(e.title)}</h3><div class="sub">${h(e.where)}${hl ? ` &middot; ${range(hl.o)}` : ''}</div></div>
+        <button class="rm" type="button" data-act="tb-remove" data-esc="${id}">Remove</button></div>
+        <div class="bar" role="progressbar" aria-label="${h(e.title)} progress" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${done}"><i style="width:${pct}%"></i></div>
+        <div class="sub">${done} of ${total} done</div>
+        ${firsts.length ? `<h4>Book first</h4><ul class="ck">${firsts.map(row).join('')}</ul>` : ''}
+        ${stops.length ? `<h4>Stops</h4><ul class="ck">${stops.map(row).join('')}</ul>` : ''}
+        <div class="tbi-a">${e.flights.map(([c, code]) => `<a class="btn small line" href="${flightUrl(code)}" target="_blank" rel="noopener">Flights to ${code}</a>`).join('')}${hl ? `<a class="btn small line" href="${calUrl(hl.ev, hl.o)}" target="_blank" rel="noopener">Add dates to calendar</a>` : ''}</div></article>`;
+    }).join('');
+    foot.innerHTML = `<button class="btn line small" type="button" data-act="tb-print">Print my Trip Book</button><button class="btn line small" type="button" data-act="tb-clear">Clear all</button>`;
+  }
+  function openTrip() {
+    lastFocus = document.activeElement;
+    renderTrip();
+    $('#veil').classList.add('on'); const d = $('#tripbook'); d.classList.add('on'); d.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    $('#tbClose').focus();
+  }
+  function closeTrip(restore = true) {
+    $('#veil').classList.remove('on'); const d = $('#tripbook'); d.classList.remove('on'); d.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (restore && lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  const tripOpen = () => $('#tripbook').classList.contains('on');
+
+  /* keep every save-button, badge and card in step with state */
+  function sync() {
+    $('#tbCount').textContent = trip.size;
+    $$('.save').forEach(b => { const on = isSaved(b.dataset.esc, b.dataset.key); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.textContent = on ? 'Saved' : 'Save this stop'; });
+    $$('[data-act="toggle-esc"]').forEach(b => {
+      const on = escSaved(b.dataset.esc), long = b.hasAttribute('data-long');
+      b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+      b.textContent = on ? 'Saved to my Trip Book' : (long ? 'Add this escape to my Trip Book' : 'Save to my Trip Book');
+    });
+    $$('[data-act="save-leg"]').forEach(b => {
+      const e = ESC[b.dataset.esc], keys = e.legs[+b.dataset.i].days.map((_, di) => `s${b.dataset.i}.${di}`);
+      const all = keys.every(k => isSaved(e.id, k));
+      b.classList.toggle('on', all); b.textContent = all ? 'This leg is saved' : 'Save this whole leg';
+    });
+    if (tripOpen()) renderTrip();
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Reveal on scroll                                                  */
+  /* ---------------------------------------------------------------- */
+  let io;
+  function observe() {
+    if (!('IntersectionObserver' in window)) { $$('.rv').forEach(n => n.classList.add('in')); return; }
+    io = io || new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+    $$('.rv:not(.in)').forEach(n => io.observe(n));
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Events                                                            */
+  /* ---------------------------------------------------------------- */
+  function selectTab(id, i, focus) {
+    $$(`[data-act="tab"][data-esc="${id}"]`).forEach(t => { const on = +t.dataset.i === i; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+    ESC[id].legs.forEach((_, li) => { const p = $(`#pn-${id}-${li}`); if (p) p.hidden = li !== i; });
+  }
+
+  document.addEventListener('click', ev => {
+    const pin = ev.target.closest('.pin');
+    if (pin) { showPin(pin.dataset.pin); return; }
+    const t = ev.target.closest('[data-act]');
+    if (!t) return;
+    const act = t.dataset.act, id = t.dataset.esc;
+    switch (act) {
+      case 'toggle-esc': toggleEscape(id); break;
+      case 'save-stop': {
+        if (isSaved(id, t.dataset.key)) { dropKey(id, t.dataset.key); toast('Removed'); }
+        else { addKey(id, t.dataset.key); toast('Saved to your Trip Book'); }
+        sync(); break;
+      }
+      case 'save-leg': {
+        const keys = ESC[id].legs[+t.dataset.i].days.map((_, di) => `s${t.dataset.i}.${di}`);
+        const all = keys.every(k => isSaved(id, k));
+        keys.forEach(k => all ? dropKey(id, k) : addKey(id, k));
+        toast(all ? 'Leg removed' : 'Leg saved to your Trip Book'); sync(); break;
+      }
+      case 'tab': selectTab(id, +t.dataset.i); break;
+      case 'open-tb': openTrip(); break;
+      case 'tb-close-jump': closeTrip(false); break;
+      case 'tb-remove': trip.delete(id); toast('Removed from your Trip Book'); sync(); break;
+      case 'tb-clear': trip.clear(); sync(); break;
+      case 'tb-print': window.print(); break;
+      case 'show-pin': showPin(t.dataset.pin); break;
+      case 'filter': filter = t.dataset.f; renderFilters(); renderFixtures(); break;
+      case 'dot': {
+        const f = fixtures.find(x => x.ev.id === t.dataset.ev);
+        if (f && !passes(f)) { filter = 'all'; renderFilters(); renderFixtures(); }
+        const el = $('#fx-' + t.dataset.ev);
+        if (el) { el.classList.add('in'); el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+        break;
+      }
+      case 'q-pick': {
+        if (quiz.busy) break; quiz.busy = true;
+        quiz.picks[quiz.i] = +t.dataset.n;
+        $$('.q-opt').forEach(b => b.classList.toggle('picked', b === t));
+        setTimeout(() => { quiz.i++; quiz.busy = false; renderQuiz(true); }, 240);
+        break;
+      }
+      case 'q-back': quiz.i = Math.max(0, quiz.i - 1); renderQuiz(true); break;
+      case 'q-retake': quiz.i = 0; quiz.picks = []; renderQuiz(true); break;
+      case 'q-goto': { const el = $('#esc-' + id); if (el) el.scrollIntoView({ behavior: 'smooth' }); break; }
+    }
+    if (act === 'show-pin') { const top = $('#top'); if (top) top.scrollIntoView({ behavior: 'smooth' }); ev.preventDefault(); }
+  });
+
+  document.addEventListener('change', ev => {
+    const t = ev.target.closest('[data-act="tb-check"]'); if (!t) return;
+    const s = trip.get(t.dataset.esc); if (!s) return;
+    t.checked ? s.done.add(t.dataset.key) : s.done.delete(t.dataset.key);
+    renderTrip();
+  });
+
+  document.addEventListener('keydown', ev => {
+    const pin = ev.target.closest && ev.target.closest('.pin');
+    if (pin && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); showPin(pin.dataset.pin); return; }
+    const tab = ev.target.closest && ev.target.closest('[data-act="tab"]');
+    if (tab && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(ev.key)) {
+      ev.preventDefault();
+      const id = tab.dataset.esc, n = ESC[id].legs.length; let i = +tab.dataset.i;
+      i = ev.key === 'ArrowRight' ? (i + 1) % n : ev.key === 'ArrowLeft' ? (i + n - 1) % n : ev.key === 'Home' ? 0 : n - 1;
+      selectTab(id, i, true); return;
+    }
+    if (tripOpen()) {
+      if (ev.key === 'Escape') { closeTrip(); return; }
+      if (ev.key === 'Tab') {
+        const f = $$('a[href],button,input', $('#tripbook')).filter(n => !n.disabled && n.offsetParent !== null);
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+        else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+        else if (!$('#tripbook').contains(document.activeElement)) { ev.preventDefault(); first.focus(); }
+      }
+    }
+  });
+
+  $('#tbOpen').addEventListener('click', openTrip);
+  $('#footTrip').addEventListener('click', openTrip);
+  $('#tbClose').addEventListener('click', () => closeTrip());
+  $('#veil').addEventListener('click', () => closeTrip());
+  $('#bookCta').href = CONFIG.bookUrl;
+
+  /* ---------------------------------------------------------------- */
+  /* Boot                                                              */
+  /* ---------------------------------------------------------------- */
+  buildFixtures();
+  drawMap();
+  renderSquad();
+  renderYear();
+  renderFilters();
+  renderFixtures();
+  renderQuiz(false);
+  renderEscapes();
+  renderKick();
+  showPin('costa');
+  sync();
+  observe();
+  setInterval(renderKick, 30000);
+})();
+
+</script>
+</body>
+</html>
