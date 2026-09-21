@@ -138,8 +138,9 @@
        rel="me noopener">, remove the "is-soon" class and the status line, update the footer entry, and
        add the URL to sameAs in the JSON-LD above.
     7. The launch list form posts to Buttondown (buttondown.com/yskaipe). Test one signup end to end after deploying.
-    8. Brand images: upload favicon.ico to the site root, and images/yskaipe-logo.webp, yskaipe-emblem.webp,
-       yskaipe-logo.png, logo-512.png, icon-192.png, apple-touch-icon.png and og-yskaipe.jpg to /images.
+    8. The visible logo (header, hero, footer) uses only images/yskaipe-goat.jpg. Separate files are still
+       needed for the head tags: favicon.ico (site root), and in /images: icon-192.png, apple-touch-icon.png,
+       og-yskaipe.jpg (social card) and logo-512.png (Google logo in the schema).
     All four covers use real images from /images (cover-tobi.jpeg, cover-stoppage-time.jpg,
     cover-to-stay.jpeg, cover-the-pace.jpg).
     All .yk-* rules are scoped so they don't collide with style.css. Move them there when ready.
@@ -174,10 +175,28 @@
       gap:56px;align-items:center;margin:0 0 44px;
     }
     .yk-hero-top .yk-hero-lead{margin:0;}
-    .yk-hero-mark img{display:block;width:100%;max-width:400px;height:auto;margin:0 auto;}
+    /* One image drives all of it: images/yskaipe-goat.jpg. Its near-black background is blended away
+       (lighten) so it sits cleanly on the dark page, and each spot crops the part it needs. */
+    .yk-hero-mark-frame{
+      position:relative;width:100%;max-width:400px;margin:0 auto;
+      aspect-ratio:737 / 617;overflow:hidden;
+    }
+    .yk-hero-mark-frame img{
+      position:absolute;display:block;height:auto;
+      width:158.48%;left:-29.17%;top:-12.80%;
+      mix-blend-mode:lighten;
+    }
     .logo.yk-logo{display:inline-flex;align-items:center;gap:12px;}
-    .yk-logo-mark{display:block;height:44px;width:auto;flex:none;}
-    .footer-brand .yk-logo-mark{height:38px;}
+    .yk-logo-mark{
+      --h:44px;
+      display:block;flex:none;height:var(--h);width:calc(var(--h) * 1.3757);
+      background:url("images/yskaipe-goat.jpg") no-repeat;
+      background-size:calc(var(--h) * 3.0899) auto;
+      background-position:calc(var(--h) * -0.8439) calc(var(--h) * -0.2249);
+      mix-blend-mode:lighten;
+    }
+    .footer-brand .yk-logo-mark{--h:38px;}
+    .yk-logo-text{white-space:nowrap;}
 
     /* The two featured series: each offers a virtual world and, when live, a Kindle link */
     .yk-worlds{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
@@ -380,7 +399,7 @@
       .yk-shelf-cover svg,.yk-shelf-cover img{max-width:300px;}
       .yk-hero{padding:48px 0 32px;}
       .yk-hero-top{grid-template-columns:1fr;gap:28px;margin-bottom:32px;}
-      .yk-hero-mark img{max-width:260px;}
+      .yk-hero-mark-frame{max-width:260px;}
       .yk-follow-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
     }
     @media (max-width:520px){
@@ -399,7 +418,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo yk-logo">
-        <img class="yk-logo-mark" src="images/yskaipe-emblem.webp" alt="" width="60" height="44" decoding="async">
+        <span class="yk-logo-mark" aria-hidden="true"></span>
         <div class="yk-logo-text">YSKAIPE <span>escape</span></div>
       </a>
       <nav class="nav">
@@ -428,7 +447,9 @@
             </p>
           </div>
           <div class="yk-hero-mark">
-            <img src="images/yskaipe-logo.webp" alt="YSKAIPE escape logo: a gold open book above a coastline and a winding road" width="737" height="617" fetchpriority="high" decoding="async">
+            <div class="yk-hero-mark-frame">
+              <img src="images/yskaipe-goat.jpg" alt="YSKAIPE escape logo: a gold open book above a coastline and a winding road" width="1168" height="784" fetchpriority="high" decoding="async">
+            </div>
           </div>
         </div>
 
@@ -806,7 +827,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo yk-logo">
-            <img class="yk-logo-mark" src="images/yskaipe-emblem.webp" alt="" width="52" height="38" loading="lazy" decoding="async">
+            <span class="yk-logo-mark" aria-hidden="true"></span>
             <div class="yk-logo-text">YSKAIPE <span>escape</span></div>
           </div>
           <p>Independent publisher. Fiction set in real places, with the travel guide inside. Est. 2025</p>
