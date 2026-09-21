@@ -15,22 +15,28 @@
   <!-- Trip guides (virtual worlds): the main destination-search pages -->
   <url>
     <loc>https://www.yskaipe.com/series/tidewater.html</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://www.yskaipe.com/series/festival-league.html</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
 
   <!-- Core site pages -->
   <url>
     <loc>https://www.yskaipe.com/series.html</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://www.yskaipe.com/catalog.html</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://www.yskaipe.com/authors.html</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://www.yskaipe.com/about.html</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
 </urlset>
